@@ -1,0 +1,294 @@
+{
+  "$id": "1",
+  "$type": "ModelCore.RootModel, Assembly-CSharp",
+  "_modeles": {
+    "$id": "2",
+    "$type": "System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[ModelCore.Model, Assembly-CSharp]], mscorlib",
+    "S_Container": {
+      "$id": "3",
+      "$type": "ModelCore.Universal.AliasValue.AliasString, Assembly-CSharp",
+      "_value": "SomeText",
+      "_alias": "Container",
+      "Root": {
+        "$ref": "1"
+      }
+    },
+    "S_ALias": {
+      "$id": "4",
+      "$type": "ModelCore.Universal.AliasValue.AliasString, Assembly-CSharp",
+      "_value": "SomeText",
+      "_alias": "ALias",
+      "Root": {
+        "$ref": "1"
+      }
+    }
+  },
+  "Alias": "WorldPrefab",
+  "Root": {
+    "$id": "5",
+    "$type": "ModelCore.RootModel, Assembly-CSharp",
+    "_modeles": {
+      "$id": "6",
+      "$type": "System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[ModelCore.Model, Assembly-CSharp]], mscorlib",
+      "B_Rnd=1870": {
+        "$id": "7",
+        "$type": "ModelCore.Universal.AliasValue.AliasBool, Assembly-CSharp",
+        "_value": false,
+        "_alias": "Rnd=1870",
+        "Root": {
+          "$ref": "5"
+        }
+      },
+      "F_Rnd=-7514": {
+        "$id": "8",
+        "$type": "ModelCore.Universal.AliasValue.AliasFloat, Assembly-CSharp",
+        "_value": 0.0,
+        "_alias": "Rnd=-7514",
+        "Root": {
+          "$ref": "5"
+        }
+      },
+      "I_Rnd=-9088": {
+        "$id": "9",
+        "$type": "ModelCore.Universal.AliasValue.AliasInt, Assembly-CSharp",
+        "_value": 0,
+        "_alias": "Rnd=-9088",
+        "Root": {
+          "$ref": "5"
+        }
+      },
+      "Root_WorldPrefab": {
+        "$ref": "1"
+      }
+    },
+    "Alias": "Asteroid",
+    "Root": {
+      "$id": "10",
+      "$type": "ModelCore.RootModel, Assembly-CSharp",
+      "_modeles": {
+        "$id": "11",
+        "$type": "System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[ModelCore.Model, Assembly-CSharp]], mscorlib",
+        "Root_Asteroid": {
+          "$ref": "5"
+        }
+      },
+      "Alias": "Enemy",
+      "Root": {
+        "$id": "12",
+        "$type": "ModelCore.RootModel, Assembly-CSharp",
+        "_modeles": {
+          "$id": "13",
+          "$type": "System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[ModelCore.Model, Assembly-CSharp]], mscorlib",
+          "Root_Enemy": {
+            "$ref": "10"
+          }
+        },
+        "Alias": "Data",
+        "Root": {
+          "$id": "14",
+          "$type": "ModelCore.RootModel, Assembly-CSharp",
+          "_modeles": {
+            "$id": "15",
+            "$type": "System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[ModelCore.Model, Assembly-CSharp]], mscorlib",
+            "Root_Data": {
+              "$ref": "12"
+            },
+            "Root_Game": {
+              "$id": "16",
+              "$type": "ModelCore.RootModel, Assembly-CSharp",
+              "_modeles": {
+                "$id": "17",
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[ModelCore.Model, Assembly-CSharp]], mscorlib",
+                "Root_Screens": {
+                  "$id": "18",
+                  "$type": "ModelCore.RootModel, Assembly-CSharp",
+                  "_modeles": {
+                    "$id": "19",
+                    "$type": "System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[ModelCore.Model, Assembly-CSharp]], mscorlib",
+                    "Root_MainMenu": {
+                      "$id": "20",
+                      "$type": "ModelCore.RootModel, Assembly-CSharp",
+                      "_modeles": {
+                        "$id": "21",
+                        "$type": "System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[ModelCore.Model, Assembly-CSharp]], mscorlib",
+                        "Root_Fade": {
+                          "$id": "22",
+                          "$type": "ModelCore.RootModel, Assembly-CSharp",
+                          "_modeles": {
+                            "$id": "23",
+                            "$type": "System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[ModelCore.Model, Assembly-CSharp]], mscorlib",
+                            "B_IsOn": {
+                              "$id": "24",
+                              "$type": "ModelCore.Universal.AliasValue.AliasBool, Assembly-CSharp",
+                              "_value": false,
+                              "_alias": "IsOn",
+                              "Root": {
+                                "$ref": "22"
+                              }
+                            },
+                            "Script_Js-26": {
+                              "$id": "25",
+                              "$type": "ModelCore.Universal.JsEn, Assembly-CSharp",
+                              "_script": "Js-26",
+                              "NameScript": "Js-26",
+                              "Root": {
+                                "$ref": "22"
+                              }
+                            },
+                            "Cs_Custom name": {
+                              "$id": "26",
+                              "$type": "ModelCore.Universal.CsEn, Assembly-CSharp",
+                              "Script": {
+                                "$id": "27",
+                                "$type": "ModelCore.Universal.ExampleSctipt, Assembly-CSharp",
+                                "publicF": 0.0,
+                                "publicI": 0,
+                                "publicS": null,
+                                "publicB": false,
+                                "v3": {
+                                  "$id": "28",
+                                  "$type": "UnityEngine.Vector3, UnityEngine.CoreModule",
+                                  "x": 0.0,
+                                  "y": 0.0,
+                                  "z": 0.0,
+                                  "magnitude": 0.0,
+                                  "sqrMagnitude": 0.0
+                                },
+                                "v2": {
+                                  "$id": "29",
+                                  "$type": "UnityEngine.Vector2, UnityEngine.CoreModule",
+                                  "x": 0.0,
+                                  "y": 0.0,
+                                  "magnitude": 0.0,
+                                  "sqrMagnitude": 0.0
+                                },
+                                "CustomStruct": {
+                                  "$id": "30",
+                                  "$type": "ModelCore.Universal.SomeSctruct, Assembly-CSharp",
+                                  "a": 0,
+                                  "B": 0
+                                },
+                                "privateJsonF": 0.0,
+                                "TestEnum": 0
+                              },
+                              "Root": {
+                                "$ref": "22"
+                              }
+                            }
+                          },
+                          "Alias": "Fade",
+                          "Root": {
+                            "$ref": "20"
+                          }
+                        },
+                        "Root_ButtonMain": {
+                          "$id": "31",
+                          "$type": "ModelCore.RootModel, Assembly-CSharp",
+                          "_modeles": {
+                            "$id": "32",
+                            "$type": "System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[ModelCore.Model, Assembly-CSharp]], mscorlib",
+                            "B_IsOn": {
+                              "$id": "33",
+                              "$type": "ModelCore.Universal.AliasValue.AliasBool, Assembly-CSharp",
+                              "_value": false,
+                              "_alias": "IsOn",
+                              "Root": {
+                                "$ref": "31"
+                              }
+                            }
+                          },
+                          "Alias": "ButtonMain",
+                          "Root": {
+                            "$ref": "20"
+                          }
+                        },
+                        "Root_Shop": {
+                          "$id": "34",
+                          "$type": "ModelCore.RootModel, Assembly-CSharp",
+                          "_modeles": {
+                            "$id": "35",
+                            "$type": "System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[ModelCore.Model, Assembly-CSharp]], mscorlib",
+                            "B_IsOn": {
+                              "$id": "36",
+                              "$type": "ModelCore.Universal.AliasValue.AliasBool, Assembly-CSharp",
+                              "_value": false,
+                              "_alias": "IsOn",
+                              "Root": {
+                                "$ref": "34"
+                              }
+                            }
+                          },
+                          "Alias": "Shop",
+                          "Root": {
+                            "$ref": "20"
+                          }
+                        }
+                      },
+                      "Alias": "MainMenu",
+                      "Root": {
+                        "$ref": "18"
+                      }
+                    }
+                  },
+                  "Alias": "Screens",
+                  "Root": {
+                    "$ref": "16"
+                  }
+                },
+                "Root_Arena1": {
+                  "$id": "37",
+                  "$type": "ModelCore.RootModel, Assembly-CSharp",
+                  "_modeles": {
+                    "$id": "38",
+                    "$type": "System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[ModelCore.Model, Assembly-CSharp]], mscorlib",
+                    "EventT_NewEnemy": {
+                      "$id": "39",
+                      "$type": "ModelCore.Universal.RootEvent, Assembly-CSharp",
+                      "Alias": "NewEnemy",
+                      "Root": {
+                        "$ref": "37"
+                      }
+                    },
+                    "Cs_ExampleScript2": {
+                      "$id": "40",
+                      "$type": "ModelCore.Universal.CsEn, Assembly-CSharp",
+                      "Script": {
+                        "$id": "41",
+                        "$type": "ModelCore.Universal.ExampleScript2, Assembly-CSharp"
+                      },
+                      "Root": {
+                        "$ref": "37"
+                      }
+                    },
+                    "Root_Content": {
+                      "$id": "42",
+                      "$type": "ModelCore.RootModel, Assembly-CSharp",
+                      "_modeles": {
+                        "$id": "43",
+                        "$type": "System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[ModelCore.Model, Assembly-CSharp]], mscorlib"
+                      },
+                      "Alias": "Content",
+                      "Root": {
+                        "$ref": "37"
+                      }
+                    }
+                  },
+                  "Alias": "Arena1",
+                  "Root": {
+                    "$ref": "16"
+                  }
+                }
+              },
+              "Alias": "Game",
+              "Root": {
+                "$ref": "14"
+              }
+            }
+          },
+          "Alias": "Main",
+          "Root": null
+        }
+      }
+    }
+  }
+}

@@ -13,7 +13,7 @@ namespace DIContainer.Editor
         public override void OnInspectorGUI()
         {
             base.OnInspectorGUI();
-            if(GUILayout.Button("Show Single")) ViewDi.Show();
+            if(GUILayout.Button("Show Single")) ViewDi.ShowDebug();
         }
 
     }
@@ -21,7 +21,7 @@ namespace DIContainer.Editor
     public class ViewDi : EditorWindow
     {
         [MenuItem("MVP/DI/Show register single")]
-        public static void Show() => GetWindow<ViewDi>().ShowAuxWindow();
+        public static void ShowDebug() => GetWindow<ViewDi>().ShowAuxWindow();
 
         public void CreateGUI()
         {
