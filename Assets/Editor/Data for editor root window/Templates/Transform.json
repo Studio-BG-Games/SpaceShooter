@@ -1,0 +1,142 @@
+{
+  "$id": "1",
+  "$type": "ModelCore.RootModel, Assembly-CSharp",
+  "_modeles": {
+    "$id": "2",
+    "$type": "System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[ModelCore.Model, Assembly-CSharp]], mscorlib",
+    "V3_Position": {
+      "$id": "3",
+      "$type": "ModelCore.Universal.AliasValue.AliasVector3, Assembly-CSharp",
+      "_value": {
+        "$id": "4",
+        "$type": "UnityEngine.Vector3, UnityEngine.CoreModule",
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "_alias": "Position",
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0,
+      "Root": {
+        "$ref": "1"
+      }
+    },
+    "V3_Rotation": {
+      "$id": "5",
+      "$type": "ModelCore.Universal.AliasValue.AliasVector3, Assembly-CSharp",
+      "_value": {
+        "$id": "6",
+        "$type": "UnityEngine.Vector3, UnityEngine.CoreModule",
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "_alias": "Rotation",
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0,
+      "Root": {
+        "$ref": "1"
+      }
+    },
+    "V3_Scale": {
+      "$id": "7",
+      "$type": "ModelCore.Universal.AliasValue.AliasVector3, Assembly-CSharp",
+      "_value": {
+        "$id": "8",
+        "$type": "UnityEngine.Vector3, UnityEngine.CoreModule",
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "_alias": "Scale",
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0,
+      "Root": {
+        "$ref": "1"
+      }
+    }
+  },
+  "Alias": "Transform",
+  "Root": {
+    "$id": "9",
+    "$type": "ModelCore.RootModel, Assembly-CSharp",
+    "_modeles": {
+      "$id": "10",
+      "$type": "System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[ModelCore.Model, Assembly-CSharp]], mscorlib",
+      "Root_Material-5780": {
+        "$id": "11",
+        "$type": "ModelCore.RootModel, Assembly-CSharp",
+        "_modeles": {
+          "$id": "12",
+          "$type": "System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[ModelCore.Model, Assembly-CSharp]], mscorlib",
+          "S_Pack": {
+            "$id": "13",
+            "$type": "ModelCore.Universal.AliasValue.AliasString, Assembly-CSharp",
+            "_value": "alias pack",
+            "_alias": "Pack",
+            "Root": {
+              "$ref": "11"
+            }
+          },
+          "S_Id": {
+            "$id": "14",
+            "$type": "ModelCore.Universal.AliasValue.AliasString, Assembly-CSharp",
+            "_value": "id mat",
+            "_alias": "Id",
+            "Root": {
+              "$ref": "11"
+            }
+          }
+        },
+        "Alias": "Material-5780",
+        "Root": {
+          "$ref": "9"
+        }
+      },
+      "Root_SkinMesh-7572": {
+        "$id": "15",
+        "$type": "ModelCore.RootModel, Assembly-CSharp",
+        "_modeles": {
+          "$id": "16",
+          "$type": "System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[ModelCore.Model, Assembly-CSharp]], mscorlib",
+          "S_Pack": {
+            "$id": "17",
+            "$type": "ModelCore.Universal.AliasValue.AliasString, Assembly-CSharp",
+            "_value": "alias pack",
+            "_alias": "Pack",
+            "Root": {
+              "$ref": "15"
+            }
+          },
+          "S_Id": {
+            "$id": "18",
+            "$type": "ModelCore.Universal.AliasValue.AliasString, Assembly-CSharp",
+            "_value": "id mat",
+            "_alias": "Id",
+            "Root": {
+              "$ref": "15"
+            }
+          }
+        },
+        "Alias": "SkinMesh-7572",
+        "Root": {
+          "$ref": "9"
+        }
+      },
+      "Root_Transform": {
+        "$ref": "1"
+      }
+    },
+    "Alias": "Main",
+    "Root": null
+  }
+}

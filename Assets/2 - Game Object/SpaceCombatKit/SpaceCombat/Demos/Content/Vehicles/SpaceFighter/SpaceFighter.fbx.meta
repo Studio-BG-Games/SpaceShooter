@@ -1,0 +1,351 @@
+fileFormatVersion: 2
+guid: d75bdaf40bd3cd946962686a7b3a02cb
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Camera
+    100002: SpaceFighterHologram
+    100004: SpaceFighterHologram.001
+    100006: SpaceFighterHologram.002
+    100008: SpaceFighterHologram.003
+    100010: SpaceFighterHologram.004
+    100012: Sun
+    100014: //RootNode
+    100016: SpaceFighterHologram.005
+    100018: Canopy
+    100020: SpaceFighter
+    100022: Canopy.003
+    100024: Body_01
+    100026: JoystickBase
+    100028: SpaceFighter.001
+    100030: Bip001
+    100032: Bip001 Head
+    100034: Bip001 Head_end
+    100036: Bip001 L Calf
+    100038: Bip001 L Clavicle
+    100040: Bip001 L Finger0
+    100042: Bip001 L Finger01
+    100044: Bip001 L Finger02
+    100046: Bip001 L Finger02_end
+    100048: Bip001 L Finger1
+    100050: Bip001 L Finger11
+    100052: Bip001 L Finger12
+    100054: Bip001 L Finger12_end
+    100056: Bip001 L Finger2
+    100058: Bip001 L Finger21
+    100060: Bip001 L Finger22
+    100062: Bip001 L Finger22_end
+    100064: Bip001 L Finger3
+    100066: Bip001 L Finger31
+    100068: Bip001 L Finger32
+    100070: Bip001 L Finger32_end
+    100072: Bip001 L Finger4
+    100074: Bip001 L Finger41
+    100076: Bip001 L Finger42
+    100078: Bip001 L Finger42_end
+    100080: Bip001 L Foot
+    100082: Bip001 L Forearm
+    100084: Bip001 L Hand
+    100086: Bip001 L Thigh
+    100088: Bip001 L Toe0
+    100090: Bip001 L Toe0_end
+    100092: Bip001 L UpperArm
+    100094: Bip001 Neck
+    100096: Bip001 Pelvis
+    100098: Bip001 R Calf
+    100100: Bip001 R Clavicle
+    100102: Bip001 R Finger0
+    100104: Bip001 R Finger01
+    100106: Bip001 R Finger02
+    100108: Bip001 R Finger02_end
+    100110: Bip001 R Finger1
+    100112: Bip001 R Finger11
+    100114: Bip001 R Finger12
+    100116: Bip001 R Finger12_end
+    100118: Bip001 R Finger2
+    100120: Bip001 R Finger21
+    100122: Bip001 R Finger22
+    100124: Bip001 R Finger22_end
+    100126: Bip001 R Finger3
+    100128: Bip001 R Finger31
+    100130: Bip001 R Finger32
+    100132: Bip001 R Finger32_end
+    100134: Bip001 R Finger4
+    100136: Bip001 R Finger41
+    100138: Bip001 R Finger42
+    100140: Bip001 R Finger42_end
+    100142: Bip001 R Foot
+    100144: Bip001 R Forearm
+    100146: Bip001 R Hand
+    100148: Bip001 R Thigh
+    100150: Bip001 R Toe0
+    100152: Bip001 R Toe0_end
+    100154: Bip001 R UpperArm
+    100156: Bip001 Spine
+    100158: Bip001 Spine1
+    100160: Bip001 Spine2
+    100162: Exhaust
+    100164: CockpitControls
+    100166: Fuselage
+    400000: Camera
+    400002: SpaceFighterHologram
+    400004: SpaceFighterHologram.001
+    400006: SpaceFighterHologram.002
+    400008: SpaceFighterHologram.003
+    400010: SpaceFighterHologram.004
+    400012: Sun
+    400014: //RootNode
+    400016: SpaceFighterHologram.005
+    400018: Canopy
+    400020: SpaceFighter
+    400022: Canopy.003
+    400024: Body_01
+    400026: JoystickBase
+    400028: SpaceFighter.001
+    400030: Bip001
+    400032: Bip001 Head
+    400034: Bip001 Head_end
+    400036: Bip001 L Calf
+    400038: Bip001 L Clavicle
+    400040: Bip001 L Finger0
+    400042: Bip001 L Finger01
+    400044: Bip001 L Finger02
+    400046: Bip001 L Finger02_end
+    400048: Bip001 L Finger1
+    400050: Bip001 L Finger11
+    400052: Bip001 L Finger12
+    400054: Bip001 L Finger12_end
+    400056: Bip001 L Finger2
+    400058: Bip001 L Finger21
+    400060: Bip001 L Finger22
+    400062: Bip001 L Finger22_end
+    400064: Bip001 L Finger3
+    400066: Bip001 L Finger31
+    400068: Bip001 L Finger32
+    400070: Bip001 L Finger32_end
+    400072: Bip001 L Finger4
+    400074: Bip001 L Finger41
+    400076: Bip001 L Finger42
+    400078: Bip001 L Finger42_end
+    400080: Bip001 L Foot
+    400082: Bip001 L Forearm
+    400084: Bip001 L Hand
+    400086: Bip001 L Thigh
+    400088: Bip001 L Toe0
+    400090: Bip001 L Toe0_end
+    400092: Bip001 L UpperArm
+    400094: Bip001 Neck
+    400096: Bip001 Pelvis
+    400098: Bip001 R Calf
+    400100: Bip001 R Clavicle
+    400102: Bip001 R Finger0
+    400104: Bip001 R Finger01
+    400106: Bip001 R Finger02
+    400108: Bip001 R Finger02_end
+    400110: Bip001 R Finger1
+    400112: Bip001 R Finger11
+    400114: Bip001 R Finger12
+    400116: Bip001 R Finger12_end
+    400118: Bip001 R Finger2
+    400120: Bip001 R Finger21
+    400122: Bip001 R Finger22
+    400124: Bip001 R Finger22_end
+    400126: Bip001 R Finger3
+    400128: Bip001 R Finger31
+    400130: Bip001 R Finger32
+    400132: Bip001 R Finger32_end
+    400134: Bip001 R Finger4
+    400136: Bip001 R Finger41
+    400138: Bip001 R Finger42
+    400140: Bip001 R Finger42_end
+    400142: Bip001 R Foot
+    400144: Bip001 R Forearm
+    400146: Bip001 R Hand
+    400148: Bip001 R Thigh
+    400150: Bip001 R Toe0
+    400152: Bip001 R Toe0_end
+    400154: Bip001 R UpperArm
+    400156: Bip001 Spine
+    400158: Bip001 Spine1
+    400160: Bip001 Spine2
+    400162: Exhaust
+    400164: CockpitControls
+    400166: Fuselage
+    2000000: Camera
+    2100000: Base
+    2100002: Trim
+    2100004: Canopy
+    2100006: Body_01
+    2100008: Plastic_Red
+    2100010: Plastic_Grey
+    2100012: Canopy_Outside
+    2100014: Canopy_Inside
+    2300000: SpaceFighterHologram
+    2300002: SpaceFighterHologram.001
+    2300004: SpaceFighterHologram.002
+    2300006: SpaceFighterHologram.003
+    2300008: SpaceFighterHologram.004
+    2300010: //RootNode
+    2300012: SpaceFighterHologram.005
+    2300014: Canopy
+    2300016: SpaceFighter
+    2300018: Canopy.003
+    2300020: Body_01
+    2300022: JoystickBase
+    2300024: SpaceFighter.001
+    2300026: Exhaust
+    2300028: CockpitControls
+    2300030: Fuselage
+    3300000: SpaceFighterHologram
+    3300002: SpaceFighterHologram.001
+    3300004: SpaceFighterHologram.002
+    3300006: SpaceFighterHologram.003
+    3300008: SpaceFighterHologram.004
+    3300010: //RootNode
+    3300012: SpaceFighterHologram.005
+    3300014: Canopy
+    3300016: SpaceFighter
+    3300018: Canopy.003
+    3300020: Body_01
+    3300022: JoystickBase
+    3300024: SpaceFighter.001
+    3300026: Exhaust
+    3300028: CockpitControls
+    3300030: Fuselage
+    4300000: SpaceFighterHologram
+    4300002: SpaceFighterHologram.001
+    4300004: SpaceFighterHologram.002
+    4300006: SpaceFighterHologram.003
+    4300008: SpaceFighterHologram.004
+    4300010: SpaceFighterHologram.005
+    4300012: SpaceFighter
+    4300014: Canopy
+    4300016: Canopy.003
+    4300018: Body_01
+    4300020: JoystickBase
+    4300022: SpaceFighter.001
+    4300024: Exhaust
+    4300026: Fuselage
+    4300028: CockpitControls
+    10800000: Sun
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Base
+    second: {fileID: 2100000, guid: d4e83f6c339d9bc4f806641000ccc8ec, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Canopy
+    second: {fileID: 2100000, guid: d5b0d2f18a0ed06458b6ec990e225a5a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Canopy_Inside
+    second: {fileID: 2100000, guid: 3e1d77b518b15544984c7f3befaa2525, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Canopy_Outside
+    second: {fileID: 2100000, guid: d5b0d2f18a0ed06458b6ec990e225a5a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Plastic_Grey
+    second: {fileID: 2100000, guid: 5e14e295c9b0d1c4faaddb774dfb3319, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Plastic_Red
+    second: {fileID: 2100000, guid: 8712995bbce76954b9725f795e4a1cff, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Trim
+    second: {fileID: 2100000, guid: abdb7a3cf7fbc4c438b17d6a579d0321, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

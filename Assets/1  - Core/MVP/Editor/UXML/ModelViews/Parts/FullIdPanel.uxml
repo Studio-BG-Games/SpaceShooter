@@ -1,0 +1,3 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <ui:Label text="Full Id = Root_Dfg" display-tooltip-when-elided="true" name="FullId" style="background-color: rgb(190, 125, 125); padding-left: 2px; margin-left: 3px; padding-right: 2px; padding-top: 2px; padding-bottom: 2px; color: rgb(255, 255, 255);" />
+</ui:UXML>

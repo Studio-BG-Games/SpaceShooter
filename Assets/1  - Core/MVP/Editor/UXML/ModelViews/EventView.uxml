@@ -1,0 +1,12 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <ui:Template name="FullIdPanel" src="Parts/FullIdPanel.uxml" />
+    <ui:VisualElement name="Event" style="flex-direction: row; align-items: center; justify-content: flex-start; min-width: auto; -unity-text-align: upper-left;">
+        <ui:Button text="-" display-tooltip-when-elided="true" name="Btn_Delete" style="margin-left: 3px; margin-right: 3px; margin-top: 0; margin-bottom: 0; width: 20px; background-color: rgb(229, 77, 74);" />
+        <ui:VisualElement name="Icon" style="background-image: url(&apos;/Assets/1  - Core/ConsoleModul/Sprites/129-1293760_search-engines-like-google-and-youtube-are-tailoring.png&apos;); width: 20px; height: 20px; -unity-background-scale-mode: scale-to-fit;" />
+        <ui:Label text="Prefix_" display-tooltip-when-elided="true" name="Prefix" class="SizeText20" />
+        <ui:TextField picking-mode="Ignore" value="fgdcfhdfgjfk" text="Alias" name="Alias" class="SizeText20 FielModel" style="margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0;" />
+        <ui:Label text=":" display-tooltip-when-elided="true" name="Label" class="SizeText20" style="padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; flex-basis: auto; -unity-font-style: bold;" />
+        <ui:Label text="Type - Empty" display-tooltip-when-elided="true" name="Type" class="SizeText20" style="padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; flex-basis: auto; -unity-font-style: normal;" />
+        <ui:Instance template="FullIdPanel" name="FullIdPanel" />
+    </ui:VisualElement>
+</ui:UXML>

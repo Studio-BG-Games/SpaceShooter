@@ -1,0 +1,161 @@
+fileFormatVersion: 2
+guid: 357a319b805c5d34f8098891ea2be380
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Canopy
+    100002: CockpitControls
+    100004: Exhaust.001
+    100006: Fuselage.001
+    100008: //RootNode
+    100010: Exhaust_Heavy
+    100012: Fuselage_Heavy
+    400000: Canopy
+    400002: CockpitControls
+    400004: Exhaust.001
+    400006: Fuselage.001
+    400008: //RootNode
+    400010: Exhaust_Heavy
+    400012: Fuselage_Heavy
+    2100000: Trim
+    2100002: Canopy_Outside
+    2100004: Canopy_Inside
+    2100006: Plastic_Red
+    2100008: Base
+    2100010: Plastic_Grey
+    2300000: Canopy
+    2300002: CockpitControls
+    2300004: Exhaust.001
+    2300006: Fuselage.001
+    2300008: //RootNode
+    2300010: Exhaust_Heavy
+    2300012: Fuselage_Heavy
+    3300000: Canopy
+    3300002: CockpitControls
+    3300004: Exhaust.001
+    3300006: Fuselage.001
+    3300008: //RootNode
+    3300010: Exhaust_Heavy
+    3300012: Fuselage_Heavy
+    4300000: Canopy
+    4300002: CockpitControls
+    4300004: Fuselage.001
+    4300006: Exhaust.001
+    4300008: Fuselage_Heavy
+    4300010: Exhaust_Heavy
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Base
+    second: {fileID: 2100000, guid: d4e83f6c339d9bc4f806641000ccc8ec, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Canopy_Inside
+    second: {fileID: 2100000, guid: 3e1d77b518b15544984c7f3befaa2525, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Canopy_Outside
+    second: {fileID: 2100000, guid: d5b0d2f18a0ed06458b6ec990e225a5a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Plastic_Grey
+    second: {fileID: 2100000, guid: 5e14e295c9b0d1c4faaddb774dfb3319, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Plastic_Red
+    second: {fileID: 2100000, guid: 8712995bbce76954b9725f795e4a1cff, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Trim
+    second: {fileID: 2100000, guid: abdb7a3cf7fbc4c438b17d6a579d0321, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

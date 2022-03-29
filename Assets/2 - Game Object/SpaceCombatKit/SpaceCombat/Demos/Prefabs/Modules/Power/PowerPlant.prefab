@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1762605991310544
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4353879813334204}
+  - component: {fileID: 114032748402699698}
+  - component: {fileID: 114208612914090424}
+  m_Layer: 0
+  m_Name: PowerPlant
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4353879813334204
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1762605991310544}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 36.93225, y: 3.3583984, z: -121.40497}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114032748402699698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1762605991310544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ba4537787c17f54dbd52105d05cb68c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  label: POWER PLANT
+  description: Power plant for engines and energy weapons.
+  menuSprite: {fileID: 21300000, guid: 1255d1aca62224f4c9fe24eada1a6e07, type: 3}
+  moduleType: {fileID: 11400000, guid: 7ea3bc0198838154282eebc28f5f32bf, type: 2}
+  onModuleMounted:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VSX.UniversalVehicleCombat.OnModuleMountedEventHandler, Assembly-CSharp,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  onModuleUnmounted:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VSX.UniversalVehicleCombat.OnModuleUnmountedEventHandler, Assembly-CSharp,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  onModuleActivationStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VSX.UniversalVehicleCombat.OnModuleActivationStateChangedEventHandler,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  onModuleReset:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VSX.UniversalVehicleCombat.OnModuleResetEventHandler, Assembly-CSharp,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  onSetRootTransform:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VSX.UniversalVehicleCombat.OnSetRootTransformEventHandler, Assembly-CSharp,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+--- !u!114 &114208612914090424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1762605991310544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69b2b9dc714c4e544b16b89b1ca37130, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  output: 5000

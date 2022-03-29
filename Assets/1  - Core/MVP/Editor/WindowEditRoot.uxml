@@ -1,0 +1,45 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <Style src="USS-s/BackgroundButton.uss" />
+    <ui:VisualElement style="height: 2000px;">
+        <ui:VisualElement style="height: 24px; background-color: rgb(156, 154, 154); align-items: center; flex-direction: row; justify-content: flex-start;">
+            <ui:Button text="Refresh" display-tooltip-when-elided="true" name="Refresh" style="background-color: rgb(179, 255, 251);" />
+            <ui:Button text="Hide all" display-tooltip-when-elided="true" name="Btn_HideAll" style="background-color: rgb(179, 255, 251);" />
+            <ui:VisualElement style="height: 100%; width: 4px; background-color: rgb(111, 103, 103); margin-left: 0; margin-right: 0; padding-left: 3px; margin-top: 0; margin-bottom: 0; padding-right: 3px;" />
+            <ui:Button text="Save On Path" display-tooltip-when-elided="true" name="SaveByPath" style="background-color: rgb(116, 248, 127);" />
+            <ui:TextField picking-mode="Ignore" value="filler text" text="2 - Game Object/RootData" name="Path" style="min-width: 150px;" />
+            <ui:TextField picking-mode="Ignore" value="filler text" text="NewNameFile" name="NameFile" style="min-width: 90px;" />
+            <ui:VisualElement style="height: 100%; width: 4px; background-color: rgb(111, 103, 103); margin-left: 0; margin-right: 0; padding-left: 3px; margin-top: 0; margin-bottom: 0; padding-right: 3px;" />
+            <ui:Toggle value="false" name="EnableSave" />
+            <ui:Button text="Save To" display-tooltip-when-elided="true" name="Save" style="background-color: rgb(116, 248, 127);" />
+            <uie:ObjectField allow-scene-objects="false" type="UnityEngine.TextAsset, UnityEngine.CoreModule" name="JsonFile" style="height: 100%; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; align-items: center; justify-content: flex-end; width: 157px;" />
+            <ui:Button text="Load from" display-tooltip-when-elided="true" name="Load" style="background-color: rgb(221, 221, 130);" />
+            <ui:Label text="Only json and txt:p" display-tooltip-when-elided="false" name="tooltip" style="font-size: 10px; -unity-text-align: middle-left; -unity-font-style: bold-and-italic;" />
+        </ui:VisualElement>
+        <ui:Label display-tooltip-when-elided="false" name="Message" text="Message" style="font-size: 11px; -unity-text-align: middle-left; -unity-font-style: italic; max-height: 27px; min-height: 11px; background-color: rgb(111, 103, 103);" />
+        <ui:VisualElement style="height: 6px; background-color: rgb(111, 103, 103); width: 100%;" />
+        <ui:VisualElement style="flex-direction: row-reverse; justify-content: flex-start; align-items: stretch; -unity-font-style: normal; -unity-text-align: middle-left; height: auto; flex-wrap: nowrap; flex-basis: auto; min-height: auto; flex-grow: 1;">
+            <ui:ScrollView scroll-deceleration-rate="0,135" elasticity="0,1" name="ViewRoot" mode="VerticalAndHorizontal" show-horizontal-scroller="true" show-vertical-scroller="true" style="width: 100%; background-color: rgb(224, 224, 224); align-items: flex-start; flex-grow: 1; min-height: auto; height: auto;" />
+            <ui:VisualElement style="height: auto; background-color: rgb(111, 103, 103); width: 6px; flex-grow: 1;" />
+            <ui:ScrollView scroll-deceleration-rate="0,135" elasticity="0,1" name="Buttons" show-horizontal-scroller="false" show-vertical-scroller="true" style="background-color: rgb(200, 199, 199); width: 315px; align-items: stretch; flex-grow: 1;">
+                <ui:VisualElement name="ButtonsControlRoot" style="flex-direction: column; margin-top: 3px;">
+                    <ui:VisualElement name="Add" style="flex-direction: row; justify-content: center; flex-shrink: 0; flex-grow: 1;">
+                        <ui:Button text="New File" display-tooltip-when-elided="true" binding-path="Btn_NewRoot" name="btn_Create" style="flex-shrink: initial; flex-basis: auto; margin-left: 3px; margin-right: 0; margin-top: 1px; margin-bottom: 1px; flex-grow: 0; width: 170px;" />
+                        <ui:TextField picking-mode="Ignore" text="Main" mask-character="Text_NameNewRoot" name="S_NameForNew" value="Main" style="flex-shrink: 1; width: 122px; flex-grow: 0; margin-right: 3px;" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="SaveName" style="flex-direction: row; justify-content: center; flex-shrink: 0; flex-grow: 1;" />
+                    <ui:VisualElement name="BlackLine" style="height: 4px; background-color: rgba(55, 55, 55, 0.32); margin-top: 2px; margin-bottom: 2px; padding-bottom: 0;" />
+                </ui:VisualElement>
+                <ui:Button text="Show/Hide Create Button" display-tooltip-when-elided="true" view-data-key="Btn_ShowHideCreate" name="ShowHideCreate" style="color: rgb(0, 0, 0); background-color: rgb(117, 216, 255);" />
+                <ui:VisualElement name="CreateButtons" view-data-key="Element_CreateButtons" class="BackgroundButton" style="background-color: rgb(111, 103, 103); margin-left: 3px; margin-right: 3px; margin-top: 3px; margin-bottom: 3px; padding-left: 4px; padding-right: 4px; padding-top: 6px; padding-bottom: 6px;" />
+                <ui:VisualElement name="BlackLine" style="height: 4px; background-color: rgba(55, 55, 55, 0.32); margin-top: 2px; margin-bottom: 2px; padding-bottom: 0;" />
+                <ui:VisualElement style="flex-direction: row; justify-content: space-around; align-items: center; flex-grow: 1; flex-shrink: 0;">
+                    <ui:Label text="Templates" display-tooltip-when-elided="true" style="font-size: 13px; -unity-text-align: upper-center; -unity-font-style: bold; flex-grow: 1;" />
+                    <ui:Button text="Show/Hide" display-tooltip-when-elided="true" name="Btn_ShowHideTemplate" style="width: auto; background-color: rgb(117, 216, 255); flex-wrap: nowrap; flex-direction: row; justify-content: center; align-items: auto; flex-grow: 1;" />
+                </ui:VisualElement>
+                <ui:Button text="Create from selected" display-tooltip-when-elided="true" name="Btn_CreateTemplate" style="width: auto; background-color: rgb(255, 255, 255); flex-wrap: nowrap; flex-direction: row; justify-content: center; align-items: auto; flex-grow: 1;" />
+                <ui:ScrollView scroll-deceleration-rate="0,135" elasticity="0,1" name="PanelTemplates" class="BackgroundButton" style="background-color: rgb(111, 103, 103); margin-left: 3px; margin-right: 3px; margin-top: 3px; margin-bottom: 3px; padding-left: 4px; padding-right: 4px; padding-top: 6px; padding-bottom: 6px; height: 225px;" />
+                <ui:VisualElement name="BlackLine" style="height: 4px; background-color: rgba(55, 55, 55, 0.32); margin-top: 2px; margin-bottom: 2px; padding-bottom: 0;" />
+            </ui:ScrollView>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

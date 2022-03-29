@@ -1,0 +1,9 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <ui:VisualElement name="ViewScript" style="background-color: rgba(182, 182, 182, 0); padding-left: 1px; padding-right: 1px; padding-top: 1px; padding-bottom: 1px; margin-left: 3px; margin-right: 3px; margin-top: 3px; margin-bottom: 3px; flex-direction: column;">
+        <ui:VisualElement style="flex-direction: row;">
+            <ui:VisualElement style="background-image: url(&apos;/Assets/1  - Core/MVP/Editor/Images/4b6e7703-193c-4e80-922c-e6fe4fa53da0.png&apos;); width: 17px; height: 15px;" />
+            <ui:Label text="Type&amp;Id" display-tooltip-when-elided="true" name="NameScript" style="white-space: normal;" />
+        </ui:VisualElement>
+        <ui:Label text="Краткая информация о скрите взятая из атрибута" display-tooltip-when-elided="true" name="InfoScript" style="white-space: normal; color: rgb(255, 255, 255); background-color: rgb(147, 129, 129); margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-top: 2px; padding-bottom: 2px;" />
+    </ui:VisualElement>
+</ui:UXML>

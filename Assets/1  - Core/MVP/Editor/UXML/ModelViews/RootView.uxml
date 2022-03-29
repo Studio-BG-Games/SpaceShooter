@@ -1,0 +1,18 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <Style src="/Assets/1  - Core/MVP/Editor/USS-s/SizeText20.uss" />
+    <ui:VisualElement name="Info" class="SizeText20" style="flex-direction: row; background-color: rgb(229, 229, 229); margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-top: 0; padding-bottom: 1px; align-items: center; padding-left: 0; padding-right: 0;">
+        <ui:Foldout name="ShowHideTog" value="false" />
+        <ui:Button text="o" display-tooltip-when-elided="true" name="Btn_Select" style="margin-left: 3px; margin-right: 3px; margin-top: 0; margin-bottom: 0; width: 20px; background-color: rgb(94, 255, 81);" />
+        <ui:Label text="Rooot_" display-tooltip-when-elided="true" name="Prefix" class="SizeText20" />
+        <ui:TextField value="dfdg" text="dgdg" name="Alias" class="FielModel SizeText20" style="margin-left: 0; margin-top: 0; margin-right: 0; margin-bottom: 0; flex-direction: row; max-width: 350px;" />
+        <ui:Button text="-" display-tooltip-when-elided="true" name="Btn_Delete" style="margin-left: 3px; margin-right: 3px; margin-top: 0; margin-bottom: 0; width: 20px; background-color: rgb(229, 77, 74);" />
+        <ui:Button text="C" display-tooltip-when-elided="true" name="Btn_Copy" style="margin-left: 3px; margin-right: 3px; margin-top: 0; margin-bottom: 0; width: 20px; background-color: rgb(243, 253, 77);" />
+        <ui:Button text="Cp" display-tooltip-when-elided="true" name="Btn_CopyParent" style="margin-left: 3px; margin-right: 3px; margin-top: 0; margin-bottom: 0; width: 20px; background-color: rgb(243, 253, 77);" />
+        <ui:VisualElement style="font-size: 14px;">
+            <ui:Label text="Full Id = Root_Dfg" display-tooltip-when-elided="true" name="FullId" style="background-color: rgb(190, 125, 125); padding-left: 2px; margin-left: 3px; padding-right: 2px; padding-top: 2px; padding-bottom: 2px; color: rgb(255, 255, 255); font-size: 11px;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:VisualElement name="ttt" style="flex-direction: column; -unity-slice-left: 0; -unity-slice-top: 0; -unity-slice-right: 0; -unity-slice-bottom: 0; left: auto; position: relative; display: flex; margin-left: 0; color: rgb(200, 200, 200); min-height: auto; background-color: rgb(140, 136, 136);">
+        <ui:VisualElement name="container" style="flex-direction: column; -unity-slice-left: 0; -unity-slice-top: 0; -unity-slice-right: 0; -unity-slice-bottom: 0; left: auto; position: relative; display: flex; margin-left: 35px; color: rgb(200, 200, 200); min-height: 0; background-color: rgb(224, 224, 224);" />
+    </ui:VisualElement>
+</ui:UXML>

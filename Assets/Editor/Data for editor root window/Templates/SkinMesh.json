@@ -1,0 +1,70 @@
+{
+  "$id": "1",
+  "$type": "ModelCore.RootModel, Assembly-CSharp",
+  "_modeles": {
+    "$id": "2",
+    "$type": "System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[ModelCore.Model, Assembly-CSharp]], mscorlib",
+    "S_Pack": {
+      "$id": "3",
+      "$type": "ModelCore.Universal.AliasValue.AliasString, Assembly-CSharp",
+      "_value": "alias pack",
+      "_alias": "Pack",
+      "Root": {
+        "$ref": "1"
+      }
+    },
+    "S_Id": {
+      "$id": "4",
+      "$type": "ModelCore.Universal.AliasValue.AliasString, Assembly-CSharp",
+      "_value": "id mat",
+      "_alias": "Id",
+      "Root": {
+        "$ref": "1"
+      }
+    }
+  },
+  "Alias": "SkinMesh",
+  "Root": {
+    "$id": "5",
+    "$type": "ModelCore.RootModel, Assembly-CSharp",
+    "_modeles": {
+      "$id": "6",
+      "$type": "System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[ModelCore.Model, Assembly-CSharp]], mscorlib",
+      "Root_Material": {
+        "$id": "7",
+        "$type": "ModelCore.RootModel, Assembly-CSharp",
+        "_modeles": {
+          "$id": "8",
+          "$type": "System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[ModelCore.Model, Assembly-CSharp]], mscorlib",
+          "S_Pack": {
+            "$id": "9",
+            "$type": "ModelCore.Universal.AliasValue.AliasString, Assembly-CSharp",
+            "_value": "alias pack",
+            "_alias": "Pack",
+            "Root": {
+              "$ref": "7"
+            }
+          },
+          "S_Id": {
+            "$id": "10",
+            "$type": "ModelCore.Universal.AliasValue.AliasString, Assembly-CSharp",
+            "_value": "id mat",
+            "_alias": "Id",
+            "Root": {
+              "$ref": "7"
+            }
+          }
+        },
+        "Alias": "Material",
+        "Root": {
+          "$ref": "5"
+        }
+      },
+      "Root_SkinMesh": {
+        "$ref": "1"
+      }
+    },
+    "Alias": "Main",
+    "Root": null
+  }
+}
