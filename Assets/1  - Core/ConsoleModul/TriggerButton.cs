@@ -7,6 +7,7 @@ namespace UiHlpers
     {
         public UltEvent OnTrue;
         public UltEvent OnFalse;
+        public UltEvent<bool> ValueEvent;
 
         [SerializeField] private bool _value;
 
@@ -32,6 +33,7 @@ namespace UiHlpers
         {
             if(_value) OnTrue.Invoke();
             else OnFalse.Invoke();
+            ValueEvent.Invoke(_value);
         }
     }
 }

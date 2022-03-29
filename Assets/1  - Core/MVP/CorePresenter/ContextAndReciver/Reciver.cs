@@ -1,6 +1,7 @@
 ﻿using System;
 using DIContainer;
 using ModelCore;
+using Sirenix.OdinInspector;
 using UltEvents;
 using UnityEngine;
 
@@ -19,9 +20,13 @@ namespace CorePresenter.ContextAndReciver
         
         private RootModel _model;
 
-        private void Start()
+        private void Awake()
         {
             SuccessfulGet.DynamicCalls += x => InitPresenter(x);
+        }
+
+        private void Start()
+        {
             if(TimeRecive == TimeForRecive.OnStart) ForceReciver();
         }
 
@@ -40,11 +45,13 @@ namespace CorePresenter.ContextAndReciver
             }
         }
 
+        [Button]
         public void ReciveIfHasNot()
         {
             if(_model==null) ForceReciver();
         }
-
+        
+        [Button]
         public void ForceReciver()
         {
             if (_model != null) _model.CountModelsCahnged -= OnUpdateModel;

@@ -29,6 +29,8 @@ namespace ModelCore
                 AfterAddToNewModel(Root);
             }
         }
+        
+        public virtual void CopyFrom(Model other){}
 
         public bool Rename(string newName)
         {
@@ -43,6 +45,17 @@ namespace ModelCore
             return true;
         }
         
+        public Model Clone() => JsonConvert.DeserializeObject<Model>(Save(), RootModel.Factory.SettingJson());
+
+        public string Save()
+        {
+            var prevRoot = Root;
+            Root = null;
+            var result = JsonConvert.SerializeObject(this, RootModel.Factory.SettingJson());
+            Root = prevRoot;
+            return result;
+        }
+
         protected abstract void FinalRenane(string newName);
 
         public virtual void InitByModel() { }

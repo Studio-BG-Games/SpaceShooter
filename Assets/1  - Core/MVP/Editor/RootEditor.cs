@@ -21,6 +21,7 @@ using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEditor.UIElements;
+using UnityEngine.Rendering.PostProcessing;
 using UnityEngine.Tilemaps;
 using UnityEngine.UI;
 using Button = UnityEngine.UIElements.Button;
@@ -62,7 +63,7 @@ public class RootEditor : EditorWindow
     private TextField _pathField;
     private TextField _nameFileField;
 
-    private Type[] TypesModels => _typesModels ??= typeof(Model).Assembly.GetTypes().Where(x => x.IsSubclassOf(typeof(Model)) && x.IsAbstract == false).ToArray();
+    private Type[] TypesModels => _typesModels ??= typeof(Model).Assembly.GetTypes().Where(x => (x.IsSubclassOf(typeof(Model)) && x.IsAbstract == false) || x == typeof(CsEn)).ToArray();
     private Type[] _typesModels;
 
     [InitializeOnLoadMethod]
@@ -178,7 +179,7 @@ public class RootEditor : EditorWindow
                 Model newModel = null;
                 if (x.GetInterfaces().Contains(typeof(IAliasValue)))
                     newModel = (Model) Activator.CreateInstance(x, new object[] {$"Rnd={Random.Range(-10000, 10001)}", default});
-                else if (x  == typeof(CsEn))
+                else if (x == typeof(CsEn))
                 {
                     SearchCsModelScript.Show(z =>
                     {
@@ -188,14 +189,14 @@ public class RootEditor : EditorWindow
                             Debug.LogWarning("Не удалось создать CsEn с типом - "+z.Name);
                             return;
                         }
-                        SelectedRoot.GetModel.AddModel(new CsEn((CsEn.BaseScript)scriptInstance));
+                        SelectedRoot.GetModel.AddModel((CsEn)scriptInstance);
                     });
                 }
                 else
                     newModel = (Model) Activator.CreateInstance(x, new object[] {$"Rnd={Random.Range(-10000, 10001)}"});
                 SelectedRoot.GetModel.AddModel(newModel);
             });
-            
+       
             button.text = "Create " + x.Name;
             button.style.backgroundColor = new StyleColor(color);
             
@@ -232,13 +233,13 @@ public class RootEditor : EditorWindow
         SendMessageForUser("Загружен", Color.green);
     }
 
-    private void Save()
+    private bool Save()
     {
         var file = GetFile();
         if (file == null)
         {
             SendMessageForUser("Не могу сохранить, нет выбранного файла", Color.yellow);
-            return;
+            return false;
         }
 
         var path = AssetDatabase.GetAssetPath(file);
@@ -246,6 +247,7 @@ public class RootEditor : EditorWindow
         EditorUtility.SetDirty(file);
         AssetDatabase.Refresh();
         SendMessageForUser("Сохранен", Color.green);
+        return true;
     }
 
     private void SendMessageForUser(string name) => SendMessageForUser(name, Color.white);
@@ -424,7 +426,8 @@ public class RootEditor : EditorWindow
             ViewOfModel.Q<Label>("Prefix").text = Model.Prefics;
             ViewOfModel.Q<Button>("Btn_Delete").clickable.clicked += () =>
             {
-                if(Model.Root!=null) Model.Root.DeleteId(Model.IdModel);
+                //Model.Root.DeleteId(Model.IdModel);
+                if(Model.Root!=null) Model.Root.DeleteT<Model>(x => x == Model);
             };
             SetFullId();
         }
@@ -495,8 +498,13 @@ public class RootEditor : EditorWindow
                 else SetName(prevName);
             });
 
-            ViewOfModel.Q<Button>("Btn_Select").clickable.clicked += () => EditWindow.Select(this);
+            //ViewOfModel.Q<Button>("Btn_Select").clickable.clicked += () => EditWindow.Select(this);
 
+            ViewOfModel.Q<Label>("Prefix").RegisterCallback<MouseDownEvent>(x =>
+            {
+                if(x.button==1) ShowHide();
+                if(x.button==0) EditWindow.Select(this);
+            });
             ViewOfModel.Q<Foldout>("ShowHideTog").RegisterCallback<ChangeEvent<bool>>(x => SetActiveContent(x.newValue));
             Deselect();
             
@@ -563,13 +571,13 @@ public class RootEditor : EditorWindow
 
         public void Select()
         {
-            ViewOfModel.Q<Button>("Btn_Select").style.display = new StyleEnum<DisplayStyle>(DisplayStyle.None);
+            //ViewOfModel.Q<Button>("Btn_Select").style.display = new StyleEnum<DisplayStyle>(DisplayStyle.None);
             _infoPanel.style.backgroundColor = new StyleColor(new Color(1, 1, 1));
         }
 
         public void Deselect()
         {
-            ViewOfModel.Q<Button>("Btn_Select").style.display = new StyleEnum<DisplayStyle>(DisplayStyle.Flex);
+            //ViewOfModel.Q<Button>("Btn_Select").style.display = new StyleEnum<DisplayStyle>(DisplayStyle.Flex);
             _infoPanel.style.backgroundColor = new StyleColor(new Color(0.46f, 0.46f, 0.46f, 0));
         }
 
@@ -664,17 +672,19 @@ public class RootEditor : EditorWindow
             ViewOfModel.Q<Button>("Btn_I").clickable.clicked += () => RootEditor.HideShow(ViewOfModel.Q("InfoPanel"));
             ViewOfModel.Q<Label>("Prefix").text = Model.IdModel;
 
-            var infoAtr = Model.Script.GetType().GetCustomAttribute<Info>();
+            var infoAtr = Model.GetType().GetCustomAttribute<Info>();
             ViewOfModel.Q<Label>("InfoText").text = infoAtr != null ? infoAtr.Value : "None";
 
             SpawnFields(ViewOfModel.Q<Foldout>("Panel_Fields").contentContainer);
             SpawnMethods(ViewOfModel.Q<Foldout>("Panel_Methods").contentContainer);
+            
+            Valid();
         }
 
         private void SpawnFields(VisualElement contentContainer)
         {
             contentContainer.hierarchy.Clear();
-            var elements = GenenarateInputs(Model.Script);
+            var elements = GenenarateInputs(Model);
             elements.ForEach(x => contentContainer.Add(x));
 
             List<VisualElement> GenenarateInputs(object instance)
@@ -759,16 +769,24 @@ public class RootEditor : EditorWindow
                 void RegisterCallbackInput<T>(BaseField<T> input, FieldInfo info)
                 {
                     input.RegisterCallback<ChangeEvent<T>>(x => info.SetValue(instance, x.newValue));
-                    Model.Script.Valid();
+                    input.RegisterCallback<BlurEvent>(x=>Valid());
                 }
             }
+        }
+
+        private void Valid()
+        {
+            var strOfValid = Model.Valid();
+            var validPanel = ViewOfModel.Q<VisualElement>("ValidPanel");
+            RootEditor.SetShow(validPanel, !string.IsNullOrWhiteSpace(strOfValid));
+            ViewOfModel.Q<Label>("ValidInfo").text = $"Valid result: {strOfValid}";
         }
 
         private void SpawnMethods(VisualElement contentContainer)
         {
             var flags = BindingFlags.Public | BindingFlags.Instance;
-            var baseMethods = typeof(CsEn.BaseScript).GetMethods(flags).Select(x => x.Name).ToList();
-            var methods = Model.Script.GetType().GetMethods(flags).Where(x=>!baseMethods.Contains(x.Name)).ToArray();
+            var baseMethods = typeof(CsEn).GetMethods(flags).Select(x => x.Name).ToList();
+            var methods = Model.GetType().GetMethods(flags).Where(x=>!baseMethods.Contains(x.Name)).ToArray();
             
             contentContainer.Clear();
             methods.ForEach(x =>
@@ -947,7 +965,7 @@ public class SearchCsModelScript : EditorWindow
     [InitializeOnLoadMethod]
     public static void ReshreshType()
     {
-        TypesForView = typeof(CsEn.BaseScript).Assembly.GetTypes().Where(x => x.IsSubclassOf(typeof(CsEn.BaseScript)) && !x.IsAbstract).ToArray();
+        TypesForView = typeof(CsEn).Assembly.GetTypes().Where(x => x.IsSubclassOf(typeof(CsEn)) && !x.IsAbstract).ToArray();
     }
     
     public static void Show(Action<Type> callback)
@@ -1037,7 +1055,7 @@ public class ViewCsModel : VisualElement
 
     public bool SetNewView(Type type)
     {
-        if (type.IsAbstract || !type.IsSubclassOf(typeof(CsEn.BaseScript))) return false;
+        if (type.IsAbstract || !type.IsSubclassOf(typeof(CsEn))) return false;
         _nameLabel.text = type.GetCustomAttribute<CustomId>() != null ? $"{type.GetCustomAttribute<CustomId>().Id} ({type.Name})" : type.Name;
         var infoAtr = type.GetCustomAttribute<Info>();
         if (infoAtr == null) RootEditor.SetShow(_infoLabel, false);

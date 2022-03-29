@@ -39,7 +39,12 @@ namespace ModelCore.Universal.AliasValue
         protected override void FinalRenane(string newName) => _alias = newName;
 
         [JsonConstructor] private BaseAliasValue(){}
-        
+
+        public override void CopyFrom(Model other)
+        {
+            if (other is BaseAliasValue<T>) Value = (other as BaseAliasValue<T>).Value;
+        }
+
         public BaseAliasValue(string alias)
         {
             _alias = alias;

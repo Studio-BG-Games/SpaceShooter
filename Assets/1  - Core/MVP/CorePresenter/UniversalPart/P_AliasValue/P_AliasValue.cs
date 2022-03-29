@@ -28,20 +28,17 @@ namespace CorePresenter.UniversalPart.P_AliasValue
             if (_model != null) _model.Update += Handler;
         }
 
-        [Button][GUIColor(0,1,0)]
-        public void ManualUpdate() => Updated.Invoke(Value);
+        [Button][GUIColor(0,1,0)] public void ManualUpdate() => Updated.Invoke(Value);
         
-        [Button][ButtonGroup("1")][GUIColor(0.86f, 0.76f, 0.9f, 0.8f)]
-        public void CopyFromUpdate() => Inited.CopyFrom(Updated);
+        [Button][ButtonGroup("1")][GUIColor(0.86f, 0.76f, 0.9f, 0.8f)] public void CopyFromUpdate() => Inited.CopyFrom(Updated);
 
-        [Button][ButtonGroup("1")][GUIColor(0.9f, 0.76f, 0.8f, 0.8f)]
-        public void CopyFromInit() => Updated.CopyFrom(Inited);
+        [Button][ButtonGroup("1")][GUIColor(0.9f, 0.76f, 0.8f, 0.8f)] public void CopyFromInit() => Updated.CopyFrom(Inited);
 
         [Button]
-        private void SetDefaultToModel()
-        {
-            if (_model != null) _model.Value = _default;
-        }
+        private void SetDefaultToModel() => SetValueToModel(_default);
+
+        [Button]
+        public void SetValueToModel(T value) { if (_model != null) _model.Value = value; }
 
         private void Handler(T old, T newV) => Updated.Invoke(newV);
     }

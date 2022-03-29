@@ -37,7 +37,7 @@
                     <ui:Button text="Show/Hide" display-tooltip-when-elided="true" name="Btn_ShowHideTemplate" style="width: auto; background-color: rgb(117, 216, 255); flex-wrap: nowrap; flex-direction: row; justify-content: center; align-items: auto; flex-grow: 1;" />
                 </ui:VisualElement>
                 <ui:Button text="Create from selected" display-tooltip-when-elided="true" name="Btn_CreateTemplate" style="width: auto; background-color: rgb(255, 255, 255); flex-wrap: nowrap; flex-direction: row; justify-content: center; align-items: auto; flex-grow: 1;" />
-                <ui:ScrollView scroll-deceleration-rate="0,135" elasticity="0,1" name="PanelTemplates" class="BackgroundButton" style="background-color: rgb(111, 103, 103); margin-left: 3px; margin-right: 3px; margin-top: 3px; margin-bottom: 3px; padding-left: 4px; padding-right: 4px; padding-top: 6px; padding-bottom: 6px; height: 225px;" />
+                <ui:ScrollView scroll-deceleration-rate="0,135" elasticity="0,1" name="PanelTemplates" class="BackgroundButton" style="background-color: rgb(111, 103, 103); margin-left: 3px; margin-right: 3px; margin-top: 3px; margin-bottom: 3px; padding-left: 4px; padding-right: 4px; padding-top: 6px; padding-bottom: 6px; height: auto; min-height: 225px; max-height: 500px;" />
                 <ui:VisualElement name="BlackLine" style="height: 4px; background-color: rgba(55, 55, 55, 0.32); margin-top: 2px; margin-bottom: 2px; padding-bottom: 0;" />
             </ui:ScrollView>
         </ui:VisualElement>

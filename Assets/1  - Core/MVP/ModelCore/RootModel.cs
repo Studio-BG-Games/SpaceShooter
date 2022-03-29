@@ -52,7 +52,7 @@ namespace ModelCore
                     }
                 }
                 var result = lastRootModel.GetId(strs.Last());
-                if(result==null) Debug.LogWarning($"По пути {id} ничего нет. AliassRoot: {Alias}");
+                if(result==null && Application.isPlaying) Debug.LogWarning($"По пути {id} ничего нет. AliassRoot: {Alias}");
                 return result;
             }
         }
@@ -88,13 +88,22 @@ namespace ModelCore
 
         public bool CanRename(Model model, string newName)
         {
+            /*
             if (GetId(model.IdModel) == null)
             {
                 Debug.LogWarning($"Модель - {model.IdModel}, t:{model.GetType().Namespace}; нет в словаре у {IdModel}");
                 return false;
+            }*/
+            var targetModel = _modeles.FirstOrDefault(x => x.Value == model);
+            if (targetModel.Value == null)
+            {
+                Debug.LogWarning($"Модель - {model.IdModel}, t:{model.GetType().Namespace}; не является ребенком");
+                return false;
             }
 
-            string newId = model.Prefics + newName;
+            string newId = "";
+            if(model.GetType().IsSubclassOf(typeof(CsEn))) newId = newName;
+            else newId = model.Prefics + newName;
             if (GetId(newId) != null) return false;
             return true;
         }
@@ -144,24 +153,20 @@ namespace ModelCore
             }).Value as T;
         }
 
-        public RootModel Clone()
-        {
-            return JsonConvert.DeserializeObject<RootModel>(Save(), RootModel.Factory.SettingJson());
-        }
-        
         public List<RootModel> SelectAllRoot(Func<RootModel, bool> predict) => SelectAll<RootModel>(predict);
-        
+
         public RootModel SelectRoot(Func<RootModel, bool> predict) => Select<RootModel>(predict);
-        
+
         public void DeleteT<T>(Func<T, bool> predicate) where T : Model
         {
             var model = Select<T>(predicate);
-            if(model!=null) BaseDelete(()=>_modeles.Remove(model.IdModel));
+            if(model!=null) BaseDelete(()=>
+            {
+                _modeles.Remove(_modeles.FirstOrDefault(x => x.Value == model).Key);
+            });
         }
-        
-        public void DeleteAll() { BaseDelete(() => _modeles.Clear()); }
 
-        public string Save() => JsonConvert.SerializeObject(this, Factory.SettingJson());
+        public void DeleteAll() { BaseDelete(() => _modeles.Clear()); }
 
         public void LogToConsole()
         {

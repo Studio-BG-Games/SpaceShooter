@@ -1,0 +1,37 @@
+{
+  "$id": "1",
+  "$type": "ModelCore.RootModel, Assembly-CSharp",
+  "_modeles": {
+    "$id": "2",
+    "$type": "System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[ModelCore.Model, Assembly-CSharp]], mscorlib",
+    "S_LastSelectedShipId": {
+      "$id": "3",
+      "$type": "ModelCore.Universal.AliasValue.AliasString, Assembly-CSharp",
+      "_value": "",
+      "_alias": "LastSelectedShipId",
+      "Root": {
+        "$ref": "1"
+      }
+    },
+    "I_CurrentLevel": {
+      "$id": "4",
+      "$type": "ModelCore.Universal.AliasValue.AliasInt, Assembly-CSharp",
+      "_value": 1,
+      "_alias": "CurrentLevel",
+      "Root": {
+        "$ref": "1"
+      }
+    },
+    "I_Lives": {
+      "$id": "5",
+      "$type": "ModelCore.Universal.AliasValue.AliasInt, Assembly-CSharp",
+      "_value": 3,
+      "_alias": "Lives",
+      "Root": {
+        "$ref": "1"
+      }
+    }
+  },
+  "Alias": "Player",
+  "Root": null
+}

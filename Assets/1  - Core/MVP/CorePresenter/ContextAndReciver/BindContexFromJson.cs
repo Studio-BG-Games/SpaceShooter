@@ -10,9 +10,14 @@ namespace CorePresenter.ContextAndReciver
         
         public override void Create(DiBox container)
         {
-            if(container.HasSingle<Context>()) return; 
-            Debug.Log(Assets.text);
-            Context.CreateContext("Context Json", LoaderRoot.ModelFromJson(Assets.text, false));
+            if(container.HasSingle<Context>()) return;
+            var contextModel = LoaderRoot.ModelFromJson(Assets.text, false);
+            if (contextModel == null)
+            {
+                Debug.LogError("Не удалось создать контекст", this);
+                return;
+            }
+            Context.CreateContext("Context Json", contextModel);
             Context.Instance.GameModel.Init();
             container.RegisterSingle(Context.Instance);
         }
