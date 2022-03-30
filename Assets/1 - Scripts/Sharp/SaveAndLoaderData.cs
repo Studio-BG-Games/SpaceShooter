@@ -1,31 +1,10 @@
 ﻿using System.IO;
 using ModelCore;
 using ModelCore.Universal;
-using ModelCore.Universal.AliasValue;
 using Sirenix.Utilities;
-using UnityEngine;
 
 namespace Sharp
 {
-    [CustomPath("MainMenu")][Info("Контролирует окна в главном меню")]
-    public class ControllWindowMainMenu : CsEn
-    {
-        private string[] Events =
-        {
-            "Event_"
-        };
-        
-        public override string Valid()
-        {
-            if(Root==null) return base.Valid();
-
-            if (Root.GetId("Root_Methods") == null) return "Нет Root_Methods объекта";
-
-            
-            return "";
-        }
-    }
-
     [Info("Этот скрипт позволяет сохрнять и загружать определнный рут по соседству с собою. Загрузка происходит с копированием значений полей из save в оригинал. Если у оригинал нет каких либо полей, они добавяться")]
     public class SaveAndLoaderData : CsEn
     {

@@ -1531,7 +1531,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3707bf7f88f49f74cadc956dc6cdcca9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _objects: []
+  _objects:
+  - IsUnbind: 1
+    id: 
+    Instance: {fileID: 1398287776}
   _manualBind:
   - {fileID: 427380268}
   - {fileID: 427380267}
@@ -1557,7 +1560,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1398287775}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1571,8 +1575,6 @@ GameObject:
   m_Component:
   - component: {fileID: 487628235}
   - component: {fileID: 487628237}
-  - component: {fileID: 487628239}
-  - component: {fileID: 487628238}
   - component: {fileID: 487628236}
   m_Layer: 5
   m_Name: MainScreen
@@ -1580,7 +1582,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &487628235
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1611,38 +1613,38 @@ MonoBehaviour:
   m_GameObject: {fileID: 487628234}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf557fcc4ac94bcb9144446fff449403, type: 3}
+  m_Script: {fileID: 11500000, guid: 94b4c1f9646a43a2b57ffc9884a2d131, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  method: 1
-  PathToModel: B_IsOn
-  _default: 0
-  Inited:
+  MyID: {fileID: 11400000, guid: b60a58803882340448b05ee4c1b94fa3, type: 2}
+  Opened:
     _PersistentCalls:
     - _Target: {fileID: 487628234}
       _MethodName: SetActive
       _PersistentArguments:
-      - _Type: 14
-        _Int: 0
+      - _Type: 1
+        _Int: 1
         _String: 
-        _X: 1
+        _X: 0
         _Y: 0
         _Z: 0
         _W: 0
         _Object: {fileID: 0}
-  Updated:
+  Closed:
     _PersistentCalls:
     - _Target: {fileID: 487628234}
       _MethodName: SetActive
       _PersistentArguments:
-      - _Type: 14
+      - _Type: 1
         _Int: 0
         _String: 
-        _X: 1
+        _X: 0
         _Y: 0
         _Z: 0
         _W: 0
         _Object: {fileID: 0}
+  CustomEvent:
+    _PersistentCalls: []
 --- !u!222 &487628237
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1651,43 +1653,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 487628234}
   m_CullTransparentMesh: 1
---- !u!114 &487628238
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 487628234}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 841aa81520c9444598016c10034c99d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  method: 1
-  PathToModel: Root_Menu/Root_Screens/Root_Main
-  TimeRecive: 4
-  SuccessfulGet:
-    _PersistentCalls: []
-  LoseGet:
-    _PersistentCalls: []
---- !u!114 &487628239
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 487628234}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d848fea79a544b5ba26c16ad40e7a68, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Paths: "1: B_IsOn \n"
-  ObjectPath: '1: Object:(MainScreen)
-
-'
-  Updated:
-    _PersistentCalls: []
 --- !u!1 &534595326
 GameObject:
   m_ObjectHideFlags: 0
@@ -1833,8 +1798,6 @@ GameObject:
   - component: {fileID: 571231880}
   - component: {fileID: 571231882}
   - component: {fileID: 571231881}
-  - component: {fileID: 571231885}
-  - component: {fileID: 571231884}
   - component: {fileID: 571231883}
   m_Layer: 5
   m_Name: LoadScreen
@@ -1842,7 +1805,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &571231880
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1911,74 +1874,37 @@ MonoBehaviour:
   m_GameObject: {fileID: 571231879}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf557fcc4ac94bcb9144446fff449403, type: 3}
+  m_Script: {fileID: 11500000, guid: 94b4c1f9646a43a2b57ffc9884a2d131, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  method: 1
-  PathToModel: B_IsOn
-  _default: 0
-  Inited:
+  MyID: {fileID: 11400000, guid: 692188002081bf34497c554b1ae07372, type: 2}
+  Opened:
     _PersistentCalls:
     - _Target: {fileID: 571231879}
       _MethodName: SetActive
       _PersistentArguments:
-      - _Type: 14
+      - _Type: 1
         _Int: 0
         _String: 
-        _X: 1
+        _X: 0
         _Y: 0
         _Z: 0
         _W: 0
         _Object: {fileID: 0}
-  Updated:
+  Closed:
     _PersistentCalls:
     - _Target: {fileID: 571231879}
       _MethodName: SetActive
       _PersistentArguments:
-      - _Type: 14
+      - _Type: 1
         _Int: 0
         _String: 
-        _X: 1
+        _X: 0
         _Y: 0
         _Z: 0
         _W: 0
         _Object: {fileID: 0}
---- !u!114 &571231884
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 571231879}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 841aa81520c9444598016c10034c99d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  method: 1
-  PathToModel: Root_Menu/Root_Screens/Root_Fade
-  TimeRecive: 4
-  SuccessfulGet:
-    _PersistentCalls: []
-  LoseGet:
-    _PersistentCalls: []
---- !u!114 &571231885
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 571231879}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d848fea79a544b5ba26c16ad40e7a68, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Paths: "1: B_IsOn \n"
-  ObjectPath: '1: Object:(LoadScreen)
-
-'
-  Updated:
+  CustomEvent:
     _PersistentCalls: []
 --- !u!1 &666071223
 GameObject:
@@ -2420,8 +2346,6 @@ GameObject:
   - component: {fileID: 917729400}
   - component: {fileID: 917729402}
   - component: {fileID: 917729401}
-  - component: {fileID: 917729405}
-  - component: {fileID: 917729404}
   - component: {fileID: 917729403}
   m_Layer: 5
   m_Name: SignScreen
@@ -2497,74 +2421,49 @@ MonoBehaviour:
   m_GameObject: {fileID: 917729399}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf557fcc4ac94bcb9144446fff449403, type: 3}
+  m_Script: {fileID: 11500000, guid: 94b4c1f9646a43a2b57ffc9884a2d131, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  method: 1
-  PathToModel: B_IsOn
-  _default: 0
-  Inited:
+  MyID: {fileID: 11400000, guid: 50243d7f41ec759468095245b963a053, type: 2}
+  Opened:
     _PersistentCalls:
     - _Target: {fileID: 917729399}
       _MethodName: SetActive
       _PersistentArguments:
-      - _Type: 14
-        _Int: 0
+      - _Type: 1
+        _Int: 1
         _String: 
-        _X: 1
+        _X: 0
         _Y: 0
         _Z: 0
         _W: 0
         _Object: {fileID: 0}
-  Updated:
+    - _Target: {fileID: 0}
+      _MethodName: UnityEngine.Debug, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null.Log
+      _PersistentArguments:
+      - _Type: 15
+        _Int: 0
+        _String: System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+        _X: 0
+        _Y: 0
+        _Z: 0
+        _W: 0
+        _Object: {fileID: 0}
+  Closed:
     _PersistentCalls:
     - _Target: {fileID: 917729399}
       _MethodName: SetActive
       _PersistentArguments:
-      - _Type: 14
+      - _Type: 1
         _Int: 0
         _String: 
-        _X: 1
+        _X: 0
         _Y: 0
         _Z: 0
         _W: 0
         _Object: {fileID: 0}
---- !u!114 &917729404
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 917729399}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 841aa81520c9444598016c10034c99d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  method: 1
-  PathToModel: Root_Menu/Root_Screens/Root_Sign
-  TimeRecive: 4
-  SuccessfulGet:
-    _PersistentCalls: []
-  LoseGet:
-    _PersistentCalls: []
---- !u!114 &917729405
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 917729399}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d848fea79a544b5ba26c16ad40e7a68, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Paths: "1: B_IsOn \n"
-  ObjectPath: '1: Object:(SignScreen)
-
-'
-  Updated:
+  CustomEvent:
     _PersistentCalls: []
 --- !u!1001 &919842055
 PrefabInstance:
@@ -3989,6 +3888,117 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!1 &1398287774
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1398287775}
+  - component: {fileID: 1398287776}
+  - component: {fileID: 1398287777}
+  - component: {fileID: 1398287778}
+  m_Layer: 0
+  m_Name: Controles
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1398287775
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1398287774}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 427380271}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1398287776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1398287774}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 778e6fb5af7b4e5295d599876de9790a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OpenEvent: {fileID: 11400000, guid: 4923e5e257ae1b044853dd6a9ed798ea, type: 2}
+  CloseEvent: {fileID: 11400000, guid: 1ea9c3e6212ae8d48b975f81594306f0, type: 2}
+--- !u!114 &1398287777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1398287774}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f574d8b2153a0d4fa15f5de878f680c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _Event:
+    _PersistentCalls:
+    - _Target: {fileID: 1398287776}
+      _MethodName: Close
+      _PersistentArguments:
+      - _Type: 13
+        _Int: 0
+        _String: Sharp.WindowSOId, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+          PublicKeyToken=null
+        _X: 0
+        _Y: 0
+        _Z: 0
+        _W: 0
+        _Object: {fileID: 11400000, guid: 692188002081bf34497c554b1ae07372, type: 2}
+    - _Target: {fileID: 1398287776}
+      _MethodName: Open
+      _PersistentArguments:
+      - _Type: 13
+        _Int: 0
+        _String: Sharp.WindowSOId, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+          PublicKeyToken=null
+        _X: 0
+        _Y: 0
+        _Z: 0
+        _W: 0
+        _Object: {fileID: 11400000, guid: 50243d7f41ec759468095245b963a053, type: 2}
+  _Delay: 2
+--- !u!114 &1398287778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1398287774}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 003c25630808c7243847bd9149749434, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _AwakeEvent:
+    _PersistentCalls: []
+  _StartEvent:
+    _PersistentCalls: []
+  _EnableEvent:
+    _PersistentCalls:
+    - _Target: {fileID: 1398287777}
+      _MethodName: Invoke
+      _PersistentArguments: []
+  _DisableEvent:
+    _PersistentCalls: []
+  _DestroyEvent:
+    _PersistentCalls: []
 --- !u!1001 &1454585880
 PrefabInstance:
   m_ObjectHideFlags: 0

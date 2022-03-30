@@ -27,7 +27,7 @@ namespace MVP.Views
 
         protected virtual void CustomAwake() { }
 
-        public abstract override void View(RootModel engine);
+        public abstract override void View(RootModel model);
 
         [OnInspectorInit]
         private void InInspectorInit()

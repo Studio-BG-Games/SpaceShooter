@@ -961,6 +961,7 @@ public class SearchCsModelScript : EditorWindow
     private ScrollView _scroll;
     private Dictionary<string, ViewFolder.Path> _folders = new Dictionary<string, ViewFolder.Path>();
     private static Action<Type> _callbackTypeSelected;
+    private Type[] _types;
 
     [InitializeOnLoadMethod]
     public static void ReshreshType()
@@ -972,6 +973,15 @@ public class SearchCsModelScript : EditorWindow
     {
         _callbackTypeSelected = callback;
         var win = CreateInstance<SearchCsModelScript>();
+        win._types = TypesForView;
+        win.ShowAuxWindow();
+    }
+
+    public static void Show(Type[] typesForView, Action<Type> callback)
+    {
+        _callbackTypeSelected = callback;
+        var win = CreateInstance<SearchCsModelScript>();
+        win._types = typesForView;
         win.ShowAuxWindow();
     }
 
@@ -981,7 +991,7 @@ public class SearchCsModelScript : EditorWindow
         var child = tree.Instantiate();
         _scroll = child.Q<ScrollView>("ViewElelemnts");
         
-        TypesForView.ForEach(x =>
+        _types.ForEach(x =>
         {
             var pathAtr = x.GetCustomAttribute<CustomPath>();
             if (pathAtr == null) return;
@@ -994,7 +1004,7 @@ public class SearchCsModelScript : EditorWindow
             });
         });
 
-        TypesForView.ForEach(x =>
+        _types.ForEach(x =>
         {
             var pathAtr = x.GetCustomAttribute<CustomPath>();
             var viewCs = new ViewCsModel(x);

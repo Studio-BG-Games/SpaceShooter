@@ -152,6 +152,17 @@ namespace ModelCore
                 return predicate(m);
             }).Value as T;
         }
+        
+        public bool TrySelect<T>(Func<T, bool> predicate, T result) where T : Model
+        {
+            result = _modeles.FirstOrDefault(x =>
+            {
+                var m = x.Value as T;
+                if (m == null) return false;
+                return predicate(m);
+            }).Value as T;
+            return result != null;
+        }
 
         public List<RootModel> SelectAllRoot(Func<RootModel, bool> predict) => SelectAll<RootModel>(predict);
 
@@ -257,9 +268,8 @@ namespace ModelCore
                 {
                     ReferenceLoopHandling = ReferenceLoopHandling.Ignore,
                     Formatting = Formatting.Indented,
-                    TypeNameHandling = TypeNameHandling.All,
+                    TypeNameHandling = TypeNameHandling.Objects,
                     PreserveReferencesHandling  = PreserveReferencesHandling.Objects,
-                    //MaxDepth = 12,
                 };
             }
 
