@@ -4,6 +4,7 @@ using System.Reflection;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using UnityEngine;
+using Object = UnityEngine.Object;
 
 namespace ModelCore
 {
@@ -31,6 +32,8 @@ namespace ModelCore
         }
         
         public virtual void CopyFrom(Model other){}
+
+        public virtual void SendMessage(Message message) {}
 
         public bool Rename(string newName)
         {

@@ -1,6 +1,8 @@
 ﻿using System;
+using ModelCore.Messages;
 using Newtonsoft.Json;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 namespace ModelCore.Universal.AliasValue
 {
@@ -43,6 +45,17 @@ namespace ModelCore.Universal.AliasValue
         public override void CopyFrom(Model other)
         {
             if (other is BaseAliasValue<T>) Value = (other as BaseAliasValue<T>).Value;
+        }
+
+        public override void SendMessage(Message message)
+        {
+            if (TryCast<SetValue<T>>(message, out var r)) Value = r.Value;
+
+            bool TryCast<X>(Message m, out X r) where X : Message
+            {
+                r = m as X;
+                return r != null;
+            }
         }
 
         public BaseAliasValue(string alias)

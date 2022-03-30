@@ -675,16 +675,16 @@ public class RootEditor : EditorWindow
             var infoAtr = Model.GetType().GetCustomAttribute<Info>();
             ViewOfModel.Q<Label>("InfoText").text = infoAtr != null ? infoAtr.Value : "None";
 
-            SpawnFields(ViewOfModel.Q<Foldout>("Panel_Fields").contentContainer);
+            SpawnFields(ViewOfModel.Q<Foldout>("Panel_Fields").contentContainer, Model, ()=>Valid());
             SpawnMethods(ViewOfModel.Q<Foldout>("Panel_Methods").contentContainer);
             
             Valid();
         }
 
-        private void SpawnFields(VisualElement contentContainer)
+        public static void SpawnFields(VisualElement contentContainer, object objInspector, Action onBlur)
         {
             contentContainer.hierarchy.Clear();
-            var elements = GenenarateInputs(Model);
+            var elements = GenenarateInputs(objInspector);
             elements.ForEach(x => contentContainer.Add(x));
 
             List<VisualElement> GenenarateInputs(object instance)
@@ -705,7 +705,7 @@ public class RootEditor : EditorWindow
                         input.Q("unity-text-input").style.maxWidth = maxWidth;
                         result.Add(input);
                         input.value = (int)f.GetValue(instance);
-                        RegisterCallbackInput<int>(input, f);
+                        RegisterCallbackInput<int>(input, f, onBlur);
                     }
                     else if (f.FieldType == typeof(float))
                     {
@@ -714,7 +714,7 @@ public class RootEditor : EditorWindow
                         input.Q("unity-text-input").style.maxWidth = maxWidth;
                         result.Add(input);
                         input.value = (float)f.GetValue(instance);
-                        RegisterCallbackInput<float>(input, f);
+                        RegisterCallbackInput<float>(input, f, onBlur);
                     }
                     else if (f.FieldType == typeof(string))
                     {
@@ -724,20 +724,20 @@ public class RootEditor : EditorWindow
                         input.Q("unity-text-input").style.maxWidth = maxWidth;
                         result.Add(input);
                         input.value = (string)f.GetValue(instance);
-                        RegisterCallbackInput<string>(input, f);
+                        RegisterCallbackInput<string>(input, f, onBlur);
                     }
                     else if (f.FieldType == typeof(bool))
                     {
                         var input = new Toggle(f.Name);
                         result.Add(input);
                         input.value = (bool)f.GetValue(instance);
-                        RegisterCallbackInput<bool>(input, f);
+                        RegisterCallbackInput<bool>(input, f, onBlur);
                     }
                     else if (f.FieldType.IsEnum)
                     {
                         var input = new EnumField(f.Name, (Enum)f.GetValue(instance));
                         result.Add(input);
-                        RegisterCallbackInput<Enum>(input, f);
+                        RegisterCallbackInput<Enum>(input, f, onBlur);
                     }
                     else if(f.FieldType.IsSubclassOf(typeof(ValueType)))
                     {
@@ -746,14 +746,14 @@ public class RootEditor : EditorWindow
                             var input = new Vector2Field(f.Name);
                             result.Add(input);
                             input.value = (Vector2)f.GetValue(instance);
-                            RegisterCallbackInput<Vector2>(input, f);
+                            RegisterCallbackInput<Vector2>(input, f, onBlur);
                         }
                         else if (f.FieldType == typeof(Vector3))
                         {
                             var input = new Vector3Field(f.Name);
                             result.Add(input);
                             input.value = (Vector3)f.GetValue(instance);
-                            RegisterCallbackInput<Vector3>(input, f);
+                            RegisterCallbackInput<Vector3>(input, f, onBlur);
                         }
                         else
                         {
@@ -766,10 +766,10 @@ public class RootEditor : EditorWindow
                 }
 
                 return result;
-                void RegisterCallbackInput<T>(BaseField<T> input, FieldInfo info)
+                void RegisterCallbackInput<T>(BaseField<T> input, FieldInfo info, Action onBlur)
                 {
                     input.RegisterCallback<ChangeEvent<T>>(x => info.SetValue(instance, x.newValue));
-                    input.RegisterCallback<BlurEvent>(x=>Valid());
+                    input.RegisterCallback<BlurEvent>(x=>onBlur());
                 }
             }
         }
@@ -1065,7 +1065,8 @@ public class ViewCsModel : VisualElement
 
     public bool SetNewView(Type type)
     {
-        if (type.IsAbstract || !type.IsSubclassOf(typeof(CsEn))) return false;
+        //if (type.IsAbstract || !type.IsSubclassOf(typeof(CsEn))) return false;
+        if (type.IsAbstract) return false;
         _nameLabel.text = type.GetCustomAttribute<CustomId>() != null ? $"{type.GetCustomAttribute<CustomId>().Id} ({type.Name})" : type.Name;
         var infoAtr = type.GetCustomAttribute<Info>();
         if (infoAtr == null) RootEditor.SetShow(_infoLabel, false);

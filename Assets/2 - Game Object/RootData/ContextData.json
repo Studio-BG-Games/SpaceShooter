@@ -30,22 +30,6 @@
                   "Root": {
                     "$ref": "7"
                   }
-                },
-                "Event_Unfaded": {
-                  "$id": "10",
-                  "$type": "ModelCore.Universal.JsEvent, Assembly-CSharp",
-                  "Alias": "Unfaded",
-                  "Root": {
-                    "$ref": "7"
-                  }
-                },
-                "Event_Faded": {
-                  "$id": "11",
-                  "$type": "ModelCore.Universal.JsEvent, Assembly-CSharp",
-                  "Alias": "Faded",
-                  "Root": {
-                    "$ref": "7"
-                  }
                 }
               },
               "Alias": "Fade",
@@ -54,34 +38,18 @@
               }
             },
             "Root_Sign": {
-              "$id": "12",
+              "$id": "10",
               "$type": "ModelCore.RootModel, Assembly-CSharp",
               "_modeles": {
-                "$id": "13",
+                "$id": "11",
                 "$type": "System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[ModelCore.Model, Assembly-CSharp]], mscorlib",
                 "B_IsOn": {
-                  "$id": "14",
+                  "$id": "12",
                   "$type": "ModelCore.Universal.AliasValue.AliasBool, Assembly-CSharp",
                   "_value": false,
                   "_alias": "IsOn",
                   "Root": {
-                    "$ref": "12"
-                  }
-                },
-                "Event_Correct": {
-                  "$id": "15",
-                  "$type": "ModelCore.Universal.JsEvent, Assembly-CSharp",
-                  "Alias": "Correct",
-                  "Root": {
-                    "$ref": "12"
-                  }
-                },
-                "Event_Uncorrect": {
-                  "$id": "16",
-                  "$type": "ModelCore.Universal.JsEvent, Assembly-CSharp",
-                  "Alias": "Uncorrect",
-                  "Root": {
-                    "$ref": "12"
+                    "$ref": "10"
                   }
                 }
               },
@@ -91,26 +59,18 @@
               }
             },
             "Root_Main": {
-              "$id": "17",
+              "$id": "13",
               "$type": "ModelCore.RootModel, Assembly-CSharp",
               "_modeles": {
-                "$id": "18",
+                "$id": "14",
                 "$type": "System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[ModelCore.Model, Assembly-CSharp]], mscorlib",
                 "B_IsOn": {
-                  "$id": "19",
+                  "$id": "15",
                   "$type": "ModelCore.Universal.AliasValue.AliasBool, Assembly-CSharp",
                   "_value": false,
                   "_alias": "IsOn",
                   "Root": {
-                    "$ref": "17"
-                  }
-                },
-                "Event_Play": {
-                  "$id": "20",
-                  "$type": "ModelCore.Universal.JsEvent, Assembly-CSharp",
-                  "Alias": "Play",
-                  "Root": {
-                    "$ref": "17"
+                    "$ref": "13"
                   }
                 }
               },
@@ -132,116 +92,116 @@
       }
     },
     "Root_Data": {
-      "$id": "21",
+      "$id": "16",
       "$type": "ModelCore.RootModel, Assembly-CSharp",
       "_modeles": {
-        "$id": "22",
+        "$id": "17",
         "$type": "System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[ModelCore.Model, Assembly-CSharp]], mscorlib",
         "Root_Setting": {
-          "$id": "23",
+          "$id": "18",
           "$type": "ModelCore.RootModel, Assembly-CSharp",
           "_modeles": {
-            "$id": "24",
+            "$id": "19",
             "$type": "System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[ModelCore.Model, Assembly-CSharp]], mscorlib",
             "F_MasterSound": {
-              "$id": "25",
+              "$id": "20",
               "$type": "ModelCore.Universal.AliasValue.AliasFloat, Assembly-CSharp",
               "_value": 1.0,
               "_alias": "MasterSound",
               "Root": {
-                "$ref": "23"
+                "$ref": "18"
               }
             },
             "F_EffectSound": {
-              "$id": "26",
+              "$id": "21",
               "$type": "ModelCore.Universal.AliasValue.AliasFloat, Assembly-CSharp",
               "_value": 1.0,
               "_alias": "EffectSound",
               "Root": {
-                "$ref": "23"
+                "$ref": "18"
               }
             },
             "F_MusicSound": {
-              "$id": "27",
+              "$id": "22",
               "$type": "ModelCore.Universal.AliasValue.AliasFloat, Assembly-CSharp",
               "_value": 0.8,
               "_alias": "MusicSound",
               "Root": {
-                "$ref": "23"
+                "$ref": "18"
               }
             },
             "B_Vibration": {
-              "$id": "28",
+              "$id": "23",
               "$type": "ModelCore.Universal.AliasValue.AliasBool, Assembly-CSharp",
               "_value": true,
               "_alias": "Vibration",
               "Root": {
-                "$ref": "23"
+                "$ref": "18"
               }
             }
           },
           "Alias": "Setting",
           "Root": {
-            "$ref": "21"
+            "$ref": "16"
           }
         },
         "Root_Player": {
-          "$id": "29",
+          "$id": "24",
           "$type": "ModelCore.RootModel, Assembly-CSharp",
           "_modeles": {
-            "$id": "30",
+            "$id": "25",
             "$type": "System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[ModelCore.Model, Assembly-CSharp]], mscorlib",
             "S_LastSelectedShipId": {
-              "$id": "31",
+              "$id": "26",
               "$type": "ModelCore.Universal.AliasValue.AliasString, Assembly-CSharp",
               "_value": "",
               "_alias": "LastSelectedShipId",
               "Root": {
-                "$ref": "29"
+                "$ref": "24"
               }
             },
             "I_CurrentLevel": {
-              "$id": "32",
+              "$id": "27",
               "$type": "ModelCore.Universal.AliasValue.AliasInt, Assembly-CSharp",
               "_value": 1,
               "_alias": "CurrentLevel",
               "Root": {
-                "$ref": "29"
+                "$ref": "24"
               }
             },
             "I_Lives": {
-              "$id": "33",
+              "$id": "28",
               "$type": "ModelCore.Universal.AliasValue.AliasInt, Assembly-CSharp",
               "_value": 3,
               "_alias": "Lives",
               "Root": {
-                "$ref": "29"
+                "$ref": "24"
               }
             }
           },
           "Alias": "Player",
           "Root": {
-            "$ref": "21"
+            "$ref": "16"
           }
         },
         "Cs_SaveLoad(Setting)": {
-          "$id": "34",
+          "$id": "29",
           "$type": "Sharp.SaveAndLoaderData, Assembly-CSharp",
           "TargetRoot": "Setting",
           "RelitivePath": "DataSave",
           "NameFile": "GameSettings",
           "Root": {
-            "$ref": "21"
+            "$ref": "16"
           }
         },
         "Cs_SaveLoad(Player)": {
-          "$id": "35",
+          "$id": "30",
           "$type": "Sharp.SaveAndLoaderData, Assembly-CSharp",
           "TargetRoot": "Player",
           "RelitivePath": "DataSave",
           "NameFile": "DataPlayer",
           "Root": {
-            "$ref": "21"
+            "$ref": "16"
           }
         }
       },

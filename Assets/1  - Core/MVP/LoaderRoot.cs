@@ -23,7 +23,6 @@ namespace ModelCore
         {
             if (!Directory.Exists(GetPathDir(path))) Directory.CreateDirectory(GetPathDir(path));
             var filePath = GetPathFile(path, nameFile);
-            Debug.Log(filePath);
             File.WriteAllText(filePath, content);
         }
 

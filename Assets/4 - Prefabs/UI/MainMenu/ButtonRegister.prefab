@@ -255,8 +255,6 @@ GameObject:
   - component: {fileID: 6492099181833924682}
   - component: {fileID: 3676813107683817557}
   - component: {fileID: 7518058168292313809}
-  - component: {fileID: 3761317880660811087}
-  - component: {fileID: 486301104494449685}
   m_Layer: 5
   m_Name: ButtonRegister
   m_TagString: Untagged
@@ -279,6 +277,7 @@ RectTransform:
   - {fileID: 6492099181616396125}
   - {fileID: 4575697319886643732}
   - {fileID: 5596603779831128502}
+  - {fileID: 937266201309330139}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -427,9 +426,21 @@ MonoBehaviour:
   onClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3761317880660811087}
-        m_TargetAssemblyTypeName: UltEvents.UltEventHolder, UltEvents
-        m_MethodName: Invoke
+      - m_Target: {fileID: 6017988085558043671}
+        m_TargetAssemblyTypeName: CorePresenter.P_SendMessage, Assembly-CSharp
+        m_MethodName: Send
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2215862668042915195}
+        m_TargetAssemblyTypeName: CorePresenter.P_SendMessage, Assembly-CSharp
+        m_MethodName: Send
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -472,81 +483,6 @@ MonoBehaviour:
       speed: -1
       aliases: []
   OnExit:
-    _PersistentCalls: []
---- !u!114 &3761317880660811087
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6492099181833924724}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 289ff940279d54e4e92f632d7d3823dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _Event:
-    _PersistentCalls:
-    - _Target: {fileID: 486301104494449685}
-      _MethodName: SendEventToOtherWindow
-      _PersistentArguments:
-      - _Type: 13
-        _Int: 0
-        _String: Sharp.WindowSOId, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-          PublicKeyToken=null
-        _X: 0
-        _Y: 0
-        _Z: 0
-        _W: 0
-        _Object: {fileID: 11400000, guid: 50243d7f41ec759468095245b963a053, type: 2}
-      - _Type: 13
-        _Int: 0
-        _String: Sharp.WindowSOAction, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-          PublicKeyToken=null
-        _X: 0
-        _Y: 0
-        _Z: 0
-        _W: 0
-        _Object: {fileID: 11400000, guid: 1ea9c3e6212ae8d48b975f81594306f0, type: 2}
-    - _Target: {fileID: 486301104494449685}
-      _MethodName: SendEventToOtherWindow
-      _PersistentArguments:
-      - _Type: 13
-        _Int: 0
-        _String: Sharp.WindowSOId, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-          PublicKeyToken=null
-        _X: 0
-        _Y: 0
-        _Z: 0
-        _W: 0
-        _Object: {fileID: 11400000, guid: b60a58803882340448b05ee4c1b94fa3, type: 2}
-      - _Type: 13
-        _Int: 0
-        _String: Sharp.WindowSOAction, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-          PublicKeyToken=null
-        _X: 0
-        _Y: 0
-        _Z: 0
-        _W: 0
-        _Object: {fileID: 11400000, guid: 4923e5e257ae1b044853dd6a9ed798ea, type: 2}
---- !u!114 &486301104494449685
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6492099181833924724}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 94b4c1f9646a43a2b57ffc9884a2d131, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MyID: {fileID: 0}
-  Opened:
-    _PersistentCalls: []
-  Closed:
-    _PersistentCalls: []
-  CustomEvent:
     _PersistentCalls: []
 --- !u!1 &6492099183069104444
 GameObject:
@@ -623,3 +559,113 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &9009157121678127724
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 937266201309330139}
+  - component: {fileID: 3242831781956396354}
+  - component: {fileID: 5394883840295272243}
+  - component: {fileID: 6017988085558043671}
+  - component: {fileID: 2215862668042915195}
+  m_Layer: 5
+  m_Name: '[OnClick]'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &937266201309330139
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9009157121678127724}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6492099181833924683}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &3242831781956396354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9009157121678127724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d848fea79a544b5ba26c16ad40e7a68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Paths: "1: Root_Sign/B_IsOn \n2: Root_Main/B_IsOn \n"
+  ObjectPath: '1: Object:([OnClick])
+
+    2: Object:([OnClick])
+
+'
+  Updated:
+    _PersistentCalls: []
+--- !u!114 &5394883840295272243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9009157121678127724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 841aa81520c9444598016c10034c99d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  method: 1
+  PathToModel: Root_Menu/Root_Screens
+  TimeRecive: 0
+  SuccessfulGet:
+    _PersistentCalls: []
+  LoseGet:
+    _PersistentCalls: []
+--- !u!114 &6017988085558043671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9009157121678127724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36cdada885da4fc9a8cd48b085bc0994, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  method: 1
+  PathToModel: Root_Sign/B_IsOn
+  __save: "{\r\n  \"$id\": \"1\",\r\n  \"$type\": \"ModelCore.Messages.SetBool, Assembly-CSharp\",\r\n 
+    \"Value\": false\r\n}"
+--- !u!114 &2215862668042915195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9009157121678127724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36cdada885da4fc9a8cd48b085bc0994, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  method: 1
+  PathToModel: Root_Main/B_IsOn
+  __save: "{\r\n  \"$id\": \"1\",\r\n  \"$type\": \"ModelCore.Messages.SetBool, Assembly-CSharp\",\r\n 
+    \"Value\": true\r\n}"

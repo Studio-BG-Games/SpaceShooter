@@ -12,6 +12,7 @@ using Jint.Runtime;
 using Jint.Runtime.Debugger;
 using Jint.Runtime.Interop;
 using Js;
+using ModelCore.Messages;
 using ModelCore.Universal;
 using ModelCore.Universal.AliasValue;
 using Newtonsoft.Json;
@@ -55,6 +56,11 @@ namespace ModelCore
                 if(result==null && Application.isPlaying) Debug.LogWarning($"По пути {id} ничего нет. AliassRoot: {Alias}");
                 return result;
             }
+        }
+
+        public override void SendMessage(Message message)
+        {
+            (message as ISetValueToChildRoot).TrySet(this);
         }
 
         public RootModel(string alias) => Alias = alias;

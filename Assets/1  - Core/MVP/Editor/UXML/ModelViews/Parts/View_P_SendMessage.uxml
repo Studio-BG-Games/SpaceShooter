@@ -1,0 +1,4 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <ui:Button text="Select Message" display-tooltip-when-elided="true" name="SelectMessage" style="height: 39px; font-size: 19px;" />
+    <ui:VisualElement name="PanelMessageEditor" style="height: auto; background-color: rgba(209, 209, 209, 255); margin-left: 5px; margin-right: 5px; margin-top: 5px; margin-bottom: 5px; min-height: 30px;" />
+</ui:UXML>

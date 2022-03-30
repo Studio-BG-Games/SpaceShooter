@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using ModelCore;
 using ModelCore.Universal;
 using Sirenix.Utilities;
@@ -13,23 +14,25 @@ namespace Sharp
         public string TargetRoot;
         public string RelitivePath;
         public string NameFile;
+        private Action _callbackSave;
 
         public override void InitByModel()
         {
             var path = Path.Combine(RelitivePath, $"{NameFile}");
             var loadetRoot = LoaderRoot.LoadModel(RelitivePath, NameFile, false);
             var targetRoot = Root["Root_" + TargetRoot] as RootModel;
-            
+
             if (targetRoot == null)
             {
                 Root.Logger.LogError($"{IdModel} не может получить целевой объект Root_{TargetRoot}");
                 return;
             }
 
+            _callbackSave = () => Save(targetRoot);
             if (loadetRoot == null)
             {
                 Root.Logger.LogWarning($"{IdModel} не удалось загрузить сохранения по пути, будет создано автоматически: {path}");
-                LoaderRoot.SaveModel(targetRoot, NameFile, RelitivePath);
+                Save(targetRoot);
             }
             else
             {
@@ -39,7 +42,22 @@ namespace Sharp
                     else targetRoot.AddModel(x.Clone());
                 });
             }
+        }
+
+        public override void SendMessage(Message message)
+        {
+            if(message is SaveData) _callbackSave?.Invoke();
+        }
+        
+        [CustomPath("Save*Load Data")]
+        public class SaveData : Message
+        {
             
+        }
+
+        private void Save(RootModel root)
+        {
+            LoaderRoot.SaveModel(root, NameFile, RelitivePath);
         }
 
         public override string Valid()
