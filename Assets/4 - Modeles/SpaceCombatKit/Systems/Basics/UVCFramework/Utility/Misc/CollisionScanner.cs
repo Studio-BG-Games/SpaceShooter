@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UltEvents;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -56,6 +57,7 @@ namespace VSX.UniversalVehicleCombat
 
         // Hit detected event
         public OnCollisionScannerHitDetectedEventHandler onHitDetected;
+        public UltEvent<RaycastHit> onHitDetected2;
         
         protected bool disabled = false;
 
@@ -108,6 +110,7 @@ namespace VSX.UniversalVehicleCombat
                 transform.position = hits[i].point;
                 disabled = true;
                 onHitDetected.Invoke(hits[i]);
+                onHitDetected2.Invoke(hits[i]);
                 break;
 
             }

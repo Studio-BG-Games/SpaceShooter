@@ -12,13 +12,13 @@ namespace VSX.UniversalVehicleCombat
         public HealthType HealthType { get { return healthType; } }
 
         [SerializeField]
-        protected Health health;
+        protected HealthSpaceCombat healthSpaceCombat;
 
         private void Update()
         {
-            if (health != null)
+            if (healthSpaceCombat != null)
             {
-                SetFillAmount(health.GetCurrentHealthFractionByType(healthType));
+                SetFillAmount(healthSpaceCombat.GetCurrentHealthFractionByType(healthType));
             }
         }
 

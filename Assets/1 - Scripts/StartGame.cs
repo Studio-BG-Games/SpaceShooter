@@ -13,5 +13,10 @@ namespace DefaultNamespace
         {
             _appStateMachine.Enter<GameScene, DataGameScene>(new DataGameScene());
         }
+        
+        public void EnterToTutotrScene()
+        {
+            _appStateMachine.Enter<TutorScene>();
+        }
     }
 }

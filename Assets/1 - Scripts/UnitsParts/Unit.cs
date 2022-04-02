@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using Dreamteck.Forever;
+using Sirenix.OdinInspector;
 using Sirenix.Utilities;
 using TMPro;
 using UnityEngine;
@@ -20,9 +21,9 @@ namespace Services
             return false;
         });
 
-        private void OnValidate()
+        [Button]private void OnValidate()
         {
-            _parts = GetComponents<PartUnit>();
+            _parts = GetComponentsInChildren<PartUnit>();
             _parts.ForEach(x => x.Init(this));
         }
     }

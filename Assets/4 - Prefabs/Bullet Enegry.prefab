@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 765423122786303924}
   - component: {fileID: -9107042937410610320}
   - component: {fileID: 4327743659996968126}
+  - component: {fileID: 1736801951247989670}
   m_Layer: 0
   m_Name: Bullet Enegry
   m_TagString: Untagged
@@ -55,6 +56,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _parts:
   - {fileID: 765423122786303924}
+  - {fileID: 1736801951247989670}
 --- !u!114 &114768807756433516
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71,7 +73,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 819
   hitScanIntervalType: 0
-  hitScanFrameInterval: 0
+  hitScanFrameInterval: 3
   hitScanTimeInterval: 0
   ignoreTriggerColliders: 1
   ignoreHierarchyCollision: 1
@@ -79,10 +81,10 @@ MonoBehaviour:
   onHitDetected:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1256465192544184063}
-        m_TargetAssemblyTypeName: VSX.Effects.AddRumble, Assembly-CSharp
-        m_MethodName: Run
-        m_Mode: 1
+      - m_Target: {fileID: 1736801951247989670}
+        m_TargetAssemblyTypeName: Services.ChangerHealth, Assembly-CSharp
+        m_MethodName: Change
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -91,6 +93,24 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  onHitDetected2:
+    _PersistentCalls:
+    - _Target: {fileID: 1256465192544184063}
+      _MethodName: Run
+      _PersistentArguments: []
+    - _Target: {fileID: 0}
+      _MethodName: UnityEngine.Object, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null.Destroy
+      _PersistentArguments:
+      - _Type: 13
+        _Int: 0
+        _String: UnityEngine.Object, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
+          PublicKeyToken=null
+        _X: 0
+        _Y: 0
+        _Z: 0
+        _W: 0
+        _Object: {fileID: 1059452319082446}
 --- !u!114 &1256465192544184063
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -275,6 +295,21 @@ MonoBehaviour:
         _W: 0
         _Object: {fileID: 1059452319082446}
   _Delay: 2.5
+--- !u!114 &1736801951247989670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1059452319082446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc6d66cd70fc4597bf34033286640ee3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _targets:
+  - TargetId: {fileID: 0}
+    ChangeAt: 3
 --- !u!1 &1649931267902942
 GameObject:
   m_ObjectHideFlags: 0

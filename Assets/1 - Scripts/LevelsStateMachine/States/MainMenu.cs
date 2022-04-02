@@ -31,6 +31,19 @@ namespace Plugins.GameStateMachines.States
             DiBox.MainBox.RemoveSingel<DataGameScene>();
         }
     }
+    
+    public class TutorScene : IEnterState
+    {
+        public void Enter()
+        {
+            SceneLoader.Load("Tutor"); 
+        }
+
+        public void Exit()
+        {
+        }
+    }
+
 
     public class DataGameScene
     {
