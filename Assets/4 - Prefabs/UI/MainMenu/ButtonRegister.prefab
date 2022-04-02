@@ -426,21 +426,9 @@ MonoBehaviour:
   onClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6017988085558043671}
-        m_TargetAssemblyTypeName: CorePresenter.P_SendMessage, Assembly-CSharp
-        m_MethodName: Send
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 2215862668042915195}
-        m_TargetAssemblyTypeName: CorePresenter.P_SendMessage, Assembly-CSharp
-        m_MethodName: Send
+      - m_Target: {fileID: 5269614088911277301}
+        m_TargetAssemblyTypeName: Sharp.UnityMessager.SendMessagerUnity, Assembly-CSharp
+        m_MethodName: SendDefault
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -568,10 +556,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 937266201309330139}
-  - component: {fileID: 3242831781956396354}
-  - component: {fileID: 5394883840295272243}
-  - component: {fileID: 6017988085558043671}
-  - component: {fileID: 2215862668042915195}
+  - component: {fileID: 5269614088911277301}
   m_Layer: 5
   m_Name: '[OnClick]'
   m_TagString: Untagged
@@ -598,7 +583,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &3242831781956396354
+--- !u!114 &5269614088911277301
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -607,65 +592,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 9009157121678127724}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d848fea79a544b5ba26c16ad40e7a68, type: 3}
+  m_Script: {fileID: 11500000, guid: 5ee3ae6241354c06a3c87f9c8e05e477, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Paths: "1: Root_Sign/B_IsOn \n2: Root_Main/B_IsOn \n"
-  ObjectPath: '1: Object:([OnClick])
-
-    2: Object:([OnClick])
-
-'
-  Updated:
-    _PersistentCalls: []
---- !u!114 &5394883840295272243
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9009157121678127724}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 841aa81520c9444598016c10034c99d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  method: 1
-  PathToModel: Root_Menu/Root_Screens
-  TimeRecive: 0
-  SuccessfulGet:
-    _PersistentCalls: []
-  LoseGet:
-    _PersistentCalls: []
---- !u!114 &6017988085558043671
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9009157121678127724}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 36cdada885da4fc9a8cd48b085bc0994, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  method: 1
-  PathToModel: Root_Sign/B_IsOn
-  __save: "{\r\n  \"$id\": \"1\",\r\n  \"$type\": \"ModelCore.Messages.SetBool, Assembly-CSharp\",\r\n 
-    \"Value\": false\r\n}"
---- !u!114 &2215862668042915195
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9009157121678127724}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 36cdada885da4fc9a8cd48b085bc0994, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  method: 1
-  PathToModel: Root_Main/B_IsOn
-  __save: "{\r\n  \"$id\": \"1\",\r\n  \"$type\": \"ModelCore.Messages.SetBool, Assembly-CSharp\",\r\n 
-    \"Value\": true\r\n}"
+  defaultTo: {fileID: 11400000, guid: 61003962d6840234aa465dfc5a628790, type: 2}
+  defaultEvent: {fileID: 11400000, guid: 4b06d0f50807755409005ee72949df40, type: 2}

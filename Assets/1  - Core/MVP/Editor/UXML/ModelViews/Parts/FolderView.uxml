@@ -1,9 +1,0 @@
-<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
-    <ui:VisualElement name="Folder" style="height: auto;">
-        <ui:VisualElement name="InfoPanel" style="flex-direction: row; background-color: rgb(102, 115, 113); padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; margin-left: 4px; margin-right: 4px; margin-top: 4px; margin-bottom: 0;">
-            <ui:VisualElement name="Icon" style="-unity-background-scale-mode: scale-and-crop; background-image: url(&apos;/Assets/1  - Core/MVP/Editor/Images/CloseFolder.png&apos;); width: 26px; height: 26px; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0;" />
-            <ui:Label text="Name of foldedr" display-tooltip-when-elided="true" name="NameLabel" style="-unity-text-align: middle-center; font-size: 13px;" />
-        </ui:VisualElement>
-        <ui:VisualElement name="Content" style="height: auto; background-color: rgb(236, 226, 226); padding-left: 0; margin-left: 15px; display: none; min-height: 13px;" />
-    </ui:VisualElement>
-</ui:UXML>

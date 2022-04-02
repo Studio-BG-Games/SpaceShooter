@@ -1,4 +1,0 @@
-<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
-    <ui:TextField picking-mode="Ignore" label="Filter" name="Searcher" />
-    <ui:ScrollView scroll-deceleration-rate="0,135" elasticity="0,1" name="Scripts" style="height: 350px;" />
-</ui:UXML>

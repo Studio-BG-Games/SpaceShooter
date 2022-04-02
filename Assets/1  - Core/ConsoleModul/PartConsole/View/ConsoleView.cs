@@ -5,7 +5,6 @@ using ConsoleModul.PartConsole.Js;
 using ConsoleModul.PartConsole.LoggerConsoles;
 using Js;
 using Js.Interfaces;
-using ModelCore;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Events;
@@ -45,7 +44,7 @@ namespace ConsoleModul.PartConsole.View
             _loggerConsole.AddLoger(_comandLogger, NameCommandLogger, 32);
             _loggerConsole.AddLoger(_jsLogger, NameJsLogger, 64);
             _loggerConsole.AddLoger(ConnecterUnityConsole.Instance, "DefaultUnityConsole", 128);
-            _loggerConsole.AddLoger(LoggerForModel.Instance, "Model", 64);
+            //_loggerConsole.AddLoger(LoggerForModel.Instance, "Model", 64);
 
             _commandConsole.Add(CreateCleanComand());
             _commandConsole.Add(CreateCleanAllComand());

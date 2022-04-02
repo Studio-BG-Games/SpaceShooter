@@ -1,0 +1,129 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fab16db9ad26e5d4589d394443875f2f, type: 3}
+  m_Name: Collider Path
+  m_EditorClassIdentifier: 
+  pathType: 2
+  sampleRate: 30
+  controlPointsPerSegment: 4
+  normalInterpolation:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  customNormalInterpolation: 0
+  valueInterpolation:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  customValueInterpolation: 0
+  useCustomNormalDirection: 0
+  customNormalDirection: {x: 0, y: 1, z: 0}
+  startOrientation: {x: 0, y: 0, z: 0}
+  randomizer: {fileID: 11400000, guid: d856acc0e92435345a3ae0cb58b7ef9d, type: 2}
+  restrictPitch: 1
+  restrictYaw: 1
+  restrictRoll: 0
+  usePitch: 1
+  useYaw: 1
+  useRoll: 0
+  useColors: 0
+  useSizes: 0
+  minOrientation: {x: -30, y: -90, z: 0}
+  maxOrientation: {x: 30, y: 90, z: 0}
+  minRandomStep: {x: 10, y: 25, z: 0}
+  maxRandomStep: {x: 10, y: 45, z: 0}
+  minTurnRate: {x: 2, y: 5, z: 0}
+  maxTurnRate: {x: 2, y: 5, z: 0}
+  startTargetOrientation: {x: 0, y: 0, z: 0}
+  useStartPitchTarget: 0
+  useStartYawTarget: 0
+  useStartRollTarget: 0
+  minColor:
+    serializedVersion: 2
+    key0: {r: 1, g: 1, b: 1, a: 1}
+    key1: {r: 1, g: 1, b: 1, a: 1}
+    key2: {r: 0, g: 0, b: 0, a: 0}
+    key3: {r: 0, g: 0, b: 0, a: 0}
+    key4: {r: 0, g: 0, b: 0, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 0
+    ctime1: 65535
+    ctime2: 0
+    ctime3: 0
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_NumColorKeys: 2
+    m_NumAlphaKeys: 2
+  maxColor:
+    serializedVersion: 2
+    key0: {r: 1, g: 1, b: 1, a: 1}
+    key1: {r: 1, g: 1, b: 1, a: 1}
+    key2: {r: 0, g: 0, b: 0, a: 0}
+    key3: {r: 0, g: 0, b: 0, a: 0}
+    key4: {r: 0, g: 0, b: 0, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 0
+    ctime1: 65535
+    ctime2: 0
+    ctime3: 0
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_NumColorKeys: 2
+    m_NumAlphaKeys: 2
+  minSize:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  maxSize:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  minSegmentOffset: {x: 0, y: 0, z: 0}
+  maxSegmentOffset: {x: 0, y: 0, z: 0}
+  segmentOffsetSpace: 0
+  newLevelMinOffset: {x: 0, y: 0, z: 0}
+  newLevelMaxOffset: {x: 0, y: 0, z: 0}
+  levelOffsetSpace: 0

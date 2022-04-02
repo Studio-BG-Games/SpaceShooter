@@ -6,7 +6,6 @@ using System.Reflection;
 using ConsoleModul.Logger;
 using Jint;
 using Jint.Native;
-using ModelCore.Universal;
 using UnityEngine;
 using UnityEngine.Events;
 using ILogger = ConsoleModul.Logger.ILogger;
@@ -73,20 +72,20 @@ namespace ConsoleModul.PartConsole
             engine.SetValue("Scope", new Action<bool>(x =>
             {
                 loger.Log(new ConsoleMessage().SetColor(Color.green).SetMessage("Существубщий контекст"));
-                loger.Log(new ConsoleMessage().SetColor(Color.white).SetMessage(JsEn.GetScope(engine)));
+                //loger.Log(new ConsoleMessage().SetColor(Color.white).SetMessage(JsEn.GetScope(engine)));
             }));
             engine.SetValue("Doc", new Action<JsValue, bool>((x, isLoop) =>
             {
                 if (!isLoop)
                 {
-                    loger.Log(new ConsoleMessage().SetColor(Color.white).SetMessage(JsEn.DocObject(x.AsObject())));
+                    //loger.Log(new ConsoleMessage().SetColor(Color.white).SetMessage(JsEn.DocObject(x.AsObject())));
                 }
                 else
                 {
                     var o = x.AsObject();
                     do
                     {
-                        loger.Log(new ConsoleMessage().SetColor(Color.white).SetMessage(JsEn.DocObject(o)));
+                        //loger.Log(new ConsoleMessage().SetColor(Color.white).SetMessage(JsEn.DocObject(o)));
                         o = o.Prototype;
                     } while (o.Prototype != null);
                 }

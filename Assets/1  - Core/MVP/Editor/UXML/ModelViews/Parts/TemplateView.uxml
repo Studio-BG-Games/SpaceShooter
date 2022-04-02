@@ -1,9 +1,0 @@
-<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
-    <ui:VisualElement style="padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; background-color: rgb(228, 228, 228); margin-left: 0; margin-right: 0; margin-top: 3px; margin-bottom: 3px;">
-        <ui:Label text="Name of template" display-tooltip-when-elided="true" name="NameLabel" style="background-color: rgba(161, 161, 161, 0); -unity-background-image-tint-color: rgb(228, 228, 228); font-size: 11px; -unity-text-align: middle-center; -unity-font-style: bold; justify-content: flex-end; padding-bottom: 2px;" />
-        <ui:VisualElement style="flex-direction: row; justify-content: space-between; margin-left: 2px; margin-right: 2px; margin-top: 2px; margin-bottom: 2px; align-items: flex-end; flex-grow: 1;">
-            <ui:Button text="Add to tree" display-tooltip-when-elided="true" name="Spawn" style="background-color: rgb(35, 152, 42); color: rgb(255, 255, 255); flex-shrink: 1; flex-grow: 1; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0;" />
-            <ui:Button text="Remove file" display-tooltip-when-elided="true" name="Delete" style="color: rgb(255, 255, 255); background-color: rgb(188, 36, 36); flex-grow: 1; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; flex-shrink: 1;" />
-        </ui:VisualElement>
-    </ui:VisualElement>
-</ui:UXML>

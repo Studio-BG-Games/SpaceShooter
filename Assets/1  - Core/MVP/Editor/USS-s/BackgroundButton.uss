@@ -1,7 +1,0 @@
-.BackgroundButton {
-    margin-left: 6px;
-    margin-right: 6px;
-    background-color: rgba(173, 166, 166, 0.98);
-    padding-top: 3px;
-    padding-bottom: 3px;
-}

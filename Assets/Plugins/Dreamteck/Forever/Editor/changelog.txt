@@ -1,0 +1,139 @@
+-------- 1.13 --------
+FIX: Fixed and improved the behavior of looping levels
+FIX: Fixed an issue with registering the Bend Spline of the SegmentObjectSettings component
+FIX: Improved logic for handling (skipping) disabled levels
+FIX: Fixed the custom path editor inspector for segments with custom paths
+FIX: Logic of LevelGenerator.CalculateLength
+
+API: Added a SetPercent method to the Runner class so that it can be teleported anywhere along the existing path easily
+
+-------- 1.12 --------
+FEATURE: Added a new Shuffle sequence mode which randomizes the segments' order without repeating them
+FEATURE: Introduced a new system for unloading assets which bypasses Resources.UnloadUnusedAssets - UnloadUnusedAssets can now be toggled through the LevelGenerator component
+
+FIX: Brought back the possibility to loop custom path generator splines
+FIX: Fixed an issue with segment creation and level loading order
+FIX: Various small performance optimizations
+FIX: Fixed custom paths behavior for custom level segments
+
+API: Added the "associatedRemoteLevel" property to ForeverLevel to provide a reference to the RemoteLevel component of remote levels
+API: Added the "onSegmentCreated" event to the LevelGenerator
+
+SUPPORT: Official Unity 2020.3 support
+SUPPORT: Official Unity 2021.1 support
+
+-------- 1.11 --------
+FEATURE: Added support for dragging multiple level segment prefabs into the sequence editor at once
+
+FIX: Improved general stability of the generation logic
+FIX: Fixed errors and segments not removing when using Forever in Debug mode
+FIX: Fixed an issue where entire levels got skipped when calling ForeverLevel.SkipSequence
+FIX: LevelGenerator.levelChangeHandler will no longer be overridden upon each LevelGenerator.StartGeneration call
+FIX: Fixed segments not being destroyed in some cases when object pooling is enabled
+
+SUPPORT: Reworked segment generation multithreading to support a wider range of devices (Nintendo Switch)
+SUPPORT: Official 2020.2 support
+SUPPORT: Minimum supported version of Unity is now 2018.4
+
+
+-------- 1.10 --------
+FIX: Fixed errors in the editor when using custom segments with custom paths
+FIX: General code quality improvement
+FIX: Fixed the StackOverflow exception when drawing empty splines
+FIX: Fixed serialization issues with the SegmentObjectSettings component and the Extrusion Settings window
+FIX: Fixed editor crash when exiting play mode while having a path generator selected
+FIX: Fixed issues with Path Generator objects serialization
+FIX: Patched memory leaks related to LevelSegment.next and LevelSegment.previous
+
+FEATURE: Forever is now using the convenient Dreamteck Splines editor for for all spline editing
+FEATURE: Introducing object pooling for levels, defined in separate scenes
+FEATURE: Levels in Forever are now defined using Scriptable Objects and can be extended
+FEATURE: Introducing randomizer objects which allow custom randomization for path generation and level and sequence iteration
+FEATURE: Added per-level level path overriding
+
+SUPPORT: Minimum supported version of Unity is now 2018.3
+SUPPORT: Official support for Unity 2020.1
+
+
+-------- 1.07 --------
+API: Support for Dreamteck Splines 2.00 (Dreamteck Splines 1 no longer work with Forever)
+
+FIX: Children of objects with custom local rotation now get properly extruded and positioned
+FIX: Fixed an issue with nested sequences being skipped in some situations
+FIX: Custom path rules now work properly with High Level Path Generators
+FIX: LevelGenerator.GlobalToLocal percent now returns the correct values
+
+API: The ProjectedPlayer class now also holds a reference to the Level Segment the player is in
+
+
+-------- 1.06 --------
+FIX: Level Generator debug mode now works properly with remote levels
+FIX: Fixed the path generators' Continue functionality when LevelGenerator.instance.DestroySegment is called
+FIX: Remote levels are now unloaded properly when the Level Generator is destroyed
+FIX: Fixed the behavior of the path offset inside the Random Path Generator
+
+
+API: Added a "DoProject" method to the Projected Player component which forces the component to calculate the projection immediately
+API: Added an "onProject" event to the ProjectedPlayer which gets called after the projection calculation has been executed
+
+-------- 1.05 --------
+FIX: Custom paths for level segments now save properly without data loss
+FIX: Improved the path generator's Continue functionality when swapping generators at runtime
+FIX: Improved the behavior of the nested sequences
+
+FEATURE: Sequence duplication inside the sequence editor
+
+
+-------- 1.04 --------
+FIX: The first generated segment now starts exactly at the position of the Level Generator's transform
+FIX: Fixed the level path generation behavior when the Level Generator is rotated at an oblique angle
+FIX: Keeping the Level Window open while re-compiling does not  cause it to crash and turn into a blank window anymore
+
+FEATURE: Added the CustomSequence - a class which gives the developers full freedom to override Forever's segment sequences and implement their own segment picking logic
+FEATURE: Random segment sequences now enable the user to set a spawn chance for each individual segment or nested sequence
+FEATURE: Each sequence can now override the Level Generator's Path Generator with a custom path
+FEATURE: Hovering over the segment thumbnails inside the Sequence Editor displays tooltips with their full name
+FEATURE: The Level Window now stays open even if the Level Generator has been de-selected making it easier to browse segments in the project view before dragging them over
+
+CHANGE: The Level Path Generators now work in Level Generator-local space
+
+API: Added the "isFirstPoint" protected bool to the Path Generator classes which returs true if the currently generated point is the first point of the first segment
+API: Renamed the "levelGeneratorTransform" to just "transform" inside the LevelPathGenerator class
+API: The "Reset" method of the SegmentShuffle class is now virtual
+API: SegmentDefinition, SegmentSequence and SegmentSequenceCollections are no longer nested in the Level class
+API: Added the onReady event to the LevelGenerator class
+API: Added the onLevelsDepleted event to the LevelGenerator class which fires if there are no more levels to generate further segments from (Works only for Level Iteration "Ordered" or "None").
+
+-------- 1.03 --------
+FIX: Bending Dreamteck Splines no longer throws info messages in the console when the points' tangents and positions are the same
+FIX: Fixed the SegmentObjectSettings component not being saved correctly when applying prefabs.
+FIX: Changes made to the sequence headers inside the level editor window are now properly saved and work with Undo
+FIX: Changes made to path generators are now properly saved in the project upon exit
+
+API: "LevelSegmentCustomPath" renamed to "LevelSegmentPath"
+API: Added the "CalculateLength" method to the LevelSegment and the LevelGenerator - for calculating the path length in world units
+
+-------- 1.02 --------
+FIX: Disabling extrudable objects in the Level Segment no longer throws an exception and works properly
+FIX: Improved the stability of loading and unloading remote levels
+FIX: Selecting levels segments in the editor during runtime no longer causes their colliders to not be enabled
+FIX: The Level Generator now properly activates all segments upon generation in Finite mode
+FIX: Swapping a Level Path Generator with a High Level Path Generator inside the Level Generator during runtime no longer throws an exception
+
+FEATURE: The IndexType property of the SegmentObjectSettings component is now also available in the Extrusion Settings Window under "Indexing"
+FEATURE: The Custom Path Generator now has the "useRelativeCoordinates" property which allows for it to be seamlessly exchanged during runtime, continuing the generated path from the same point and direction
+FEATURE: The Custom Path Generator now offers the "segmentCount" property which defines how many segments this path is meant for approximately
+
+API: Added the "SetLevel" method to the LevelGenerator class for setting the desired level easily
+
+CHANGE: The "Enabled" property in the Extrusion Settings window has been replaced by the "Indexing" field. Setting "Indexing" to "Ignore" now has the same effect as disabling the object
+CHANGE: ExtrusionSettings.Indexing.IgnoreAll is now the equivalent of SegmentObjectSettings.IndexType.Ignore
+
+-------- 1.01 --------
+FIX: Improved the behavior of the Custom Lane Runner component
+FIX: Custom segment paths are now properly drawn in runtime
+FIX: Restarting the Level Generator when remote levels are used no longer causes it to stop working
+FIX: Changing the path generator of the Level Generator during runtime now properly preserves the direction and position of the path
+
+FEATURE: Added the "Seamless Edges" toggle for the custom segment paths - allows for the user to choose whether the custom paths should preserve the semalessness between the segments or they should be mapped more accurately around their ends.
+FEATURE: Added "Move Up" and "Move Down" operations for custom paths so that they can be re-arranged

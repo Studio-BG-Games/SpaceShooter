@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7caf1ec1dee72eb41897d5f6a011c9be, type: 3}
+  m_Name: HighLevelPathGenerator
+  m_EditorClassIdentifier: 
+  pathType: 2
+  sampleRate: 10
+  controlPointsPerSegment: 5
+  normalInterpolation:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  customNormalInterpolation: 0
+  valueInterpolation:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  customValueInterpolation: 0
+  useCustomNormalDirection: 0
+  customNormalDirection: {x: 0, y: 1, z: 0}
+  startOrientation: {x: 0, y: 0, z: 0}

@@ -1,6 +1,0 @@
-<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
-    <ui:Label text="Фильтер по namespace" display-tooltip-when-elided="true" style="align-items: auto; justify-content: flex-start; flex-direction: column; -unity-text-align: upper-center; font-size: 15px; -unity-font-style: bold;" />
-    <ui:TextField picking-mode="Ignore" />
-    <ui:VisualElement style="background-color: rgb(126, 126, 126); height: 6px;" />
-    <ui:ScrollView scroll-deceleration-rate="0,135" elasticity="0,1" name="ViewElelemnts" show-vertical-scroller="true" show-horizontal-scroller="true" style="height: 1195px; max-height: none; min-height: auto; justify-content: flex-start; align-items: stretch; bottom: auto;" />
-</ui:UXML>

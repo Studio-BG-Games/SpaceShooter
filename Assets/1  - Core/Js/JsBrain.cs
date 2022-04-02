@@ -6,7 +6,6 @@ using Jint;
 using Jint.Native;
 using Jint.Runtime.Interop;
 using Js.Interfaces;
-using ModelCore;
 using Sirenix.OdinInspector;
 using Sirenix.Utilities;
 using UnityEngine;
