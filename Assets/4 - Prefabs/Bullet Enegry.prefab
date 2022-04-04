@@ -310,6 +310,9 @@ MonoBehaviour:
   _targets:
   - TargetId: {fileID: 0}
     ChangeAt: 3
+  Damaged:
+    _PersistentCalls: []
+  _canEvented: 1
 --- !u!1 &1649931267902942
 GameObject:
   m_ObjectHideFlags: 0

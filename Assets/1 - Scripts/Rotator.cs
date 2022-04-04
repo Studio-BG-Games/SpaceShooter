@@ -10,6 +10,9 @@ namespace DefaultNamespace
         [ShowInInspector] public Vector3 Diraction { get; set; }
         [ShowInInspector] public float Speed { get; set; }
 
-        private void Update() => Target.Rotate(Diraction*Speed);
+        private void Update()
+        {
+            Target.eulerAngles += Diraction * Speed;
+        }
     }
 }

@@ -8,21 +8,20 @@ namespace Services.Bind
 {
     public class FactoryInput : FactoryDI
     {
-        private PcInput _pc;
+        public PcInput Pc;
+        public MobileInput Mobile;
+        
+        private CompositeInput _composite;
 
         public override void Create(DiBox container)
         {
-            _pc = new PcInput();
-            container.RegisterSingle<IInput>(_pc);
-        }
-
-        private void Update()
-        {
-            _pc.Update();
+            _composite = new CompositeInput(new IInput[] {Pc, Mobile});
+            container.RegisterSingle<IInput>(_composite);
         }
 
         public override void DestroyDi(DiBox container)
         {
+            _composite.Dispose();
             container.RemoveSingel<IInput>();
         }
     }

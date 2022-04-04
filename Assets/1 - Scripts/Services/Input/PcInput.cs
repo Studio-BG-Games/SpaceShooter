@@ -1,9 +1,10 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.PlayerLoop;
 
 namespace Services.Input
 {
-    public class PcInput : IInput
+    public class PcInput : MonoBehaviour, IInput
     {
         public event Action<Vector2> Move;
         public event Action ChangeWeapon;

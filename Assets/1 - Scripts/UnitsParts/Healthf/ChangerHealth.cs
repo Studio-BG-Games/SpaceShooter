@@ -1,6 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Sirenix.OdinInspector;
 using Sirenix.Utilities;
+using UltEvents;
 using UnityEngine;
 
 namespace Services
@@ -8,10 +10,29 @@ namespace Services
     public class ChangerHealth : PartUnit
     {
         [SerializeField] private List<TargetAttack> _targets;
+        public UltEvent Damaged;
+        [SerializeField][HideInInspector]private bool _canEvented = true;
 
-        public void Change(RaycastHit hit) => hit.collider.GetComponents<Health>().ForEach(x => Change((Health) x));
+        private void Awake() => _canEvented = true;
 
-        public void Change(Health health) => _targets.ForEach(x=>x.Change(health));
+        public void Change(RaycastHit hit) => Change(hit.collider);
+
+        public void Change(Collider collider)
+        {
+            foreach (var health in collider.GetComponents<Health>())
+            {
+                Change(health);
+                _canEvented = false;
+            }
+
+            _canEvented = true;
+        }
+
+        public void Change(Health health)
+        {
+            if(_canEvented) Damaged.Invoke();
+            _targets.ForEach(x => x.Change(health));
+        }
 
         [System.Serializable]
         public class TargetAttack

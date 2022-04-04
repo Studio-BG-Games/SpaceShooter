@@ -1,6 +1,7 @@
 ﻿using System;
 using Dreamteck;
 using Sirenix.OdinInspector;
+using Sirenix.Serialization;
 using UnityEngine;
 
 namespace Services
@@ -10,11 +11,12 @@ namespace Services
         public HealthID Id;
 
         public event Action<int, int> ChangedOldNew;
-
+        
         public int Min => 0;
-        [ShowInInspector] public int Max { get; private set; }
+        public int Max => _max;
         [SerializeField] private int _current;
-
+        [SerializeField] private int _max;
+        
         public int Current
         {
             get => _current;

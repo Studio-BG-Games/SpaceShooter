@@ -8,6 +8,7 @@ namespace DefaultNamespace
     public class MarkPlayerSearch : MonoBehaviour
     {
         public UltEvent Finded;
+        public UltEvent<Collider> FindedCollider;
         
         [SerializeField] private Collider _collider;
 
@@ -15,6 +16,7 @@ namespace DefaultNamespace
         {
             if (other.TryGetComponent<MarkPlayer>(out var mark))
             {
+                FindedCollider.Invoke(other);
                 Finded?.Invoke();
             }
         }

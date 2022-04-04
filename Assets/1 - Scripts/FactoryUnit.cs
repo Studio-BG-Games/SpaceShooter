@@ -27,5 +27,12 @@ namespace Services
 
             return bullet;
         }
+
+        public Unit CreateUnit(Unit runner, Transform point)
+        {
+            var unit = DiBox.MainBox.CreatePrefab(runner);
+            unit.transform.position = point.transform.position;
+            return unit;
+        }
     }
 }
