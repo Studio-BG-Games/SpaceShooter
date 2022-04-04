@@ -16,7 +16,11 @@ namespace Spawners
         [SerializeField] private float _sizeGizmos=10;
         
         
-        public override void Generate() => _factoryUnit.CreateUnit(SpawnObject, GetPoint);
+        public override void Generate()
+        {
+            var result = _factoryUnit.CreateUnit(SpawnObject, GetPoint);
+            result.transform.SetParent(transform);
+        }
 
         private void OnDrawGizmosSelected()
         {

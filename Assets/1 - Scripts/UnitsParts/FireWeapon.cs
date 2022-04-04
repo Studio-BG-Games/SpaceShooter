@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using DIContainer;
+using Sirenix.Utilities;
 using UltEvents;
 using UnityEngine;
 
@@ -14,13 +15,15 @@ namespace Services
         [Min(0.05f)][SerializeField] private float _fireRate;
         [SerializeField] private Transform _spawnPoint;
         public UltEvent Fired;
+        public Collider[] ColliderForIgnore;
 
         private Coroutine _pause;
         public void TryFire()
         {
             if (_pause == null)
             {
-                _factoryUnit.CreateBullet(zmover, Bullet, _spawnPoint.position); 
+                var r = _factoryUnit.CreateBullet(zmover, Bullet, _spawnPoint.position);
+                r.GetComponentsInChildren<HitCast>().ForEach(x => x.AddIgnore(ColliderForIgnore));
                 Fired.Invoke();
                 Pause();
             }

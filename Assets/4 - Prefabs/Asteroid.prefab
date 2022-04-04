@@ -112,6 +112,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Id: {fileID: 11400000, guid: a65ec0f5624545c4ca630f0317e965e5, type: 2}
   _current: 8
+  _max: 8
 --- !u!114 &6596271197145662815
 MonoBehaviour:
   m_ObjectHideFlags: 0

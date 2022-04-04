@@ -19,11 +19,13 @@ namespace Services
 
         public void Change(Collider collider)
         {
-            foreach (var health in collider.GetComponents<Health>())
+            var healthf = new HashSet<Health>(collider.GetComponents<Health>());
+            collider.GetComponents<HealthRef>().ForEach(x => healthf.Add(x.Health));
+            healthf.ForEach(x =>
             {
-                Change(health);
+                Change(x);
                 _canEvented = false;
-            }
+            });
 
             _canEvented = true;
         }
@@ -38,6 +40,7 @@ namespace Services
         public class TargetAttack
         {
             [InfoBox("if null - change all health witn any id")]
+            [InfoBox("Negative Value = damage, Positive = heal")]
             public HealthID TargetId;
             public int ChangeAt;
 

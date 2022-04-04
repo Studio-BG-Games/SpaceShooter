@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4140573685538426}
   - component: {fileID: 3852924292553681525}
-  - component: {fileID: 114768807756433516}
+  - component: {fileID: 4984299782318381335}
   - component: {fileID: 1256465192544184063}
   - component: {fileID: 114724404775509316}
   - component: {fileID: 9182887333520444961}
@@ -57,7 +57,7 @@ MonoBehaviour:
   _parts:
   - {fileID: 765423122786303924}
   - {fileID: 1736801951247989670}
---- !u!114 &114768807756433516
+--- !u!114 &4984299782318381335
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -66,35 +66,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 1059452319082446}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 696e8838ed735264aac535bcba19e9d3, type: 3}
+  m_Script: {fileID: 11500000, guid: f6f2a3761d2c45f88b59de68dae33dd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitMask:
-    serializedVersion: 2
-    m_Bits: 819
-  hitScanIntervalType: 0
-  hitScanFrameInterval: 3
-  hitScanTimeInterval: 0
-  ignoreTriggerColliders: 1
-  ignoreHierarchyCollision: 1
-  rootTransform: {fileID: 0}
-  onHitDetected:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1736801951247989670}
-        m_TargetAssemblyTypeName: Services.ChangerHealth, Assembly-CSharp
-        m_MethodName: Change
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  onHitDetected2:
+  _isForward: 1
+  _distance: 0.5
+  Hited:
     _PersistentCalls:
+    - _Target: {fileID: 1736801951247989670}
+      _MethodName: Change
+      _PersistentArguments:
+      - _Type: 14
+        _Int: 0
+        _String: UnityEngine.Collider, UnityEngine.PhysicsModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        _X: 0
+        _Y: 0
+        _Z: 0
+        _W: 0
+        _Object: {fileID: 0}
     - _Target: {fileID: 1256465192544184063}
       _MethodName: Run
       _PersistentArguments: []
@@ -240,7 +230,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _runner: {fileID: 7114145335453364577}
-  IsPositive: 1
+  _isPositive: 1
+  NewDiraction:
+    _PersistentCalls:
+    - _Target: {fileID: 4984299782318381335}
+      _MethodName: set_IsForward
+      _PersistentArguments:
+      - _Type: 14
+        _Int: 0
+        _String: 
+        _X: 1
+        _Y: 0
+        _Z: 0
+        _W: 0
+        _Object: {fileID: 0}
   _speed: 90
 --- !u!114 &-9107042937410610320
 MonoBehaviour:
@@ -309,7 +312,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _targets:
   - TargetId: {fileID: 0}
-    ChangeAt: 3
+    ChangeAt: -3
   Damaged:
     _PersistentCalls: []
   _canEvented: 1
@@ -338,7 +341,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1649931267902942}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4140573685538426}
@@ -467,7 +470,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 124577890379536165}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 10.9}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4140573685538426}

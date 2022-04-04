@@ -1,5 +1,6 @@
 ﻿using System;
 using Dreamteck.Forever;
+using UltEvents;
 using UnityEngine;
 
 namespace Services
@@ -8,9 +9,22 @@ namespace Services
     {
         [SerializeField]private Runner _runner;
         public Runner Runner => _runner;
-        public bool IsPositive;
+        [SerializeField] private bool _isPositive;
 
-        [SerializeField] private float _speed;
+        public UltEvent<bool> NewDiraction;
+
+        public bool IsPositive
+        {
+            get => _isPositive;
+            set
+            {
+                _isPositive = value;
+                _runner.followSpeed = Speed;
+                NewDiraction.Invoke(_isPositive);
+            }
+        }
+
+        [Min(0)][SerializeField] private float _speed;
 
         public float Speed
         {
@@ -22,6 +36,10 @@ namespace Services
             }
         }
 
-        private void Awake() => _runner.followSpeed = Speed;
+        private void Awake()
+        {
+            NewDiraction.Invoke(IsPositive);
+            _runner.followSpeed = Speed;
+        }
     }
 }
