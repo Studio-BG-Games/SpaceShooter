@@ -1,9 +1,8 @@
-﻿using System;
-using DIContainer;
+﻿using DIContainer;
 using UltEvents;
 using UnityEngine;
 
-namespace Services.Input
+namespace Services.Inputs
 {
     public class InputReciverMove  : MonoBehaviour
     {

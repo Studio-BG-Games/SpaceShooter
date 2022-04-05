@@ -1,8 +1,7 @@
 ﻿using System;
 using UnityEngine;
-using UnityEngine.PlayerLoop;
 
-namespace Services.Input
+namespace Services.Inputs
 {
     public class PcInput : MonoBehaviour, IInput
     {
@@ -17,8 +16,8 @@ namespace Services.Input
             Move?.Invoke(UnityEngine.Input.mousePosition - lastPosition);
             lastPosition = UnityEngine.Input.mousePosition;
             
-            if(UnityEngine.Input.GetKeyDown(KeyCode.Mouse1)) ChangeWeapon?.Invoke();
-            if(UnityEngine.Input.GetKey(KeyCode.Mouse0)) Fire?.Invoke();
+            if(Input.GetKeyDown(KeyCode.Mouse1) || Input.GetKey(KeyCode.LeftShift)) ChangeWeapon?.Invoke();
+            if(Input.GetKey(KeyCode.Mouse0) || Input.GetKey(KeyCode.Space)) Fire?.Invoke();
         }
     }
 }

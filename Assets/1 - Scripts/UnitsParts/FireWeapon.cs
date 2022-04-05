@@ -22,7 +22,7 @@ namespace Services
         {
             if (_pause == null)
             {
-                var r = _factoryUnit.CreateBullet(zmover, Bullet, _spawnPoint.position);
+                var r = _factoryUnit.CreateBullet(zmover, Bullet, _spawnPoint);
                 r.GetComponentsInChildren<HitCast>().ForEach(x => x.AddIgnore(ColliderForIgnore));
                 Fired.Invoke();
                 Pause();

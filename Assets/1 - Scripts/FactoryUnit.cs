@@ -9,7 +9,7 @@ namespace Services
     {
         [DI] private ObjectPool _objectPool;
         
-        public Unit CreateBullet(ZMover moverStarter, BulletMark bulletPrefab, Vector3 position)
+        public Unit CreateBullet(ZMover moverStarter, BulletMark bulletPrefab, Transform point)
         {
             //var bullet = _objectPool.Get(bulletPrefab.gameObject).GetComponent<BulletMark>().Unit;
             var bullet = DiBox.MainBox.CreatePrefab(bulletPrefab).Unit;
@@ -18,7 +18,8 @@ namespace Services
             {
                 //bulletMover.Speed += moverStarter.Speed;
                 var ruuner = moverStarter.Runner;
-                bullet.transform.position = position;
+                bullet.transform.position = point.transform.position;
+                bullet.transform.rotation = point.transform.rotation;
                 if(LevelGenerator.instance.ready)
                     ruuner.StartFollow();
                 bulletMover.IsPositive = moverStarter.IsPositive;

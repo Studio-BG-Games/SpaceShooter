@@ -25,9 +25,17 @@ namespace Services
 
         private void Update()
         {
-            if(Physics.Raycast(transform.position, IsForward ? transform.forward : transform.forward * -1, out var info, _distance))
+            if(Physics.Raycast(transform.position, (IsForward ? transform.forward : transform.forward * -1), out var info, _distance))
                 if(!_collidersForIgnore.Contains(info.collider))
                     Hited.Invoke(info.collider);
+        }
+
+        private void OnDrawGizmosSelected()
+        {
+            Gizmos.color = Color.yellow;
+            Gizmos.DrawLine(transform.position, transform.position + (IsForward ? transform.forward : transform.forward * -1)*_distance);
+            Gizmos.color = Color.magenta;
+            Gizmos.DrawWireSphere(transform.position, _distance);
         }
     }
 }

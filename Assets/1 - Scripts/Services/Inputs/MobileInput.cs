@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace Services.Input
+namespace Services.Inputs
 {
     public class MobileInput : MonoBehaviour, IInput
     {

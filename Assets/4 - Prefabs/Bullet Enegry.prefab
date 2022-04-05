@@ -70,7 +70,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _isForward: 1
-  _distance: 0.5
+  _distance: 5
   Hited:
     _PersistentCalls:
     - _Target: {fileID: 1736801951247989670}

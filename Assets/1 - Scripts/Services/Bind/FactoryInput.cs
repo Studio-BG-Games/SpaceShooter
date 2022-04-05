@@ -1,6 +1,6 @@
 ﻿using System;
 using DIContainer;
-using Services.Input;
+using Services.Inputs;
 using TMPro;
 using UnityEngine;
 
