@@ -29,10 +29,12 @@ namespace Services
             return bullet;
         }
 
-        public Unit CreateUnit(Unit runner, Transform point)
+        public Unit CreateUnit(Unit runner, Transform point) => CreateUnit(runner, point.position);
+
+        public Unit CreateUnit(Unit runner, Vector3 point)
         {
             var unit = DiBox.MainBox.CreatePrefab(runner);
-            unit.transform.position = point.transform.position;
+            unit.transform.position = point;
             return unit;
         }
     }

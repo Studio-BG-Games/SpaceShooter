@@ -1,13 +1,10 @@
-﻿using DIContainer;
-using Services;
+﻿using Services;
 using UnityEngine;
 
 namespace Spawners
 {
     public class SingleSpawner : BaseSpawner
     {
-        private FactoryUnit _factoryUnit=>DiBox.MainBox.ResolveSingle<FactoryUnit>();
-        
         public Unit SpawnObject;
         public Transform Point;
 
@@ -18,7 +15,7 @@ namespace Spawners
         
         public override void Generate()
         {
-            var result = _factoryUnit.CreateUnit(SpawnObject, GetPoint);
+            var result = factoryUnit.CreateUnit(SpawnObject, GetPoint);
             result.transform.SetParent(transform);
         }
 

@@ -1,7 +1,6 @@
 ﻿using DIContainer;
 using Infrastructure;
 using Plugins.GameStateMachines.Interfaces;
-using UnityEditor.SearchService;
 
 namespace Plugins.GameStateMachines.States
 {

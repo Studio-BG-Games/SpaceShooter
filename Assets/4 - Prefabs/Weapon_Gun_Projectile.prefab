@@ -171,6 +171,7 @@ MonoBehaviour:
     - _Target: {fileID: 3655819970066147492}
       _MethodName: SpawnAll
       _PersistentArguments: []
+  ColliderForIgnore: []
 --- !u!1 &3652971272775416983
 GameObject:
   m_ObjectHideFlags: 0
@@ -232,7 +233,7 @@ GameObject:
   m_Layer: 0
   m_Name: ProjectileSpawn
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -244,7 +245,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5381760359646359189}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.289, z: 0.653}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6388353629206137830}
