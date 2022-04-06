@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: HighLevelPathGenerator
   m_EditorClassIdentifier: 
   pathType: 2
-  sampleRate: 10
+  sampleRate: 2
   controlPointsPerSegment: 5
   normalInterpolation:
     serializedVersion: 2
