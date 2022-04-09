@@ -1,0 +1,15 @@
+.flow-vertical.input {
+    --port-color: rgb(0, 183, 64);
+}
+
+.flow-horizontal.input {
+    --port-color: rgb(0, 200, 70);
+}
+
+.flow-port.output {
+    --port-color: rgb(0, 200, 70);
+}
+
+.flow-port > #connector {
+    background-color: #212121;
+}

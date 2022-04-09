@@ -1,0 +1,19 @@
+{
+    "name": "uNode",
+    "rootNamespace": "",
+    "references": [
+        "GUID:3ccbed54d8e8e20438d51a64c5ffda29",
+        "GUID:6fbc239d3bfbeca499151080ec5a1a41"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "MaxyGames.OdinSerializer.dll"
+    ],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

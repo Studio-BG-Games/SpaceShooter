@@ -1,0 +1,19 @@
+{
+    "name": "uNode.Core.Editor",
+    "references": [
+        "GUID:3ccbed54d8e8e20438d51a64c5ffda29"
+    ],
+    "optionalUnityReferences": [],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "FullSerializer.dll"
+    ],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": []
+}

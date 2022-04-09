@@ -6,12 +6,12 @@ using UnityEngine;
 
 namespace Services
 {
-    public class FireWeapon : PartUnit
+    public class FireWeapon : MonoBehaviour
     {
-        [DI] private FactoryUnit _factoryUnit;
+        //[DI] private FactoryUnit _factoryUnit;
         
         public ZMover zmover;
-        public BulletMark Bullet;
+        //public BulletMark Bullet;
         [Min(0.05f)][SerializeField] private float _fireRate;
         [SerializeField] private Transform _spawnPoint;
         public UltEvent Fired;
@@ -20,13 +20,14 @@ namespace Services
         private Coroutine _pause;
         public void TryFire()
         {
+            /*
             if (_pause == null)
             {
                 var r = _factoryUnit.CreateBullet(zmover, Bullet, _spawnPoint);
                 r.GetComponentsInChildren<HitCast>().ForEach(x => x.AddIgnore(ColliderForIgnore));
                 Fired.Invoke();
                 Pause();
-            }
+            }*/
         }
 
         private void Pause()

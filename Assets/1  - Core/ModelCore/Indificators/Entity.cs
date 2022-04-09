@@ -1,0 +1,42 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using Sirenix.OdinInspector;
+using Sirenix.Utilities;
+using UnityEngine;
+
+namespace ModelCore
+{
+    [DisallowMultipleComponent][RequireComponent(typeof(LabelObjectGo))]
+    public class Entity : MonoBehaviour
+    {
+        private LabelObjectGo _label;
+        public LabelObjectGo Label => _label ??= GetComponent<LabelObjectGo>();
+        [SerializeField] private List<MonoBehaviour> _components = new List<MonoBehaviour>();
+
+        public T Select<T>(Func<T, bool> predict) where T : MonoBehaviour => _components.FirstOrDefault(x =>
+        {
+            var target = x as T;
+            if (target == null) return false;
+            return predict(target);
+        }) as T;
+
+        public T[] SelectAll<T>(Func<T, bool> predict) where T : MonoBehaviour
+        {
+            return _components.Where(x => x is T).Cast<T>().Where(predict).ToArray();
+        }
+
+        private void Awake() => EntityAgregator.Instance.Add(this);
+
+        private void OnDestroy() => EntityAgregator.Instance.Remove(this);
+
+        [Button]
+        public void OnValidate()
+        {
+            if(!Application.isEditor) return;
+            GetComponents<MonoBehaviour>().ForEach(x => _components.Add(x));
+            _components = new HashSet<MonoBehaviour>(_components).ToList();
+            _components.RemoveAll(x => x == null);
+        }
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "name": "uNode.Compiler",
+    "references": [
+        "GUID:e5399a7447c3e5245a98534d34d6af62",
+        "GUID:3ccbed54d8e8e20438d51a64c5ffda29",
+        "GUID:6fbc239d3bfbeca499151080ec5a1a41"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "Microsoft.CodeAnalysis.dll",
+        "Microsoft.CodeAnalysis.CSharp.dll",
+        "System.Collections.Immutable.dll"
+    ],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

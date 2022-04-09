@@ -8816,7 +8816,6 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 448b76b585a65084c837600cce4f03c2, type: 2}
-  - {fileID: 2100000, guid: 448b76b585a65084c837600cce4f03c2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -28888,7 +28887,6 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 448b76b585a65084c837600cce4f03c2, type: 2}
-  - {fileID: 2100000, guid: 448b76b585a65084c837600cce4f03c2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -34349,7 +34347,6 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 448b76b585a65084c837600cce4f03c2, type: 2}
-  - {fileID: 2100000, guid: 448b76b585a65084c837600cce4f03c2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -39165,7 +39162,6 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 448b76b585a65084c837600cce4f03c2, type: 2}
   - {fileID: 2100000, guid: 448b76b585a65084c837600cce4f03c2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -44512,7 +44508,6 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 448b76b585a65084c837600cce4f03c2, type: 2}
-  - {fileID: 2100000, guid: 448b76b585a65084c837600cce4f03c2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -49363,7 +49358,6 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 448b76b585a65084c837600cce4f03c2, type: 2}
-  - {fileID: 2100000, guid: 448b76b585a65084c837600cce4f03c2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -54179,7 +54173,6 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 448b76b585a65084c837600cce4f03c2, type: 2}
   - {fileID: 2100000, guid: 448b76b585a65084c837600cce4f03c2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -58997,7 +58990,6 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 448b76b585a65084c837600cce4f03c2, type: 2}
-  - {fileID: 2100000, guid: 448b76b585a65084c837600cce4f03c2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -63813,7 +63805,6 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 448b76b585a65084c837600cce4f03c2, type: 2}
   - {fileID: 2100000, guid: 448b76b585a65084c837600cce4f03c2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -68712,7 +68703,6 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 448b76b585a65084c837600cce4f03c2, type: 2}
-  - {fileID: 2100000, guid: 448b76b585a65084c837600cce4f03c2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -69161,8 +69151,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2062483499788289751, guid: 0c77a28bf70701e428c964c726acd0d9, type: 3}
+    - {fileID: 2593102518138306737, guid: 0c77a28bf70701e428c964c726acd0d9, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 0c77a28bf70701e428c964c726acd0d9, type: 3}
+--- !u!1 &4911209660565651743 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1807295685935236867, guid: 0c77a28bf70701e428c964c726acd0d9,
+    type: 3}
+  m_PrefabInstance: {fileID: 6718476688323216924}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2175833522098389027 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4832028135080871487, guid: 0c77a28bf70701e428c964c726acd0d9,
@@ -69175,3 +69173,85 @@ BoxCollider:
     type: 3}
   m_PrefabInstance: {fileID: 6718476688323216924}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &528017233709433435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4911209660565651743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13424878253e48bd8ab79a05bd741b4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IdToSearch:
+  - {fileID: 11400000, guid: a2f811f45c2b2f240add89ee371a40a2, type: 2}
+  Finded:
+    _PersistentCalls:
+    - _Target: {fileID: 0}
+      _MethodName: UnityEngine.Debug, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null.LogInfo
+      _PersistentArguments:
+      - _Type: 2
+        _Int: 0
+        _String: "\u041A\u043E\u043D\u0435\u0446 \u0438\u0433\u0440\u044B"
+        _X: 0
+        _Y: 0
+        _Z: 0
+        _W: 0
+        _Object: {fileID: 0}
+      - _Type: 2
+        _Int: 0
+        _String: 
+        _X: 0
+        _Y: 0
+        _Z: 0
+        _W: 0
+        _Object: {fileID: 0}
+      - _Type: 3
+        _Int: 0
+        _String: 
+        _X: 0
+        _Y: 0
+        _Z: 0
+        _W: 0
+        _Object: {fileID: 0}
+      - _Type: 3
+        _Int: 0
+        _String: 
+        _X: 0
+        _Y: 0
+        _Z: 0
+        _W: 0
+        _Object: {fileID: 0}
+--- !u!114 &8783452148070115733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4911209660565651743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8e0c45775f1b8f4b9a24196038d1b93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _TriggerEnterEvent:
+    _PersistentCalls:
+    - _Target: {fileID: 528017233709433435}
+      _MethodName: TryFind
+      _PersistentArguments:
+      - _Type: 13
+        _Int: 0
+        _String: UnityEngine.Collider, UnityEngine.PhysicsModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        _X: 0
+        _Y: 0
+        _Z: 0
+        _W: 0
+        _Object: {fileID: 6396826695350909176}
+  _TriggerStayEvent:
+    _PersistentCalls: []
+  _TriggerExitEvent:
+    _PersistentCalls: []

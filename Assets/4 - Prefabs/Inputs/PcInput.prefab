@@ -10,8 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7597893980264929463}
   - component: {fileID: 7597893980264929460}
-  - component: {fileID: 7597893980264929461}
-  - component: {fileID: 7597893980264929458}
   - component: {fileID: 7597893980264929459}
   m_Layer: 0
   m_Name: PcInput
@@ -46,81 +44,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cb8b4e837cd46f78a7434b1129f0f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &7597893980264929461
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7597893980264929462}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 003c25630808c7243847bd9149749434, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _AwakeEvent:
-    _PersistentCalls: []
-  _StartEvent:
-    _PersistentCalls:
-    - _Target: {fileID: 7597893980264929460}
-      _MethodName: set_enabled
-      _PersistentArguments:
-      - _Type: 1
-        _Int: 0
-        _String: 
-        _X: 0
-        _Y: 0
-        _Z: 0
-        _W: 0
-        _Object: {fileID: 0}
-  _EnableEvent:
-    _PersistentCalls: []
-  _DisableEvent:
-    _PersistentCalls: []
-  _DestroyEvent:
-    _PersistentCalls: []
---- !u!114 &7597893980264929458
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7597893980264929462}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f018092fba824cb2babb411f89cec300, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MyId: {fileID: 11400000, guid: 61003962d6840234aa465dfc5a628790, type: 2}
-  TimeSubscribe: 0
-  TargetValue: 0
-  EventedTarget:
-    _PersistentCalls: []
-  Evented:
-    _PersistentCalls:
-    - _Target: {fileID: 7597893980264929460}
-      _MethodName: set_enabled
-      _PersistentArguments:
-      - _Type: 14
-        _Int: 0
-        _String: 
-        _X: 1
-        _Y: 0
-        _Z: 0
-        _W: 0
-        _Object: {fileID: 0}
-    - _Target: {fileID: 7597893980264929459}
-      _MethodName: SetLock
-      _PersistentArguments:
-      - _Type: 14
-        _Int: 0
-        _String: 
-        _X: 1
-        _Y: 0
-        _Z: 0
-        _W: 0
-        _Object: {fileID: 0}
-  TargetEvet: {fileID: 11400000, guid: 304b9f9a054d608459001baa408eb027, type: 2}
 --- !u!114 &7597893980264929459
 MonoBehaviour:
   m_ObjectHideFlags: 0

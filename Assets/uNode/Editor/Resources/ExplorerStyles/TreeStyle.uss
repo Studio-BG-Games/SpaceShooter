@@ -1,0 +1,56 @@
+#title{
+	flex-direction: row;
+}
+
+#title-icon{
+	width: 18px;
+	height: 18px;
+}
+#type-icon{
+	width: 18px;
+	height: 18px;
+}
+
+#childs{
+	margin-left: 20px;
+}
+
+#node-border > #title:hover{
+	background-color: rgba(116, 116, 116, 0.226);
+}
+
+.selected > #node-border > #title{
+	background-color: rgba(37, 127, 211, 0.719);
+}
+
+.selected > #node-border > #title:hover{
+	background-color: rgba(37, 127, 211, 0.808);
+}
+
+.hidden {
+	position: absolute;
+	width:0;
+	height: 0;
+	opacity: 0;
+}
+
+#header{
+	margin-left: 18px;
+}
+
+#summary
+{
+    align-items:stretch;
+    border-radius:0;
+    margin: 0;
+    border-width:0;
+    padding:0;
+    border-radius:2px;
+    background-color: #fcd76e;
+}
+
+#summary > .unity-label
+{
+	color: #584308;
+    padding: 2px 4px 2px 4px;
+}

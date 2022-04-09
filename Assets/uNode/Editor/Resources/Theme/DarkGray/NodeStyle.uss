@@ -1,0 +1,120 @@
+/* for start node */
+EventNodeView > #node-border.flowNodeBorder {
+	border-width: 2px;
+	border-color: rgb(158, 188, 57);
+}
+
+/* flow node */
+#node-border.flowNodeBorder {
+	border-radius: 8px;
+	border-width: 0px;
+	border-top-color: rgba(0, 137, 37, 0.876);
+	border-left-color: rgba(0, 137, 37, 0);
+	border-right-color: rgba(0, 137, 37, 0);
+	border-bottom-color: rgba(0, 203, 54, 0.876);
+	background-color: rgb(61, 61, 61);
+}
+
+/* node border */
+.node-view > #node-border {
+	background-color: rgb(61, 61, 61);
+	border-color: rgba(176, 176, 176, 0.241);
+	border-width: 0px;
+}
+
+/* node border for block system */
+#node-blocks.compact > #node-border {
+	background-color: rgb(61, 61, 61);
+}
+
+/* node title container */
+.node-view > #node-border > #title {
+    height:22px;
+	justify-content: center;
+	background-color: rgba(176, 176, 176, 0);
+}
+
+/* node title icon */
+.node-view > #node-border > #title > #title-icon {
+	margin-left: 5px;
+    width:20px;
+    height:20px;
+}
+
+/* node title label */
+.node-view > #node-border > #title > #title-label {
+	flex-grow: 0;
+	margin-left: 0px;
+	margin-right: 3px;
+	font-size: 14px;
+}
+
+/* compact node */
+.node-view.compact > #node-border {
+	border-width: 0px;
+	padding-left: 5px;
+}
+
+/* for node on mouse over */
+.node-view.node:hover > #node-border,
+.node-view.node:hover > #node-border.flowNodeBorder {
+	background-color: rgb(73, 73, 73);
+}
+
+#flow-inputs {
+	margin-bottom: 1px;
+}
+
+/* for hiding input background */
+#contents > #top > #input {
+	background-color: rgba(130, 130, 130, 0);
+}
+
+/* for hiding output background */
+#contents > #top > #output {
+	background-color: rgba(130, 130, 130, 0);
+}
+
+/* for compact literal node */
+MultipurposeNodeView.compact-value #node-border {
+	border-width: 0px;
+	/* border-left-width: 0px;
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+	border-right-width: 4px; */
+}
+
+/* block border */
+BlockView > #node-border {
+	border-radius: 8px;
+	border-width: 2px;
+	border-color: rgba(0, 0, 0, 0.241);
+	/* border-left-color: rgba(0, 0, 0, 0.241);
+	border-right-color: rgba(0, 0, 0, 0.241);
+	border-bottom-color: rgba(0, 154, 41, 0.876); */
+}
+
+/* for node block hint label */
+#node-blocks #block-container > #hint {
+	padding-right: 1px;
+	padding-left: 1px;
+	border-width: 2px;
+	border-color: rgb(32, 32, 32);
+	text-color : rgb(176, 176, 176);
+}
+
+#node-blocks > #node-border {
+    padding-bottom:16px;
+}
+
+/* for hiding horizontal divider ( control, input, output ) */
+#divider.horizontal {
+	display: none;
+	border-bottom-width: 2px;
+}
+
+/* for hiding vertical divier ( title ) */
+#divider.vertical {
+	display: none;
+	border-right-width: 2px;
+}

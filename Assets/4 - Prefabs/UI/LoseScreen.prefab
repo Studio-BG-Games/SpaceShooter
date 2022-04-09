@@ -10,8 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2417270101072011627}
   - component: {fileID: 2417270101072011620}
-  - component: {fileID: 2417270101072011621}
-  - component: {fileID: 2417270101072011626}
   m_Layer: 5
   m_Name: LoseScreen
   m_TagString: Untagged
@@ -48,67 +46,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2417270101072011624}
   m_CullTransparentMesh: 1
---- !u!114 &2417270101072011621
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2417270101072011624}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: add343a7f1774ba791c198f7f5c5522f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MyId: {fileID: 11400000, guid: 61003962d6840234aa465dfc5a628790, type: 2}
-  TimeSubscribe: 0
-  Evented:
-    _PersistentCalls:
-    - _Target: {fileID: 2417270101072011624}
-      _MethodName: SetActive
-      _PersistentArguments:
-      - _Type: 1
-        _Int: 1
-        _String: 
-        _X: 0
-        _Y: 0
-        _Z: 0
-        _W: 0
-        _Object: {fileID: 0}
-  TargetEvent: {fileID: 11400000, guid: df04336d17c669549abc7f17e6143574, type: 2}
---- !u!114 &2417270101072011626
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2417270101072011624}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 003c25630808c7243847bd9149749434, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _AwakeEvent:
-    _PersistentCalls: []
-  _StartEvent:
-    _PersistentCalls:
-    - _Target: {fileID: 2417270101072011624}
-      _MethodName: SetActive
-      _PersistentArguments:
-      - _Type: 1
-        _Int: 0
-        _String: 
-        _X: 0
-        _Y: 0
-        _Z: 0
-        _W: 0
-        _Object: {fileID: 0}
-  _EnableEvent:
-    _PersistentCalls: []
-  _DisableEvent:
-    _PersistentCalls: []
-  _DestroyEvent:
-    _PersistentCalls: []
 --- !u!1 &2417270101637175696
 GameObject:
   m_ObjectHideFlags: 0
@@ -391,8 +328,6 @@ GameObject:
   - component: {fileID: 2417270102584708125}
   - component: {fileID: 2417270102584708098}
   - component: {fileID: 2417270102584708099}
-  - component: {fileID: 2417270102584708096}
-  - component: {fileID: 2417270102584708097}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -501,56 +436,4 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2417270102584708098}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2417270102584708096}
-        m_TargetAssemblyTypeName: Sharp.UnityMessager.SendMessagerUnity, Assembly-CSharp
-        m_MethodName: SendDefault
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 2417270102584708097}
-        m_TargetAssemblyTypeName: Sharp.UnityMessager.SendMessagerUnity, Assembly-CSharp
-        m_MethodName: SendDefault
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &2417270102584708096
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2417270102584708103}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ee3ae6241354c06a3c87f9c8e05e477, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  defaultTo: {fileID: 11400000, guid: 61003962d6840234aa465dfc5a628790, type: 2}
-  defaultEvent: {fileID: 11400000, guid: 7396f579bc7a815479ceed17efd6f8af, type: 2}
---- !u!114 &2417270102584708097
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2417270102584708103}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ee3ae6241354c06a3c87f9c8e05e477, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  defaultTo: {fileID: 11400000, guid: 61003962d6840234aa465dfc5a628790, type: 2}
-  defaultEvent: {fileID: 11400000, guid: d844243c1a0a0d049aae89e77f1745b3, type: 2}
+      m_Calls: []

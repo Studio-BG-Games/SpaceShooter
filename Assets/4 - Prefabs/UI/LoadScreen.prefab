@@ -370,9 +370,8 @@ GameObject:
   - component: {fileID: 4443045921933957342}
   - component: {fileID: 4443045921933957340}
   - component: {fileID: 4443045921933957343}
-  - component: {fileID: 4443045921933957341}
-  - component: {fileID: 4443045921933957338}
   - component: {fileID: 48370605838733021}
+  - component: {fileID: 4443045922503611992}
   m_Layer: 5
   m_Name: LoadScreen
   m_TagString: Untagged
@@ -430,8 +429,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 8d1c8a805fc40744586d3d6a211d7c27, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -440,46 +439,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &4443045921933957341
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4443045921933957329}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: add343a7f1774ba791c198f7f5c5522f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MyId: {fileID: 11400000, guid: 61003962d6840234aa465dfc5a628790, type: 2}
-  TimeSubscribe: 0
-  Evented:
-    _PersistentCalls:
-    - _Target: {fileID: 1221748522368115107}
-      _MethodName: BeginTransitions
-      _PersistentArguments: []
-  TargetEvent: {fileID: 11400000, guid: b1bd4d0d911abc24bb4ee52e81acf023, type: 2}
---- !u!114 &4443045921933957338
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4443045921933957329}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: add343a7f1774ba791c198f7f5c5522f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MyId: {fileID: 11400000, guid: 61003962d6840234aa465dfc5a628790, type: 2}
-  TimeSubscribe: 0
-  Evented:
-    _PersistentCalls:
-    - _Target: {fileID: 8788332536070042803}
-      _MethodName: BeginTransitions
-      _PersistentArguments: []
-  TargetEvent: {fileID: 11400000, guid: d844243c1a0a0d049aae89e77f1745b3, type: 2}
 --- !u!225 &48370605838733021
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -492,3 +451,25 @@ CanvasGroup:
   m_Interactable: 0
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &4443045922503611992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4443045921933957329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0489487a807643e2b06ec150e295d5cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Open:
+    _PersistentCalls:
+    - _Target: {fileID: 8788332536070042803}
+      _MethodName: BeginTransitions
+      _PersistentArguments: []
+  Close:
+    _PersistentCalls:
+    - _Target: {fileID: 1221748522368115107}
+      _MethodName: BeginTransitions
+      _PersistentArguments: []

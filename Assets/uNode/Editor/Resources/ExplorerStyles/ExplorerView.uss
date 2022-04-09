@@ -1,0 +1,22 @@
+#exploler {
+    background-color: #202020;
+}
+
+#scroll-view {
+    background-color: #202020;
+}
+
+.ui-hidden {
+	width: 0;
+	height: 0;
+	opacity: 0;
+	position: absolute;
+}
+
+.dragdisplay
+{
+    position:absolute;
+    height:4px;
+    margin-top:-2px;
+    background-color: rgb(210, 152, 0);
+}
