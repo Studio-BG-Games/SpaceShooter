@@ -14,6 +14,7 @@ namespace Models
             if(_screenModel!=null) _screenModel.StatusChanged -= Handler;
             _screenModel = screenModel;
             _screenModel.StatusChanged += Handler;
+            Handler(screenModel.Status);
         }
 
         private void Handler(bool obj)

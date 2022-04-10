@@ -1,15 +1,53 @@
-﻿using UltEvents;
+﻿using System;
+using Lean.Transition;
+using Sirenix.OdinInspector;
+using UltEvents;
 using UnityEngine;
 
 namespace UiHlpers
 {
     public class PanelUI : MonoBehaviour
     {
-        public UltEvent OnShow;
-        public UltEvent OnHide;
+        [SerializeField] private bool _startValue;
+        [SerializeField] private bool _useStartValue;
         
-        public void Show() => OnShow.Invoke();
+        public UltEvent OnShow;
+        public LeanManualAnimation OnShowAnim;
+        public UltEvent OnHide;
+        public LeanManualAnimation OnHideAnim;
 
-        public void Close() => OnHide.Invoke();
+        private void Awake()
+        {
+            if (_useStartValue)
+            {
+                if(_startValue) Show();
+                else Close();
+            }
+        }
+
+        public void Show()
+        {
+            OnShow.Invoke();
+            OnShowAnim?.BeginTransitions();
+        }
+
+        public void Close()
+        {
+            OnHide.Invoke();
+            OnHideAnim?.BeginTransitions();
+        }
+
+        [Button]private void CreateObjectAnims()
+        {
+            if (!OnShowAnim) OnShowAnim = CreateObject("[Open]");
+            if (!OnHideAnim) OnHideAnim = CreateObject("[Close]");
+        }
+
+        private LeanManualAnimation CreateObject(string name)
+        {
+            var r = new GameObject(name, new[] {typeof(LeanManualAnimation), typeof(RectTransform)}).GetComponent<LeanManualAnimation>();
+            r.transform.SetParent(transform);
+            return r;
+        }
     }
 }

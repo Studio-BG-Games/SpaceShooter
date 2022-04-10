@@ -42,14 +42,17 @@ public class C_MainMenuScreenController : MonoBehaviour
 
         PlayButton.onClick.AddListener(StartGame);
 
-        Wait(1, () => LoadScreen.Status = false);
-        Wait(2, () => Sign.Model.Status = true);
+        Wait(1, () =>
+        {
+            LoadScreen.Status = false;
+            Sign.Model.Status = true;
+        });
     }
 
     public void FakeSign()
     {
         Sign.Model.Status = false;
-        Wait(1, ()=>Main.Model.Status=true);   
+        Main.Model.Status = true;
     }
 
     private void StartGame()
