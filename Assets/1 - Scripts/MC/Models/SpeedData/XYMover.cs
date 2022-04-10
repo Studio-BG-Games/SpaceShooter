@@ -12,7 +12,12 @@ namespace Services
 
         public Vector2 Speed => _speed * _muptiply;
 
-        public void Move(Runner runner, Vector2 input) => runner.motion.offset += _speed * _muptiply * input;
+        public void Move(Runner runner, Vector2 input) => runner.motion.offset += new Vector2(GetSpeedAxis(Axis.X, input), GetSpeedAxis(Axis.Y, input));
+
+        private float GetSpeedAxis(Axis axis, Vector2 input) => 
+            axis == Axis.X ? _speed.x * _muptiply * input.x * Time.deltaTime : _speed.y * _muptiply * input.y * Time.deltaTime;
+
+        private enum Axis { X, Y }
 
         private void OnValidate()
         {

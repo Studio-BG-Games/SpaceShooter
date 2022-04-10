@@ -5,19 +5,18 @@ using UnityEngine;
 namespace Services.Inputs
 {
     public class InputReciverMove  : MonoBehaviour
-    {
-        [DI] private IInput _input;
-
+    { 
+        private ResolveSingle<IInput> _input = new ResolveSingle<IInput>();
         public UltEvent<Vector2> Move;
 
         private void OnDisable()
         {
-            _input.Move -= Move.Invoke;
+            _input.Depence.Move -= Move.Invoke;
         }
 
         private void OnEnable()
         {
-            _input.Move += Move.Invoke;
+            _input.Depence.Move += Move.Invoke;
         }
     }
 }

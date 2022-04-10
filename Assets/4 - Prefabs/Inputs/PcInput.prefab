@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7597893980264929463}
   - component: {fileID: 7597893980264929460}
   - component: {fileID: 7597893980264929459}
+  - component: {fileID: 7597893978976488032}
   m_Layer: 0
   m_Name: PcInput
   m_TagString: Untagged
@@ -56,3 +57,47 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbcf84a005934ed7b35871407c7357fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7597893978976488032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7597893980264929462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f23c33362484eba8e989e0af54fe450, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  On:
+    _PersistentCalls:
+    - _Target: {fileID: 7597893980264929462}
+      _MethodName: SetActive
+      _PersistentArguments:
+      - _Type: 1
+        _Int: 1
+        _String: 
+        _X: 0
+        _Y: 0
+        _Z: 0
+        _W: 0
+        _Object: {fileID: 0}
+    - _Target: {fileID: 7597893980264929459}
+      _MethodName: LockCursor
+      _PersistentArguments: []
+  Off:
+    _PersistentCalls:
+    - _Target: {fileID: 7597893980264929462}
+      _MethodName: SetActive
+      _PersistentArguments:
+      - _Type: 1
+        _Int: 0
+        _String: 
+        _X: 0
+        _Y: 0
+        _Z: 0
+        _W: 0
+        _Object: {fileID: 0}
+    - _Target: {fileID: 7597893980264929459}
+      _MethodName: FreeCursor
+      _PersistentArguments: []

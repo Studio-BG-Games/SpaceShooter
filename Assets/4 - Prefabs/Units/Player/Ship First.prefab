@@ -241,7 +241,7 @@ MonoBehaviour:
   updateMode: 1
   startPercent: 0
   startDistance: 0
-  startMode: 2
+  startMode: 0
   followSpeed: 20
   follow: 1
   isPlayer: 1
@@ -328,6 +328,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerLabel: {fileID: 11400000, guid: a2f811f45c2b2f240add89ee371a40a2, type: 2}
+  LevelMark: {fileID: 11400000, guid: 10b93fe6883e71240a53de6a44172e4e, type: 2}
   Runner: {fileID: 5017479238595632669}
   InputMove: {fileID: 5017479238595632764}
   PlayerEntityRef: {fileID: 8269269128042062354}
@@ -812,6 +813,16 @@ PrefabInstance:
     - target: {fileID: 4642213910754388797, guid: 51d900fdabd562f4fb13d0806682b55b,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6137852341822110965, guid: 51d900fdabd562f4fb13d0806682b55b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6137852341822110965, guid: 51d900fdabd562f4fb13d0806682b55b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

@@ -16,6 +16,9 @@ namespace ModelCore
             {
                 foreach (var o in IdToSearch)
                 {
+                    Debug.Log(e);
+                    Debug.Log(e.Component);
+                    Debug.Log(e.Component.Label);
                     if (e.Component.Label.IsAlias(o))
                     {
                         Finded.Invoke(e.Component);

@@ -15,8 +15,10 @@ namespace Services
             runner.motion.offset = oofset;
         }
 
-        public Vector2 GetNormal(Runner runner) 
-            => new Vector2(NormalValue(runner.motion.offset.x, Min.x, Max.x, -1, 1), NormalValue(runner.motion.offset.y, Min.y, Max.y, -1, 1));
+        public Vector2 GetNormal(Runner runner)
+        {
+            return new Vector2(NormalValue(runner.motion.offset.x, -1, 1, Min.x, Max.x), NormalValue(runner.motion.offset.y, -1, 1, Min.y, Max.y));
+        }
 
         private float NormalValue(float value, float minNormal, float maxNormal, float minValue, float maxValue)
         {

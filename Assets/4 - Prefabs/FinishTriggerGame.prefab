@@ -10,8 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4832028135080871487}
   - component: {fileID: 430873384279080676}
-  - component: {fileID: 2062483499788289751}
-  - component: {fileID: 2593102518138306737}
+  - component: {fileID: 8351021936672331638}
   m_Layer: 0
   m_Name: FinishTriggerGame
   m_TagString: Untagged
@@ -46,7 +45,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 250, y: 250, z: 37.42}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2062483499788289751
+--- !u!114 &8351021936672331638
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -55,26 +54,46 @@ MonoBehaviour:
   m_GameObject: {fileID: 1807295685935236867}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dcd149f180fb4d4cb1b3e4633c2efff3, type: 3}
+  m_Script: {fileID: 11500000, guid: 13424878253e48bd8ab79a05bd741b4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IdToSearch:
+  - {fileID: 11400000, guid: a2f811f45c2b2f240add89ee371a40a2, type: 2}
   Finded:
     _PersistentCalls:
-    - _Target: {fileID: 2593102518138306737}
-      _MethodName: SendDefault
-      _PersistentArguments: []
-  _collider: {fileID: 430873384279080676}
---- !u!114 &2593102518138306737
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1807295685935236867}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ee3ae6241354c06a3c87f9c8e05e477, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  defaultTo: {fileID: 11400000, guid: 02ca79636ed10e745a3a8fc09caf70b0, type: 2}
-  defaultEvent: {fileID: 11400000, guid: fb048f5646909c441a2f7a4a7903ba88, type: 2}
+    - _Target: {fileID: 0}
+      _MethodName: UnityEngine.Debug, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null.LogInfo
+      _PersistentArguments:
+      - _Type: 2
+        _Int: 0
+        _String: End Level
+        _X: 0
+        _Y: 0
+        _Z: 0
+        _W: 0
+        _Object: {fileID: 0}
+      - _Type: 2
+        _Int: 0
+        _String: 
+        _X: 0
+        _Y: 0
+        _Z: 0
+        _W: 0
+        _Object: {fileID: 0}
+      - _Type: 3
+        _Int: 0
+        _String: 
+        _X: 0
+        _Y: 0
+        _Z: 0
+        _W: 0
+        _Object: {fileID: 0}
+      - _Type: 3
+        _Int: 0
+        _String: 
+        _X: 0
+        _Y: 0
+        _Z: 0
+        _W: 0
+        _Object: {fileID: 0}

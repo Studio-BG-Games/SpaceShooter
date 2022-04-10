@@ -12,6 +12,6 @@ namespace ModelCore
 
         public bool IsAlias(Object obj) => _alias.Contains(obj);
 
-        [Button] public void OnValidate() => _alias.Where(x => x != null);
+        [Button] public void OnValidate() => _alias?.Where(x => x != null);
     }
 }

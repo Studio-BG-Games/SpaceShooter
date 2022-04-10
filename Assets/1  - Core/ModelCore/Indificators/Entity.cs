@@ -21,6 +21,27 @@ namespace ModelCore
             return predict(target);
         }) as T;
 
+        public T Select<T>() where T : MonoBehaviour => _components.FirstOrDefault(x => x is T) as T;
+
+        public bool Has<T>() where T : MonoBehaviour => Select<T>() != null;
+        
+        public bool Has<T>(Func<T, bool> predict) where T : MonoBehaviour => Select<T>(predict) != null;
+
+        public T[] SelectAll<T>() where T : MonoBehaviour => _components.Where(x => x is T).Cast<T>().ToArray();
+
+        public T SelectOrCreate<T>() where T : MonoBehaviour
+        {
+            T result = Select<T>();
+
+            if (result) return result;
+            else
+            {
+                var newCom = gameObject.AddComponent<T>();
+                _components.Add(newCom);
+                return newCom;
+            }
+        }
+
         public T[] SelectAll<T>(Func<T, bool> predict) where T : MonoBehaviour
         {
             return _components.Where(x => x is T).Cast<T>().Where(predict).ToArray();

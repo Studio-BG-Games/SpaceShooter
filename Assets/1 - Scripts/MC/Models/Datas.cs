@@ -21,7 +21,6 @@ namespace Models
     [System.Serializable]
     public class GameData
     {
-        public C_ShipByPlayer Ship;
         public Entity DataPlayer;
     }
     

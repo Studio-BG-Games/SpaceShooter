@@ -3381,6 +3381,7 @@ GameObject:
   - component: {fileID: 443790748}
   - component: {fileID: 443790749}
   - component: {fileID: 443790750}
+  - component: {fileID: 443790751}
   m_Layer: 0
   m_Name: Datas
   m_TagString: Untagged
@@ -3422,7 +3423,6 @@ MonoBehaviour:
     Live: 5
     CurrentLvl: 1
   Game:
-    Ship: {fileID: 5017479238595632766, guid: 69b01e6e4c13bff48b218de22b3d5699, type: 3}
     DataPlayer: {fileID: 843207225896265987, guid: d4363206d1ec10848a925822d101b1b9,
       type: 3}
 --- !u!114 &443790749
@@ -3455,6 +3455,20 @@ MonoBehaviour:
   - {fileID: 443790748}
   - {fileID: 443790749}
   - {fileID: 443790750}
+  - {fileID: 443790751}
+  - {fileID: 0}
+--- !u!114 &443790751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 443790746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37cdc8031cbc4663b39fa1b67df5088e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &476688535
 GameObject:
   m_ObjectHideFlags: 0

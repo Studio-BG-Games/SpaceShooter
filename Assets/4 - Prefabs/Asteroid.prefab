@@ -234,7 +234,6 @@ GameObject:
   - component: {fileID: 793843562285423335}
   - component: {fileID: 7825605128212863728}
   - component: {fileID: 1684729175656429885}
-  - component: {fileID: 9198017170266955308}
   - component: {fileID: 6497688644445609539}
   m_Layer: 0
   m_Name: TriggerAttack
@@ -326,35 +325,6 @@ MonoBehaviour:
         _W: 0
         _Object: {fileID: 281602037788047727}
   _canEvented: 0
---- !u!114 &9198017170266955308
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 592965419656772130}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dcd149f180fb4d4cb1b3e4633c2efff3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Finded:
-    _PersistentCalls: []
-  FindedCollider:
-    _PersistentCalls:
-    - _Target: {fileID: 1684729175656429885}
-      _MethodName: Change
-      _PersistentArguments:
-      - _Type: 14
-        _Int: 0
-        _String: UnityEngine.Collider, UnityEngine.PhysicsModule, Version=0.0.0.0,
-          Culture=neutral, PublicKeyToken=null
-        _X: 0
-        _Y: 0
-        _Z: 0
-        _W: 0
-        _Object: {fileID: 0}
-  _collider: {fileID: 6497688644445609539}
 --- !u!65 &6497688644445609539
 BoxCollider:
   m_ObjectHideFlags: 0

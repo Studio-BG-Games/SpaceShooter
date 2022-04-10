@@ -160,7 +160,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   zmover: {fileID: 0}
-  Bullet: {fileID: 9182887333520444961, guid: a7fc27354014f1d4c8d6b12b2d8dfca7, type: 3}
   _fireRate: 0.15
   _spawnPoint: {fileID: 5239336509019327035}
   Fired:
@@ -168,7 +167,7 @@ MonoBehaviour:
     - _Target: {fileID: 4068937538272031976}
       _MethodName: Flash
       _PersistentArguments: []
-    - _Target: {fileID: 3655819970066147492}
+    - _Target: {fileID: 0}
       _MethodName: SpawnAll
       _PersistentArguments: []
   ColliderForIgnore: []
@@ -181,7 +180,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3731276594514523389}
-  - component: {fileID: 3655819970066147492}
   m_Layer: 0
   m_Name: AudioSpawner
   m_TagString: Untagged
@@ -203,24 +201,6 @@ Transform:
   m_Father: {fileID: 6388353629206137830}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3655819970066147492
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3652971272775416983}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3db9e116986cbc341bdab1cc39f5e0ed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnOnEnable: 0
-  usePoolManager: 1
-  objectsToSpawn:
-  - {fileID: 9169696766150175059, guid: 189239dd6b9c83247a77a6d46799e1b1, type: 3}
-  spawnTransform: {fileID: 3731276594514523389}
-  parentToSpawnTransform: 1
 --- !u!1 &5381760359646359189
 GameObject:
   m_ObjectHideFlags: 0
@@ -328,7 +308,19 @@ PrefabInstance:
       propertyPath: m_Name
       value: MuzzleFlash
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 2654432400959657311, guid: 6904ec54bfafd6b49812d5888ff8af15,
+        type: 3}
+      propertyPath: onFlash.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2654432400959657311, guid: 6904ec54bfafd6b49812d5888ff8af15,
+        type: 3}
+      propertyPath: onFlash.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 6388133550204012024, guid: 6904ec54bfafd6b49812d5888ff8af15, type: 3}
+    - {fileID: 2075738923480574252, guid: 6904ec54bfafd6b49812d5888ff8af15, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 6904ec54bfafd6b49812d5888ff8af15, type: 3}
 --- !u!4 &678559591883020730 stripped
 Transform:

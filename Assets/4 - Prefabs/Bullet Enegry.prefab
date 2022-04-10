@@ -9,11 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4140573685538426}
-  - component: {fileID: 3852924292553681525}
   - component: {fileID: 4984299782318381335}
   - component: {fileID: 1256465192544184063}
-  - component: {fileID: 114724404775509316}
-  - component: {fileID: 9182887333520444961}
   - component: {fileID: 7114145335453364577}
   - component: {fileID: 765423122786303924}
   - component: {fileID: -9107042937410610320}
@@ -42,21 +39,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3852924292553681525
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1059452319082446}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5c8b982922241a58bcc7381ff30b281, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _parts:
-  - {fileID: 765423122786303924}
-  - {fileID: 1736801951247989670}
 --- !u!114 &4984299782318381335
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -142,38 +124,6 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &114724404775509316
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1059452319082446}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e76f755fa7dc98d49962c622a8c72f45, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  manageTrailRenderers: 1
-  onPreOriginShift:
-    m_PersistentCalls:
-      m_Calls: []
-  onPostOriginShift:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!114 &9182887333520444961
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1059452319082446}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f93511824aaa403da7bd7bc1f90faf5c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  unit: {fileID: 3852924292553681525}
 --- !u!114 &7114145335453364577
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -229,22 +179,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5fc889ef9054646865613834e74d64b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _runner: {fileID: 7114145335453364577}
-  _isPositive: 1
-  NewDiraction:
-    _PersistentCalls:
-    - _Target: {fileID: 4984299782318381335}
-      _MethodName: set_IsForward
-      _PersistentArguments:
-      - _Type: 14
-        _Int: 0
-        _String: 
-        _X: 1
-        _Y: 0
-        _Z: 0
-        _W: 0
-        _Object: {fileID: 0}
   _speed: 90
+  _isPositive: 1
 --- !u!114 &-9107042937410610320
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -310,9 +246,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc6d66cd70fc4597bf34033286640ee3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _targets:
-  - TargetId: {fileID: 0}
-    ChangeAt: -3
   Damaged:
     _PersistentCalls: []
   _canEvented: 1
