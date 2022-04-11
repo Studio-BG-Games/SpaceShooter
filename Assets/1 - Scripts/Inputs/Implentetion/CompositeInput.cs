@@ -8,6 +8,7 @@ namespace Services.Inputs
         private IInput[] _inputs;
         public event Action<Vector2> Move;
         public event Action ChangeWeapon;
+        public event Action Pause;
         public event Action Fire;
 
         public CompositeInput(IInput[] inputs)
@@ -19,8 +20,11 @@ namespace Services.Inputs
                 _inputs[i].Move += MoveHandler;
                 _inputs[i].ChangeWeapon += ChangeHander;
                 _inputs[i].Fire += FireHandler;
+                _inputs[i].Pause += PauseHandler;
             }
         }
+
+        private void PauseHandler() => Pause?.Invoke();
 
         private void MoveHandler(Vector2 obj) => Move?.Invoke(obj);
 
@@ -36,6 +40,7 @@ namespace Services.Inputs
                 _inputs[i].Move -= MoveHandler;
                 _inputs[i].ChangeWeapon -= ChangeHander;
                 _inputs[i].Fire -= FireHandler;
+                _inputs[i].Pause -= PauseHandler;
             }
         }
     }

@@ -7,6 +7,7 @@ namespace Services.Inputs
     {
         event Action<Vector2> Move;
         event Action ChangeWeapon;
+        event Action Pause;
         event Action Fire;
     }
 }

@@ -12,12 +12,20 @@ namespace MC.Controlers
     public class C_GeneratorLevel : MonoBehaviour
     {
         public LevelGenerator LevelGenerator;
+        private Action _callback;
         public Entity PlayerData { get; private set; }
 
         public void GenerateLevel(Action callback)
         {
-            LevelGenerator.onReady += callback;
+            _callback = callback;
+            LevelGenerator.onReady += HanlerCallback;
             LevelGenerator.StartGeneration();
+        }
+
+        private void HanlerCallback()
+        {
+            _callback?.Invoke();
+            LevelGenerator.onReady -= HanlerCallback;
         }
 
         public Entity SpawnPlayer()

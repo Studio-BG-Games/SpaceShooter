@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using DIContainer;
 using Sirenix.OdinInspector;
 using Sirenix.Utilities;
 using UnityEngine;
@@ -57,7 +58,7 @@ namespace ModelCore
             return _components.Where(x => x is T).Cast<T>().Where(predict).ToArray();
         }
 
-        private void Awake() => EntityAgregator.Instance.Add(this);
+        [DI]private void AddMe() => EntityAgregator.Instance.Add(this);
 
         private void OnDestroy() => EntityAgregator.Instance.Remove(this);
 

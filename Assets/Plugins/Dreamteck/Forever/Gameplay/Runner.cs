@@ -1,3 +1,5 @@
+using System;
+
 namespace Dreamteck.Forever
 {
     using UnityEngine;
@@ -66,6 +68,15 @@ namespace Dreamteck.Forever
                     Debug.LogError("WARNING: Overriding Player Runner. Only one runner should have isPlayer = true. Overriding runner " + playerInstance.name + " with " + name);
                 }
                 playerInstance = this;
+            }
+        }
+
+        private void OnDestroy()
+        {
+            if (isPlayer)
+            {
+                if(playerInstance == this)
+                    playerInstance = null;
             }
         }
 

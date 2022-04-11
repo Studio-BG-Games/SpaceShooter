@@ -16,6 +16,7 @@ namespace Models
 
         void Start()
         {
+            if(_instance!=null)Destroy(gameObject);
             _instance = this;
             var entityWindows = EntityAgregator.Instance.Select(x => x.Select<LabelObjectGo>(x => x.IsAlias(IdFadeScreens)));
             var windows = entityWindows.SelectAll<ScreenModel>(x => true);

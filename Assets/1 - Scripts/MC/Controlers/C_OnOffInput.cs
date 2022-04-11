@@ -23,7 +23,11 @@ namespace MC.Models
             Handler();
         }
 
-        private void OnDestroy() => _modelInput.Updated -= Handler;
+        private void OnDestroy()
+        {
+            if(_modelInput)
+                _modelInput.Updated -= Handler;
+        }
 
         private void Handler()
         {

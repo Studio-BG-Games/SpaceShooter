@@ -9,10 +9,12 @@ namespace Infrastructure
     {
         public static void Load(string name, Action onLoaded = null) =>
             CorutineGame.Instance.StartCoroutine(LoadScene(name, onLoaded));
-        
-        private static IEnumerator LoadScene(string name, Action onLoaded = null)
+
+        public static void Restart(Action onLoad = null) => CorutineGame.Instance.StartCoroutine(LoadScene(SceneManager.GetActiveScene().name, onLoad, true));
+
+        private static IEnumerator LoadScene(string name, Action onLoaded = null, bool ignoreActiveScene = false)
         {
-            if (SceneManager.GetActiveScene().name == name)
+            if (SceneManager.GetActiveScene().name == name && !ignoreActiveScene)
             {
                 onLoaded?.Invoke();
                 yield break;

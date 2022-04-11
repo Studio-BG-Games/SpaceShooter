@@ -31,7 +31,8 @@ Transform:
   m_LocalRotation: {x: -0.00000003774895, y: -1.1102233e-16, z: 1.11022296e-16, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 793843562285423335}
   m_Father: {fileID: 281602037788337487}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -99,11 +100,17 @@ MonoBehaviour:
   RefHp: {fileID: 2141243363192574079}
   Empty:
     _PersistentCalls:
+    - _Target: {fileID: 3828775887792186333}
+      _MethodName: StopFeedbacks
+      _PersistentArguments: []
     - _Target: {fileID: 567035601177946027}
       _MethodName: PlayFeedbacks
       _PersistentArguments: []
   DamageAt:
     _PersistentCalls:
+    - _Target: {fileID: 3828775887792186333}
+      _MethodName: StopFeedbacks
+      _PersistentArguments: []
     - _Target: {fileID: 3828775887792186333}
       _MethodName: PlayFeedbacks
       _PersistentArguments: []
@@ -162,7 +169,6 @@ Transform:
   m_Children:
   - {fileID: 281602037788337485}
   - {fileID: 6701774886133844308}
-  - {fileID: 793843562285423335}
   - {fileID: 7505895992761994930}
   - {fileID: 8211594707706031211}
   - {fileID: 6850010408095328994}
@@ -197,12 +203,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 592965419656772130}
-  m_LocalRotation: {x: -0.00000003774895, y: -1.1102233e-16, z: 1.11022296e-16, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: 2.4264683e-24, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 281602037788337487}
-  m_RootOrder: 2
+  m_Father: {fileID: 281602037788337485}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &7825605128212863728
 MeshRenderer:
@@ -353,7 +359,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 281602037788337487}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &567035601177946027
 MonoBehaviour:
@@ -435,7 +441,7 @@ MonoBehaviour:
     Quantized: 0
     TargetBPM: 120
   DebugActive: 0
-  AnimateRotationTarget: {fileID: 281602037788337487}
+  AnimateRotationTarget: {fileID: 281602037788337485}
   Mode: 1
   TimeScale: 0
   RotationSpace: 1
@@ -573,7 +579,7 @@ MonoBehaviour:
   DebugActive: 0
   Mode: 0
   TimeScale: 0
-  AnimateScaleTarget: {fileID: 281602037788337487}
+  AnimateScaleTarget: {fileID: 281602037788337485}
   AnimateScaleDuration: 0.75
   RemapCurveZero: 1
   RemapCurveOne: 0
@@ -669,8 +675,8 @@ MonoBehaviour:
       inWeight: 0
       outWeight: 0
     - serializedVersion: 3
-      time: 0.5322998
-      value: 0.59555054
+      time: 0.364847
+      value: 0.45387012
       inSlope: -4.3367486
       outSlope: -4.3367486
       tangentMode: 0
@@ -917,7 +923,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 281602037788337487}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8512949519327222624
 MonoBehaviour:
@@ -1009,7 +1015,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 281602037788337487}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3828775887792186333
 MonoBehaviour:
@@ -1090,7 +1096,7 @@ MonoBehaviour:
   DebugActive: 0
   Mode: 0
   TimeScale: 0
-  AnimateScaleTarget: {fileID: 281602037788337487}
+  AnimateScaleTarget: {fileID: 281602037788337485}
   AnimateScaleDuration: 0.2
   RemapCurveZero: 1
   RemapCurveOne: 0.7

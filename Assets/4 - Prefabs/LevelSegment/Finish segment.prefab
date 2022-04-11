@@ -2458,38 +2458,6 @@ MonoBehaviour:
     spriteRenderer: {fileID: 0}
     colliders: []
     _isRoot: 0
-  - transform: {fileID: 8346725519674482648}
-    localRotation: {x: -7.705183e-15, y: 1, z: -0.000000021855694, w: -0.00000035762784}
-    extrudedMesh: {fileID: 0}
-    extrusionSpriteVertices: []
-    extrusionSpriteUVs: []
-    extrusionSpriteRect:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-    extrudedCollisionMesh: {fileID: 0}
-    _extrusionSettings:
-      meshColliderHandling: 0
-      boundsInclusion: -1
-      indexing: 0
-      applyRotation: 1
-      keepUpright: 0
-      upVector: {x: 0, y: 1, z: 0}
-      applyScale: 0
-      bendMesh: 0
-      bendSprite: 0
-      bendPolygonCollider: 0
-      applyMeshColors: 0
-    _settingsComponent: {fileID: 0}
-    overrideSettingsComponent: 0
-    meshFilter: {fileID: 0}
-    meshCollider: {fileID: 7436601886743714714}
-    spriteRenderer: {fileID: 0}
-    colliders:
-    - {fileID: 7436601886743714714}
-    _isRoot: 0
   - transform: {fileID: 300530921383090786}
     localRotation: {x: 2.4264697e-24, y: 1, z: -8.677732e-31, w: -0.00000035762784}
     extrudedMesh: {fileID: 0}
@@ -3963,7 +3931,7 @@ MonoBehaviour:
   drawEntranceAndExit: 1
   drawBounds: 1
   drawCustomPaths: 1
-  editorChildCount: 125
+  editorChildCount: 124
 --- !u!1 &2497886731509277
 GameObject:
   m_ObjectHideFlags: 0
@@ -68779,86 +68747,9 @@ Transform:
   - {fileID: 3831506903553498888}
   - {fileID: 3831506905252854761}
   - {fileID: 3033606608589171209}
-  - {fileID: 8346725519674482648}
   m_Father: {fileID: 2555856064107488821}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &8346725519674639352
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8346725519674482648}
-  - component: {fileID: 7436601886743714714}
-  - component: {fileID: 262120919238435050}
-  m_Layer: 0
-  m_Name: Collider
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &8346725519674482648
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8346725519674639352}
-  m_LocalRotation: {x: 0.000000021855694, y: -1.1102232e-16, z: 1.1102232e-16, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 6500, y: 6500, z: 6500}
-  m_Children: []
-  m_Father: {fileID: 7239026606783459632}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &7436601886743714714
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8346725519674639352}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 5db5793de54c15c48844f45340240be3, type: 3}
---- !u!114 &262120919238435050
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8346725519674639352}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55a02bc56ef76a84eb9912465a09b49c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damageable: {fileID: 0}
-  disableCollidersOnDamageableDestroyed: 1
-  rootTransform: {fileID: 0}
-  onDamaged:
-    m_PersistentCalls:
-      m_Calls: []
-  onHealed:
-    m_PersistentCalls:
-      m_Calls: []
-  onCollision:
-    m_PersistentCalls:
-      m_Calls: []
-  onActivated:
-    m_PersistentCalls:
-      m_Calls: []
-  onDeactivated:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &8378888418881187079
 GameObject:
   m_ObjectHideFlags: 0
@@ -69151,16 +69042,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 2062483499788289751, guid: 0c77a28bf70701e428c964c726acd0d9, type: 3}
-    - {fileID: 2593102518138306737, guid: 0c77a28bf70701e428c964c726acd0d9, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c77a28bf70701e428c964c726acd0d9, type: 3}
---- !u!1 &4911209660565651743 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1807295685935236867, guid: 0c77a28bf70701e428c964c726acd0d9,
-    type: 3}
-  m_PrefabInstance: {fileID: 6718476688323216924}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2175833522098389027 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4832028135080871487, guid: 0c77a28bf70701e428c964c726acd0d9,
@@ -69173,85 +69056,3 @@ BoxCollider:
     type: 3}
   m_PrefabInstance: {fileID: 6718476688323216924}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &528017233709433435
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4911209660565651743}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13424878253e48bd8ab79a05bd741b4a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  IdToSearch:
-  - {fileID: 11400000, guid: a2f811f45c2b2f240add89ee371a40a2, type: 2}
-  Finded:
-    _PersistentCalls:
-    - _Target: {fileID: 0}
-      _MethodName: UnityEngine.Debug, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null.LogInfo
-      _PersistentArguments:
-      - _Type: 2
-        _Int: 0
-        _String: "\u041A\u043E\u043D\u0435\u0446 \u0438\u0433\u0440\u044B"
-        _X: 0
-        _Y: 0
-        _Z: 0
-        _W: 0
-        _Object: {fileID: 0}
-      - _Type: 2
-        _Int: 0
-        _String: 
-        _X: 0
-        _Y: 0
-        _Z: 0
-        _W: 0
-        _Object: {fileID: 0}
-      - _Type: 3
-        _Int: 0
-        _String: 
-        _X: 0
-        _Y: 0
-        _Z: 0
-        _W: 0
-        _Object: {fileID: 0}
-      - _Type: 3
-        _Int: 0
-        _String: 
-        _X: 0
-        _Y: 0
-        _Z: 0
-        _W: 0
-        _Object: {fileID: 0}
---- !u!114 &8783452148070115733
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4911209660565651743}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f8e0c45775f1b8f4b9a24196038d1b93, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _TriggerEnterEvent:
-    _PersistentCalls:
-    - _Target: {fileID: 528017233709433435}
-      _MethodName: TryFind
-      _PersistentArguments:
-      - _Type: 13
-        _Int: 0
-        _String: UnityEngine.Collider, UnityEngine.PhysicsModule, Version=0.0.0.0,
-          Culture=neutral, PublicKeyToken=null
-        _X: 0
-        _Y: 0
-        _Z: 0
-        _W: 0
-        _Object: {fileID: 6396826695350909176}
-  _TriggerStayEvent:
-    _PersistentCalls: []
-  _TriggerExitEvent:
-    _PersistentCalls: []

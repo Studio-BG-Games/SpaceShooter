@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 4832028135080871487}
   - component: {fileID: 430873384279080676}
   - component: {fileID: 8351021936672331638}
+  - component: {fileID: 8783452148070115733}
+  - component: {fileID: 964443528666903211}
   m_Layer: 0
   m_Name: FinishTriggerGame
   m_TagString: Untagged
@@ -61,39 +63,48 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a2f811f45c2b2f240add89ee371a40a2, type: 2}
   Finded:
     _PersistentCalls:
-    - _Target: {fileID: 0}
-      _MethodName: UnityEngine.Debug, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null.LogInfo
+    - _Target: {fileID: 964443528666903211}
+      _MethodName: Win
+      _PersistentArguments: []
+--- !u!114 &8783452148070115733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1807295685935236867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8e0c45775f1b8f4b9a24196038d1b93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _TriggerEnterEvent:
+    _PersistentCalls:
+    - _Target: {fileID: 8351021936672331638}
+      _MethodName: TryFind
       _PersistentArguments:
-      - _Type: 2
+      - _Type: 14
         _Int: 0
-        _String: End Level
+        _String: UnityEngine.Collider, UnityEngine.PhysicsModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
         _X: 0
         _Y: 0
         _Z: 0
         _W: 0
         _Object: {fileID: 0}
-      - _Type: 2
-        _Int: 0
-        _String: 
-        _X: 0
-        _Y: 0
-        _Z: 0
-        _W: 0
-        _Object: {fileID: 0}
-      - _Type: 3
-        _Int: 0
-        _String: 
-        _X: 0
-        _Y: 0
-        _Z: 0
-        _W: 0
-        _Object: {fileID: 0}
-      - _Type: 3
-        _Int: 0
-        _String: 
-        _X: 0
-        _Y: 0
-        _Z: 0
-        _W: 0
-        _Object: {fileID: 0}
+  _TriggerStayEvent:
+    _PersistentCalls: []
+  _TriggerExitEvent:
+    _PersistentCalls: []
+--- !u!114 &964443528666903211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1807295685935236867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 077a37e386dd457786795f6149642973, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

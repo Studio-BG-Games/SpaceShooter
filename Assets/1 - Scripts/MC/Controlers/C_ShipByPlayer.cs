@@ -8,12 +8,12 @@ using MC.Models;
 using ModelCore;
 using Services;
 using Services.Inputs;
+using UltEvents;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class C_ShipByPlayer : MonoBehaviour
 {
-    public LabelGoSo PlayerLabel;
     public LabelGoSo LevelMark;
     
     public Runner Runner;
@@ -26,6 +26,8 @@ public class C_ShipByPlayer : MonoBehaviour
     private DataPathShip _shipData;
     private Entity _player;
 
+    public UltEvent OnRecovery;
+
     public void Init(Entity playerEntity)
     {
         _player = playerEntity;
@@ -37,16 +39,23 @@ public class C_ShipByPlayer : MonoBehaviour
         
         InputMove.Move += OnMove;
         PlayerEntityRef.Init(playerEntity);
+
         Inited.Invoke(playerEntity);
         enabled = true;
+    }
+
+    public void Recovery()
+    {
+        Runner.enabled = true;
+        OnRecovery.Invoke();
     }
 
     private void Update()
     {
         if(_player==null) return;
         _shipData.OffsetInNomal = _xyClapm.GetNormal(Runner);
+        
         _shipData.Progress = LevelGenerator.instance.LocalToGlobalPercent(Runner.result.percent, Runner.segment.index);
-        Debug.Log("Persent: "+_shipData.Progress);
     }
     
 
