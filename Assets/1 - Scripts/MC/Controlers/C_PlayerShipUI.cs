@@ -24,7 +24,9 @@ namespace MC.Controlers
         {
             HanlerHp(player);
 
-            LifeCount.text = EntityAgregator.Instance.Select(x => x.Has<Datas>()).Select<Datas>().Save.Live.ToString();
+            var liveData = EntityAgregator.Instance.Select(x => x.Has<Datas>()).Select<Datas>().Save.Live;
+            LifeCount.text = liveData.Value.ToString();
+            liveData.Updated += x => LifeCount.text = x.ToString();
             
             _infoPath = player.SelectOrCreate<DataPathShip>();
         }
@@ -32,8 +34,8 @@ namespace MC.Controlers
         private void HanlerHp(Entity player)
         {
             var hp = player.Select<Health>();
-            hp.ChangedOldNew += (old, n) => HpBar.fillAmount = n / hp.Max;
-            HpBar.fillAmount = hp.Current / hp.Max;
+            hp.ChangedOldNew += (old, n) => HpBar.fillAmount = (float)n / hp.Max;
+            HpBar.fillAmount = (float)hp.Current / hp.Max;
         }
 
         private void Update()

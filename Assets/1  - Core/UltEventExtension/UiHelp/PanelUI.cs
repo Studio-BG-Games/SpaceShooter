@@ -3,6 +3,7 @@ using Lean.Transition;
 using Sirenix.OdinInspector;
 using UltEvents;
 using UnityEngine;
+using Object = System.Object;
 
 namespace UiHlpers
 {

@@ -14,14 +14,24 @@ namespace ModelCore
         public LabelObjectGo Label => _label ??= GetComponent<LabelObjectGo>();
         [SerializeField] private List<MonoBehaviour> _components = new List<MonoBehaviour>();
 
-        public T Select<T>(Func<T, bool> predict) where T : MonoBehaviour => _components.FirstOrDefault(x =>
+        public T Select<T>(Func<T, bool> predict, bool checknull = false) where T : MonoBehaviour
         {
-            var target = x as T;
-            if (target == null) return false;
-            return predict(target);
-        }) as T;
+            var r = _components.FirstOrDefault(x =>
+            {
+                var target = x as T;
+                if (target == null) return false;
+                return predict(target);
+            }) as T;
+            if (checknull && r == null) Debug.LogError($"На сущности нет компонента типа {typeof(T).Name}", this);
+            return r;
+        }
 
-        public T Select<T>() where T : MonoBehaviour => _components.FirstOrDefault(x => x is T) as T;
+        public T Select<T>(bool checkNull=false) where T : MonoBehaviour
+        {
+            var r = _components.FirstOrDefault(x => x is T) as T;
+            if (checkNull && r == null) Debug.LogError($"На сущности нет компонента типа {typeof(T).Name}", this);
+            return r;
+        }
 
         public bool Has<T>() where T : MonoBehaviour => Select<T>() != null;
         

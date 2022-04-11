@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: 4984299782318381335}
   - component: {fileID: 1256465192544184063}
   - component: {fileID: 7114145335453364577}
-  - component: {fileID: 765423122786303924}
   - component: {fileID: -9107042937410610320}
-  - component: {fileID: 4327743659996968126}
   - component: {fileID: 1736801951247989670}
+  - component: {fileID: 361239981846803379}
+  - component: {fileID: 956252732933885642}
   m_Layer: 0
   m_Name: Bullet Enegry
   m_TagString: Untagged
@@ -167,20 +167,6 @@ MonoBehaviour:
     applyScaleX: 0
     applyScaleY: 0
     applyScaleZ: 0
---- !u!114 &765423122786303924
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1059452319082446}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5fc889ef9054646865613834e74d64b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _speed: 90
-  _isPositive: 1
 --- !u!114 &-9107042937410610320
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -199,14 +185,32 @@ MonoBehaviour:
     _PersistentCalls: []
   _EnableEvent:
     _PersistentCalls:
-    - _Target: {fileID: 4327743659996968126}
-      _MethodName: Invoke
-      _PersistentArguments: []
+    - _Target: {fileID: 0}
+      _MethodName: UnityEngine.Object, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null.Destroy
+      _PersistentArguments:
+      - _Type: 13
+        _Int: 0
+        _String: UnityEngine.Object, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
+          PublicKeyToken=null
+        _X: 0
+        _Y: 0
+        _Z: 0
+        _W: 0
+        _Object: {fileID: 1059452319082446}
+      - _Type: 5
+        _Int: 0
+        _String: 
+        _X: 2.5
+        _Y: 0
+        _Z: 0
+        _W: 0
+        _Object: {fileID: 0}
   _DisableEvent:
     _PersistentCalls: []
   _DestroyEvent:
     _PersistentCalls: []
---- !u!114 &4327743659996968126
+--- !u!114 &1736801951247989670
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -215,10 +219,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1059452319082446}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f574d8b2153a0d4fa15f5de878f680c, type: 3}
+  m_Script: {fileID: 11500000, guid: dc6d66cd70fc4597bf34033286640ee3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _Event:
+  DamageInfoRef: {fileID: 361239981846803379}
+  Damaged:
     _PersistentCalls:
     - _Target: {fileID: 0}
       _MethodName: UnityEngine.Object, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
@@ -233,8 +238,8 @@ MonoBehaviour:
         _Z: 0
         _W: 0
         _Object: {fileID: 1059452319082446}
-  _Delay: 2.5
---- !u!114 &1736801951247989670
+  _canEvented: 1
+--- !u!114 &361239981846803379
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -243,12 +248,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 1059452319082446}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc6d66cd70fc4597bf34033286640ee3, type: 3}
+  m_Script: {fileID: 11500000, guid: 998f707e7ea6491a9662ac06bce6523c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damaged:
-    _PersistentCalls: []
-  _canEvented: 1
+  _component: {fileID: 0}
+--- !u!114 &956252732933885642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1059452319082446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a69229be53d419f839346b9b2cf5555, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DamageInfoRef: {fileID: 361239981846803379}
+  Runner: {fileID: 7114145335453364577}
+  _hitCast: {fileID: 4984299782318381335}
 --- !u!1 &1649931267902942
 GameObject:
   m_ObjectHideFlags: 0

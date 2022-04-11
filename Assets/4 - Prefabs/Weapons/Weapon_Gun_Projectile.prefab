@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 880626830503776325}
+  - component: {fileID: 4347918647491975260}
   m_Layer: 0
   m_Name: Weapon_Gun_Projectile
   m_TagString: Untagged
@@ -32,6 +33,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4347918647491975260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 880626830503776326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67baca86a1ce4bf5a1b6aab5e6c885dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  zmover: {fileID: 0}
+  _fireRate: 0.15
+  _spawnPoint: {fileID: 5239336509019327035}
+  Fired:
+    _PersistentCalls:
+    - _Target: {fileID: 4068937538272031976}
+      _MethodName: Flash
+      _PersistentArguments: []
+  ColliderForIgnore: []
 --- !u!1 &880626830737762043
 GameObject:
   m_ObjectHideFlags: 0
@@ -122,7 +144,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6388353629206137830}
-  - component: {fileID: 2529532556772915249}
   m_Layer: 0
   m_Name: ProjectileLauncher
   m_TagString: Untagged
@@ -147,30 +168,6 @@ Transform:
   m_Father: {fileID: 880626830503776325}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2529532556772915249
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2529532556772915250}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67baca86a1ce4bf5a1b6aab5e6c885dd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  zmover: {fileID: 0}
-  _fireRate: 0.15
-  _spawnPoint: {fileID: 5239336509019327035}
-  Fired:
-    _PersistentCalls:
-    - _Target: {fileID: 4068937538272031976}
-      _MethodName: Flash
-      _PersistentArguments: []
-    - _Target: {fileID: 0}
-      _MethodName: SpawnAll
-      _PersistentArguments: []
-  ColliderForIgnore: []
 --- !u!1 &3652971272775416983
 GameObject:
   m_ObjectHideFlags: 0

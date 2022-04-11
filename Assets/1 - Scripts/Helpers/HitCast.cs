@@ -32,7 +32,7 @@ namespace Services
 
         private void OnDrawGizmosSelected()
         {
-            Gizmos.color = Color.yellow;
+            Gizmos.color = Color.white;
             Gizmos.DrawLine(transform.position, transform.position + (IsForward ? transform.forward : transform.forward * -1)*_distance);
             Gizmos.color = Color.magenta;
             Gizmos.DrawWireSphere(transform.position, _distance);

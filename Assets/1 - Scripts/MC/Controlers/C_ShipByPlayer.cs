@@ -52,8 +52,8 @@ public class C_ShipByPlayer : MonoBehaviour
 
     private void HandlerZMover(ZMover mover)
     {
-        Runner.followSpeed = mover.Speed;
-        mover.Changed+=()=>Runner.followSpeed = mover.Speed;
+        Runner.followSpeed = mover.SpeedByDiraction;
+        mover.Changed+=()=>Runner.followSpeed = mover.SpeedByDiraction;
     }
 
     private void HandlerXYMover(XYMover mover) => _xyMover = mover;

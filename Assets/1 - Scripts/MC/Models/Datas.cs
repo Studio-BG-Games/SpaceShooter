@@ -1,5 +1,7 @@
-﻿using Jint.Parser.Ast;
+﻿using System;
+using Jint.Parser.Ast;
 using ModelCore;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 namespace Models
@@ -14,8 +16,8 @@ namespace Models
     [System.Serializable]
     public class DataSave
     {
-        [Min(0)]public int Live;
-        public uint CurrentLvl;
+        public ObjectValue<int> Live;
+        public ObjectValue<int> CurrentLevel;
     }
 
     [System.Serializable]
@@ -27,8 +29,25 @@ namespace Models
     [System.Serializable]
     public class SettingData
     {
-        [Range(0, 1)] public float MasterSound;
-        [Range(0, 1)] public float MusicSound;
-        [Range(0, 1)] public float EffectSound;
+        public ObjectValue<float> MasterSound;
+        public ObjectValue<float> MusicSound;
+        public ObjectValue<float> EffectSound;
+    }
+    
+    [System.Serializable]
+    public class ObjectValue<T>
+    {
+        public event Action<T> Updated;
+        [SerializeField]private T _value;
+
+        public T Value
+        {
+            get => _value;
+            set
+            {
+                _value = value;
+                Updated?.Invoke(_value);
+            }
+        }
     }
 }

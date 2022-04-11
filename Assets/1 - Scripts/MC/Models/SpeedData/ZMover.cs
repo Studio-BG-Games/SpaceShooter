@@ -22,7 +22,9 @@ namespace Services
             }
         }
 
-        public float Speed
+        public float AbsolutlySpeed => _speed;
+        
+        public float SpeedByDiraction
         {
             get => _speed * (IsPositive?1:-1);
             set

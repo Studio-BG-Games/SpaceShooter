@@ -6,15 +6,15 @@ namespace Services.Inputs
 {
     public class InputReciverCombat : MonoBehaviour
     {
-        [DI] private IInput _input;
+        private ResolveSingle<IInput> _input = new ResolveSingle<IInput>();
 
         public UltEvent Attack;
         public UltEvent ChangeWeapon;
         
         private void OnEnable()
         {
-            _input.Fire += Attack.Invoke;
-            _input.ChangeWeapon += ChangeWeapon.Invoke;
+            _input.Depence.Fire += Attack.Invoke;
+            _input.Depence.ChangeWeapon += ChangeWeapon.Invoke;
         }
     }
 }
