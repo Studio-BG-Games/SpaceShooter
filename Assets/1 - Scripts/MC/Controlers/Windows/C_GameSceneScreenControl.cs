@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using Cinemachine;
 using ModelCore;
 using Sirenix.Utilities;
 using UnityEngine;
@@ -13,8 +14,9 @@ namespace Models
         public TargetWindow WinScreen;
         public TargetWindow GameHud;
         public TargetWindow LoseScreen;
+        public TargetWindow PauseWin;
 
-        private TargetWindow[] TargetWindows() => new[] { WinScreen, GameHud, LoseScreen};
+        private TargetWindow[] TargetWindows() => new[] { WinScreen, GameHud, LoseScreen, PauseWin};
         
         private void Awake()
         {

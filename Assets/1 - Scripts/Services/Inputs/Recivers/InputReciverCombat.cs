@@ -1,4 +1,5 @@
-﻿using DIContainer;
+﻿using System;
+using DIContainer;
 using UltEvents;
 using UnityEngine;
 
@@ -15,6 +16,12 @@ namespace Services.Inputs
         {
             _input.Depence.Fire += Attack.Invoke;
             _input.Depence.ChangeWeapon += ChangeWeapon.Invoke;
+        }
+
+        private void OnDisable()
+        {
+            _input.Depence.Fire -= Attack.Invoke;
+            _input.Depence.ChangeWeapon -= ChangeWeapon.Invoke;
         }
     }
 }

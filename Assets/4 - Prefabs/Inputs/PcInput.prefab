@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7597893980264929460}
   - component: {fileID: 7597893980264929459}
   - component: {fileID: 7597893978976488032}
+  - component: {fileID: 7597893978976488033}
   m_Layer: 0
   m_Name: PcInput
   m_TagString: Untagged
@@ -100,4 +101,26 @@ MonoBehaviour:
         _Object: {fileID: 0}
     - _Target: {fileID: 7597893980264929459}
       _MethodName: FreeCursor
+      _PersistentArguments: []
+--- !u!114 &7597893978976488033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7597893980264929462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7c8b383569b40e4bb2b118754818fb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Pause:
+    _PersistentCalls:
+    - _Target: {fileID: 7597893980264929459}
+      _MethodName: FreeCursor
+      _PersistentArguments: []
+  Unpause:
+    _PersistentCalls:
+    - _Target: {fileID: 7597893980264929459}
+      _MethodName: LockCursor
       _PersistentArguments: []

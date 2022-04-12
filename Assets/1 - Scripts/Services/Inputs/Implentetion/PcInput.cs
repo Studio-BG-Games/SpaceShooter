@@ -16,7 +16,7 @@ namespace Services.Inputs
             if(keyboardVector.x!=0 || keyboardVector.y!=0)
                 Move?.Invoke(keyboardVector);
             else 
-                Move?.Invoke(new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y")));
+                Move?.Invoke(new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y")).normalized);
             
             if(Input.GetKeyDown(KeyCode.Mouse1) || Input.GetKey(KeyCode.LeftShift)) ChangeWeapon?.Invoke();
             if(Input.GetKey(KeyCode.Mouse0) || Input.GetKey(KeyCode.Space)) Fire?.Invoke();

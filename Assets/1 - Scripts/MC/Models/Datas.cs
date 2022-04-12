@@ -49,5 +49,7 @@ namespace Models
                 Updated?.Invoke(_value);
             }
         }
+
+        [Button] private void Invoke() => Updated?.Invoke(_value);
     }
 }

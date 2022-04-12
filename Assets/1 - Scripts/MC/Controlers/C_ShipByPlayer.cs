@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using DIContainer;
 using Dreamteck.Forever;
 using Dreamteck.Splines;
 using Infrastructure;
@@ -8,6 +9,9 @@ using MC.Models;
 using ModelCore;
 using Services;
 using Services.Inputs;
+using Services.PauseManagers;
+using Services.RecoveryManagers;
+using Sirenix.Utilities;
 using UltEvents;
 using UnityEngine;
 using UnityEngine.Events;
@@ -27,6 +31,9 @@ public class C_ShipByPlayer : MonoBehaviour
     private Entity _player;
 
     public UltEvent OnRecovery;
+    
+    private ResolveSingle<PauseGame> _pauseGame = new ResolveSingle<PauseGame>();
+    private ResolveSingle<RecoveryPlayerServices> _recovery = new ResolveSingle<RecoveryPlayerServices>();
 
     public void Init(Entity playerEntity)
     {
@@ -42,12 +49,16 @@ public class C_ShipByPlayer : MonoBehaviour
 
         Inited.Invoke(playerEntity);
         enabled = true;
+
+        _recovery.Depence.Recovered += () => Recovery();
+        _pauseGame.Depence.IsPause.Updated += x => Runner.enabled = !x;
     }
 
-    public void Recovery()
+    private void Recovery()
     {
         Runner.enabled = true;
         OnRecovery.Invoke();
+        _player.SelectAll<Health>().ForEach(x => x.Current = x.Max);
     }
 
     private void Update()
@@ -69,6 +80,7 @@ public class C_ShipByPlayer : MonoBehaviour
 
     private void OnMove(Vector2 obj)
     {
+        if(_pauseGame.Depence.IsPause.Value) return;
         _xyMover.Move(Runner, obj);
         _xyClapm.Clamp(Runner);
     }

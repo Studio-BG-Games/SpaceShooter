@@ -26,6 +26,12 @@ namespace UiHlpers
             }
         }
 
+        public void SetVal(bool b)
+        {
+            if(b) Show(); else Close();
+        }
+        
+
         public void Show()
         {
             OnShow.Invoke();
