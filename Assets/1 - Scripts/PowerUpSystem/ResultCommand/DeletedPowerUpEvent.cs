@@ -3,7 +3,7 @@
     [System.Serializable]
     public class DeletedPowerUpEvent : BaseEventActionWithPowerUpManager
     {
-        public PowerUp _deletedPowerUp;
+        private PowerUp _deletedPowerUp;
         public PowerUp DeletedPowerUp => _deletedPowerUp;
 
         public DeletedPowerUpEvent(PowerUp deleteUp) => _deletedPowerUp = deleteUp;
