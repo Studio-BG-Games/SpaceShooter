@@ -1040,6 +1040,9 @@ GameObject:
   - component: {fileID: 1902508786}
   - component: {fileID: 1902508787}
   - component: {fileID: 1902508788}
+  - component: {fileID: 1902508790}
+  - component: {fileID: 1902508789}
+  - component: {fileID: 1902508791}
   m_Layer: 0
   m_Name: LevelInfo
   m_TagString: Untagged
@@ -1094,6 +1097,9 @@ MonoBehaviour:
   - {fileID: 1902508786}
   - {fileID: 1902508787}
   - {fileID: 1902508788}
+  - {fileID: 1902508790}
+  - {fileID: 1902508789}
+  - {fileID: 1902508791}
 --- !u!114 &1902508785
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1158,6 +1164,79 @@ MonoBehaviour:
       TimeToNextFactor: 30
     - MultiAtFactor: 5
       TimeToNextFactor: 0
+--- !u!114 &1902508789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1902508781}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28b97123e24149a2978517ae75e0b5af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _commands:
+  - id: 0
+  references:
+    version: 1
+    00000000:
+      type: {class: ComandToPowerUpManager/AddOrReplace, ns: PowerUpSystem, asm: Assembly-CSharp}
+      data:
+        PowerUp:
+          _typePowerUp: {fileID: 11400000, guid: 6334b2a925461f2478b9072cb39a9edb,
+            type: 2}
+          _lifeTime: 666
+          _pastLiveTime: 0
+--- !u!114 &1902508790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1902508781}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0df8bb219dbd4dfcb3a0c84b10ff8b9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1902508791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1902508781}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 643d6f810cd84e788ba490eab1ea4eb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TargetsRecivers:
+  - TypeEvent:
+      id: 0
+    Event:
+      _PersistentCalls: []
+  - TypeEvent:
+      id: 1
+    Event:
+      _PersistentCalls: []
+  references:
+    version: 1
+    00000000:
+      type: {class: DeletedPowerUpEvent, ns: PowerUpSystem, asm: Assembly-CSharp}
+      data:
+        _deletedPowerUp:
+          _typePowerUp: {fileID: 0}
+          _lifeTime: 0
+          _pastLiveTime: 0
+    00000001:
+      type: {class: DeletedPowerUpEvent, ns: PowerUpSystem, asm: Assembly-CSharp}
+      data:
+        _deletedPowerUp:
+          _typePowerUp: {fileID: 0}
+          _lifeTime: 0
+          _pastLiveTime: 0
 --- !u!224 &1923667974 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2417270101072011627, guid: 4dff184c54a91cf409ba98ffcd874fb8,
@@ -1690,7 +1769,7 @@ PrefabInstance:
     - target: {fileID: 5092976837112775630, guid: 27184d028353adc4390b5e46bcd1e92f,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 431.22964
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5092976837112775630, guid: 27184d028353adc4390b5e46bcd1e92f,
         type: 3}
