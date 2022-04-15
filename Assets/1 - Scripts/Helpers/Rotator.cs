@@ -12,7 +12,7 @@ namespace DefaultNamespace
 
         private void Update()
         {
-            Target.eulerAngles += Diraction * Speed;
+            Target.Rotate(Diraction*Speed);
         }
     }
 }

@@ -23,6 +23,8 @@ namespace MC.Controlers
             _moverBullet = infoBullet.Select<ZMover>(true);
             
             DamageInfoRef.Init(infoBullet.Select<DamageInfo>(true));
+
+            Runner.motion.rotationOffset = _moverShip.IsPositive ? new Vector3(0, 0, 0) : new Vector3(180, 0, 0); 
             
             SetSpeedBullet();
             _moverBullet.Changed += SetSpeedBullet;

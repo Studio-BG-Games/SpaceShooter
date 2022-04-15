@@ -20,6 +20,12 @@ namespace Dreamteck.Forever
         public StartMode startMode = StartMode.Percent;
         public float followSpeed = 1f;
         public bool follow = true;
+
+        public bool Follow
+        {
+            get => follow;
+            set => follow = value;
+        }
         public bool isPlayer = false;
         public bool loop = false;
         public PhysicsMode physicsMode = PhysicsMode.Transform;

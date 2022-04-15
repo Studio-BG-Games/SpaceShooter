@@ -16,6 +16,8 @@ GameObject:
   - component: {fileID: 1736801951247989670}
   - component: {fileID: 361239981846803379}
   - component: {fileID: 956252732933885642}
+  - component: {fileID: 3130991220438859139}
+  - component: {fileID: 7086691605529723953}
   m_Layer: 0
   m_Name: Bullet Enegry
   m_TagString: Untagged
@@ -267,6 +269,58 @@ MonoBehaviour:
   DamageInfoRef: {fileID: 361239981846803379}
   Runner: {fileID: 7114145335453364577}
   _hitCast: {fileID: 4984299782318381335}
+--- !u!114 &3130991220438859139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1059452319082446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7c8b383569b40e4bb2b118754818fb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Pause:
+    _PersistentCalls: []
+  Unpause:
+    _PersistentCalls: []
+  NewPause:
+    _PersistentCalls:
+    - _Target: {fileID: 7086691605529723953}
+      _MethodName: Invert
+      _PersistentArguments:
+      - _Type: 14
+        _Int: 0
+        _String: 
+        _X: 1
+        _Y: 0
+        _Z: 0
+        _W: 0
+        _Object: {fileID: 0}
+    - _Target: {fileID: 7114145335453364577}
+      _MethodName: set_Follow
+      _PersistentArguments:
+      - _Type: 15
+        _Int: 0
+        _String: 
+        _X: 1
+        _Y: 0
+        _Z: 0
+        _W: 0
+        _Object: {fileID: 0}
+--- !u!114 &7086691605529723953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1059452319082446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1033e6937cae4e0b955ff0aa931f5cd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1649931267902942
 GameObject:
   m_ObjectHideFlags: 0

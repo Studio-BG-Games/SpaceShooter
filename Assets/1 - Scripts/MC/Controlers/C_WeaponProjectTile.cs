@@ -7,6 +7,14 @@ namespace Services
 {
     public class C_WeaponProjectTile : MonoBehaviour
     {
+        [SerializeField] private bool _canAttack = true;
+
+        public bool CanAttack
+        {
+            get => _canAttack;
+            set => _canAttack = value;
+        }
+
         public EntityRef ShipEntity;
         public EntityRef BulletEntity;
         public C_ProjectTile Prefab;
@@ -16,6 +24,10 @@ namespace Services
 
         private void Awake() => Weapons.ForEach(x => x.Init(CollidersForIgonore));
 
-        public void Fire() => Weapons.ForEach(x => x.TryFire(ShipEntity.Component, BulletEntity.Component, Prefab));
+        public void Fire()
+        {
+            if(CanAttack)
+                Weapons.ForEach(x => x.TryFire(ShipEntity.Component, BulletEntity.Component, Prefab));
+        }
     }
 }

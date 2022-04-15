@@ -456,6 +456,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ed5e4ac3ca64f44b21bbedd77456908, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _canAttack: 1
   ShipEntity: {fileID: 5806396911798909007}
   BulletEntity: {fileID: 7538371605843370078}
   Prefab: {fileID: 956252732933885642, guid: a7fc27354014f1d4c8d6b12b2d8dfca7, type: 3}
@@ -1161,6 +1162,11 @@ PrefabInstance:
       propertyPath: ColliderForIgnore.Array.data[0]
       value: 
       objectReference: {fileID: 5017479238595632736}
+    - target: {fileID: 4347918647491975260, guid: 91694602b25a02f4c869c3926dad6e12,
+        type: 3}
+      propertyPath: Runner
+      value: 
+      objectReference: {fileID: 5017479238595632669}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91694602b25a02f4c869c3926dad6e12, type: 3}
 --- !u!114 &6710956884584225211 stripped
@@ -1263,6 +1269,11 @@ PrefabInstance:
       propertyPath: ColliderForIgnore.Array.data[0]
       value: 
       objectReference: {fileID: 5017479238595632736}
+    - target: {fileID: 4347918647491975260, guid: 91694602b25a02f4c869c3926dad6e12,
+        type: 3}
+      propertyPath: Runner
+      value: 
+      objectReference: {fileID: 5017479238595632669}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91694602b25a02f4c869c3926dad6e12, type: 3}
 --- !u!4 &8104483576143964847 stripped

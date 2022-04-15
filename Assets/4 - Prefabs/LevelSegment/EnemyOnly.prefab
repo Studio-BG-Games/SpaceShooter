@@ -1,0 +1,427 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2080506709
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2080506710}
+  - component: {fileID: 2080506712}
+  - component: {fileID: 2080506711}
+  - component: {fileID: 8852489247710065178}
+  m_Layer: 0
+  m_Name: EnemyOnly
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2080506710
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2080506709}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 6210921477193960018}
+  - {fileID: 5411048306583489518}
+  - {fileID: 7378567652299218888}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &2080506712
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2080506709}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &2080506711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2080506709}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 972ea89ac0ab9d04f9100390a2dbf8d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 0
+  customEntrance: {fileID: 6210921477193960018}
+  customExit: {fileID: 5411048306583489518}
+  customKeepUpright: 0
+  _customMainPath: -1
+  axis: 2
+  customPaths: []
+  objectProperties:
+  - transform: {fileID: 2080506710}
+    localRotation: {x: 0, y: 0, z: 0, w: 1}
+    extrudedMesh: {fileID: 0}
+    extrusionSpriteVertices: []
+    extrusionSpriteUVs: []
+    extrusionSpriteRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    extrudedCollisionMesh: {fileID: 0}
+    _extrusionSettings:
+      meshColliderHandling: 0
+      boundsInclusion: -1
+      indexing: 0
+      applyRotation: 1
+      keepUpright: 0
+      upVector: {x: 0, y: 1, z: 0}
+      applyScale: 0
+      bendMesh: 0
+      bendSprite: 0
+      bendPolygonCollider: 0
+      applyMeshColors: 0
+    _settingsComponent: {fileID: 0}
+    overrideSettingsComponent: 0
+    meshFilter: {fileID: 0}
+    meshCollider: {fileID: 0}
+    spriteRenderer: {fileID: 0}
+    colliders: []
+    _isRoot: 1
+  - transform: {fileID: 6210921477193960018}
+    localRotation: {x: 0, y: 0, z: 0, w: 1}
+    extrudedMesh: {fileID: 0}
+    extrusionSpriteVertices: []
+    extrusionSpriteUVs: []
+    extrusionSpriteRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    extrudedCollisionMesh: {fileID: 0}
+    _extrusionSettings:
+      meshColliderHandling: 0
+      boundsInclusion: -1
+      indexing: 0
+      applyRotation: 1
+      keepUpright: 0
+      upVector: {x: 0, y: 1, z: 0}
+      applyScale: 0
+      bendMesh: 0
+      bendSprite: 0
+      bendPolygonCollider: 0
+      applyMeshColors: 0
+    _settingsComponent: {fileID: 0}
+    overrideSettingsComponent: 0
+    meshFilter: {fileID: 0}
+    meshCollider: {fileID: 0}
+    spriteRenderer: {fileID: 0}
+    colliders:
+    - {fileID: 7922794624239678222}
+    _isRoot: 0
+  - transform: {fileID: 5411048306583489518}
+    localRotation: {x: 0, y: 0, z: 0, w: 1}
+    extrudedMesh: {fileID: 0}
+    extrusionSpriteVertices: []
+    extrusionSpriteUVs: []
+    extrusionSpriteRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    extrudedCollisionMesh: {fileID: 0}
+    _extrusionSettings:
+      meshColliderHandling: 0
+      boundsInclusion: -1
+      indexing: 0
+      applyRotation: 1
+      keepUpright: 0
+      upVector: {x: 0, y: 1, z: 0}
+      applyScale: 0
+      bendMesh: 0
+      bendSprite: 0
+      bendPolygonCollider: 0
+      applyMeshColors: 0
+    _settingsComponent: {fileID: 0}
+    overrideSettingsComponent: 0
+    meshFilter: {fileID: 0}
+    meshCollider: {fileID: 0}
+    spriteRenderer: {fileID: 0}
+    colliders: []
+    _isRoot: 0
+  - transform: {fileID: 7378567652299218888}
+    localRotation: {x: 0, y: 0, z: 0, w: 1}
+    extrudedMesh: {fileID: 0}
+    extrusionSpriteVertices: []
+    extrusionSpriteUVs: []
+    extrusionSpriteRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    extrudedCollisionMesh: {fileID: 0}
+    _extrusionSettings:
+      meshColliderHandling: 0
+      boundsInclusion: -1
+      indexing: 0
+      applyRotation: 1
+      keepUpright: 0
+      upVector: {x: 0, y: 1, z: 0}
+      applyScale: 0
+      bendMesh: 0
+      bendSprite: 0
+      bendPolygonCollider: 0
+      applyMeshColors: 0
+    _settingsComponent: {fileID: 0}
+    overrideSettingsComponent: 0
+    meshFilter: {fileID: 0}
+    meshCollider: {fileID: 0}
+    spriteRenderer: {fileID: 0}
+    colliders: []
+    _isRoot: 0
+  bounds:
+    center: {x: 0, y: 0, z: 89.25}
+    extents: {x: 75, y: 75, z: 90.75}
+    max: {x: 75, y: 75, z: 180}
+    min: {x: -75, y: -75, z: -1.5}
+    size: {x: 150, y: 150, z: 181.5}
+  builders: []
+  unpacked: 0
+  alwaysDraw: 0
+  drawGeneratedSpline: 1
+  drawGeneratedSamples: 1
+  drawSampleScale: 1
+  drawEntranceAndExit: 1
+  drawBounds: 1
+  drawCustomPaths: 1
+  editorChildCount: 4
+--- !u!114 &8852489247710065178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2080506709}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d54c1e7a70444b38b797d926ca75c7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Min: {x: -20, y: -20}
+  Max: {x: 20, y: 20}
+  Distance: 180
+--- !u!1 &1660821066734291504
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7378567652299218888}
+  - component: {fileID: 5682443981781410832}
+  m_Layer: 0
+  m_Name: Spawner (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7378567652299218888
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1660821066734291504}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 20, y: -12.1, z: 151.6}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2080506710}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5682443981781410832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1660821066734291504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecafdc20df044551860fa44fea0f916b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _prefab:
+    id: 0
+  _spawnMethod:
+    id: 1
+  _addAction:
+  - id: 2
+  - id: 3
+  references:
+    version: 1
+    00000000:
+      type: {class: SimpleObject, ns: SpawnerSystem, asm: Assembly-CSharp}
+      data:
+        Prefab: {fileID: 281602037788047727, guid: 19ac5b1ec07d4e64e8f8b58fc40c8656,
+          type: 3}
+    00000001:
+      type: {class: ArrayPoints, ns: SpawnerSystem, asm: Assembly-CSharp}
+      data:
+        Start: {fileID: 7378567652299218888}
+        Diraction: {x: -0.37, y: 0.24, z: 0.2}
+        DelayDetweenSpawn: 0.3
+        Distance: 26.03
+        Count: 5
+        GizmosSize: 2.8
+    00000002:
+      type: {class: SetParent, ns: SpawnerSystem, asm: Assembly-CSharp}
+      data:
+        ParentForSpaningObject: {fileID: 2080506710}
+    00000003:
+      type: {class: SetOffset, ns: SpawnerSystem, asm: Assembly-CSharp}
+--- !u!1 &4622206907982418952
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6210921477193960018}
+  - component: {fileID: 7922794624239678222}
+  - component: {fileID: 2650554025345168177}
+  - component: {fileID: 2095032158688268756}
+  m_Layer: 2
+  m_Name: Entrance
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6210921477193960018
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4622206907982418952}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2080506710}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &7922794624239678222
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4622206907982418952}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 150, y: 150, z: 3}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2650554025345168177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4622206907982418952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13424878253e48bd8ab79a05bd741b4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IdToSearch:
+  - {fileID: 11400000, guid: a2f811f45c2b2f240add89ee371a40a2, type: 2}
+  Finded:
+    _PersistentCalls:
+    - _Target: {fileID: 5682443981781410832}
+      _MethodName: Spawn
+      _PersistentArguments: []
+--- !u!114 &2095032158688268756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4622206907982418952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8e0c45775f1b8f4b9a24196038d1b93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _TriggerEnterEvent:
+    _PersistentCalls:
+    - _Target: {fileID: 2650554025345168177}
+      _MethodName: TryFind
+      _PersistentArguments:
+      - _Type: 14
+        _Int: 0
+        _String: UnityEngine.Collider, UnityEngine.PhysicsModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        _X: 0
+        _Y: 0
+        _Z: 0
+        _W: 0
+        _Object: {fileID: 0}
+  _TriggerStayEvent:
+    _PersistentCalls: []
+  _TriggerExitEvent:
+    _PersistentCalls: []
+--- !u!1 &6680602912298376510
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5411048306583489518}
+  m_Layer: 0
+  m_Name: Exit
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5411048306583489518
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6680602912298376510}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 180}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2080506710}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

@@ -23,12 +23,30 @@ MonoBehaviour:
       segments:
       - nested: 0
         randomPickChance: 1
+        _prefab: {fileID: 2080506709, guid: 0c2e5c6a4a8a302458ad22dbe8bffb7b, type: 3}
+        _segmentPool: []
+        _pool: 0
+        _poolParent: {fileID: 0}
+      - nested: 0
+        randomPickChance: 1
+        _prefab: {fileID: 2080506709, guid: 373b95afde1b1674ab37803b768902fe, type: 3}
+        _segmentPool: []
+        _pool: 0
+        _poolParent: {fileID: 0}
+      - nested: 0
+        randomPickChance: 1
+        _prefab: {fileID: 2080506709, guid: 0c2e5c6a4a8a302458ad22dbe8bffb7b, type: 3}
+        _segmentPool: []
+        _pool: 0
+        _poolParent: {fileID: 0}
+      - nested: 0
+        randomPickChance: 1
         _prefab: {fileID: 2080506709, guid: 373b95afde1b1674ab37803b768902fe, type: 3}
         _segmentPool: []
         _pool: 0
         _poolParent: {fileID: 0}
       customPathGenerator: {fileID: 0}
-      spawnCount: 4
+      spawnCount: 2
       type: 3
       randomizer: {fileID: 11400000, guid: fb600be43607d7e47822c78754644d57, type: 2}
       customShuffle: {fileID: 0}
@@ -44,12 +62,30 @@ MonoBehaviour:
       segments:
       - nested: 0
         randomPickChance: 1
+        _prefab: {fileID: 2080506709, guid: 0c2e5c6a4a8a302458ad22dbe8bffb7b, type: 3}
+        _segmentPool: []
+        _pool: 0
+        _poolParent: {fileID: 0}
+      - nested: 0
+        randomPickChance: 1
+        _prefab: {fileID: 2080506709, guid: 373b95afde1b1674ab37803b768902fe, type: 3}
+        _segmentPool: []
+        _pool: 0
+        _poolParent: {fileID: 0}
+      - nested: 0
+        randomPickChance: 1
+        _prefab: {fileID: 2080506709, guid: 0c2e5c6a4a8a302458ad22dbe8bffb7b, type: 3}
+        _segmentPool: []
+        _pool: 0
+        _poolParent: {fileID: 0}
+      - nested: 0
+        randomPickChance: 1
         _prefab: {fileID: 2080506709, guid: 373b95afde1b1674ab37803b768902fe, type: 3}
         _segmentPool: []
         _pool: 0
         _poolParent: {fileID: 0}
       customPathGenerator: {fileID: 0}
-      spawnCount: 4
+      spawnCount: 2
       type: 3
       randomizer: {fileID: 11400000, guid: fb600be43607d7e47822c78754644d57, type: 2}
       customShuffle: {fileID: 0}

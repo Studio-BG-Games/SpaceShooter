@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pathType: 3
   sampleRate: 10
-  controlPointsPerSegment: 5
+  controlPointsPerSegment: 2
   normalInterpolation:
     serializedVersion: 2
     m_Curve: []
@@ -36,7 +36,7 @@ MonoBehaviour:
   restrictPitch: 1
   restrictYaw: 1
   restrictRoll: 0
-  usePitch: 1
+  usePitch: 0
   useYaw: 0
   useRoll: 0
   useColors: 1

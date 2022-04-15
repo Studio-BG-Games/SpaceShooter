@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using DefaultNamespace;
 using DIContainer;
 using Dreamteck.Forever;
 using Dreamteck.Splines;
@@ -13,6 +14,7 @@ namespace Services
 {
     public class WeaponProjectTile : MonoBehaviour
     {
+        public Runner Runner;
         [Min(0.05f)][SerializeField] private float _fireRate;
         [SerializeField] private Transform _spawnPoint;
         
@@ -29,23 +31,11 @@ namespace Services
             {
                 var r = Instantiate(prefab, _spawnPoint.position, _spawnPoint.rotation);
                 r.HitCast.AddIgnore(ColliderForIgnore);
-                SetOffsetProjectTile(r);
+                GlobalHelp.SetOffsetProjectTile(r.Runner, _spawnPoint.position);
                 r.Init(ship, dataBullet);
                 Fired.Invoke();
                 Pause();
             }
-        }
-
-        private void SetOffsetProjectTile(C_ProjectTile r)
-        {
-            // Раннер ввсегда начинает с нулевым оффестом. Здесь мы вычисляем нужный оффсет для ранера. Сначала 
-            // Вычисляем направление от точки с нулевым оффестом к месту стрельбы
-            // Мы получаем оффест в глобальных кординатах, затем через  InverseTransformVector делаем оффет локальный и уже его устанавливаем в оффест раннера
-            SplineSample sample = new SplineSample();
-            LevelGenerator.instance.Project(transform.position, sample);
-            var globalOffset = _spawnPoint.position - sample.position;
-            var localOffset = r.transform.InverseTransformVector(globalOffset);
-            r.Runner.motion.offset = localOffset;
         }
 
         private void Pause()
@@ -58,6 +48,11 @@ namespace Services
         {
             yield return new WaitForSeconds(delay);
             _pause = null;
+        }
+
+        private void OnValidate()
+        {
+            if(_spawnPoint) _spawnPoint.eulerAngles = Vector3.zero;
         }
     }
 }

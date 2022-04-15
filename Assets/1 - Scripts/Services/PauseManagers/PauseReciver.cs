@@ -1,4 +1,5 @@
-﻿using DIContainer;
+﻿using System;
+using DIContainer;
 using UltEvents;
 using UnityEngine;
 
@@ -16,6 +17,11 @@ namespace Services.PauseManagers
         {
             _pause.Depence.IsPause.Updated += Hanler;
             Hanler(_pause.Depence.IsPause.Value);
+        }
+
+        private void OnDestroy()
+        {
+            _pause.Depence.IsPause.Updated -= Hanler;
         }
 
         public void SetPause(bool value) => _pause.Depence.IsPause.Value = value;
