@@ -238,6 +238,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7378567652299218888}
   - component: {fileID: 5682443981781410832}
+  - component: {fileID: 1148262957006309617}
   m_Layer: 0
   m_Name: Spawner (1)
   m_TagString: Untagged
@@ -300,6 +301,69 @@ MonoBehaviour:
         ParentForSpaningObject: {fileID: 2080506710}
     00000003:
       type: {class: SetOffset, ns: SpawnerSystem, asm: Assembly-CSharp}
+--- !u!114 &1148262957006309617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1660821066734291504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 643d6f810cd84e788ba490eab1ea4eb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TargetsRecivers:
+  - TypeEvent:
+      id: 0
+    Event:
+      _PersistentCalls:
+      - _Target: {fileID: 0}
+        _MethodName: UnityEngine.Debug, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null.LogInfo
+        _PersistentArguments:
+        - _Type: 2
+          _Int: 0
+          _String: "\u041A\u0430\u043A\u043E\u0439-\u0442\u043E \u0431\u043E\u043D\u0443\u0441
+            \u0431\u044B\u043B \u0434\u043E\u0431\u0430\u0432\u043B\u0435\u043D"
+          _X: 0
+          _Y: 0
+          _Z: 0
+          _W: 0
+          _Object: {fileID: 0}
+        - _Type: 2
+          _Int: 0
+          _String: 
+          _X: 0
+          _Y: 0
+          _Z: 0
+          _W: 0
+          _Object: {fileID: 0}
+        - _Type: 3
+          _Int: 0
+          _String: 
+          _X: 0
+          _Y: 0
+          _Z: 0
+          _W: 0
+          _Object: {fileID: 0}
+        - _Type: 3
+          _Int: 0
+          _String: 
+          _X: 0
+          _Y: 0
+          _Z: 0
+          _W: 0
+          _Object: {fileID: 0}
+  references:
+    version: 1
+    00000000:
+      type: {class: AddNewPowerUp, ns: PowerUpSystem, asm: Assembly-CSharp}
+      data:
+        _newPowerUp:
+          _typePowerUp: {fileID: 0}
+          _lifeTime: 0
+          _pastLiveTime: 0
 --- !u!1 &4622206907982418952
 GameObject:
   m_ObjectHideFlags: 0

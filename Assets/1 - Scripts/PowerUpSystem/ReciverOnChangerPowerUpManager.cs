@@ -23,9 +23,9 @@ namespace PowerUpSystem
             [SerializeReference][SerializeField]public BaseEventActionWithPowerUpManager TypeEvent;
             public UltEvent Event;
 
-            public void TryInvoke(BaseEventActionWithPowerUpManager result)
+            public void TryInvoke(BaseEventActionWithPowerUpManager other)
             {
-                if(result.GetType() == TypeEvent.GetType()) Event.Invoke();
+                if(TypeEvent.IsMe(other)) Event.Invoke();
             }
         }
     }
