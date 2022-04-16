@@ -21,13 +21,23 @@ namespace PowerUpSystem
 
         private void OnEnable()
         {
-            TargetsRecivers?.ForEach(x => Manager.ResultOfCommand += x.Handler);
-            TargetsRecivers?.ForEach(x => x.TryInvokeOnStart(Manager));
+            TargetsRecivers?.ForEach(x =>
+            {
+                if (x != null)
+                {
+                    Manager.ResultOfCommand += x.Handler;
+                    x.TryInvokeOnStart(Manager);
+                }
+            });
         }
 
         private void OnDisable()
         {
-            TargetsRecivers?.ForEach(x => Manager.ResultOfCommand -= x.Handler);
+            TargetsRecivers?.ForEach(x =>
+            {
+                if(x!=null)
+                    Manager.ResultOfCommand -= x.Handler;
+            });
         }
 
         [System.Serializable]

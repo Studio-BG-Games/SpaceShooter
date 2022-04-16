@@ -11,5 +11,7 @@ namespace MC.Models
         private void Start() => _score = EntityAgregator.Instance.Select(x => x.Has<ScoreGame>()).Select<ScoreGame>();
 
         public void Add() => _score.ChangeScoreAt(Value);
+        
+        public void Add(int value) => _score.ChangeScoreAt(value);
     }
 }

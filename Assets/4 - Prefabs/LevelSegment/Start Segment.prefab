@@ -2025,7 +2025,7 @@ MonoBehaviour:
     00000000:
       type: {class: SimpleObject, ns: SpawnerSystem, asm: Assembly-CSharp}
       data:
-        Prefab: {fileID: 8953592458824705916, guid: ca625ef329745e149b5ccde872acbeb3,
+        Prefab: {fileID: 8953592458824705916, guid: 86bf83aa7a3851d46a8dd968117f30f1,
           type: 3}
     00000001:
       type: {class: SinglePoint, ns: SpawnerSystem, asm: Assembly-CSharp}

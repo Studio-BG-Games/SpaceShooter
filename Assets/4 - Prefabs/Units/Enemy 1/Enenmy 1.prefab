@@ -194,6 +194,7 @@ GameObject:
   - component: {fileID: 1473971574231917171}
   - component: {fileID: 3286737114913944330}
   - component: {fileID: 7589913938110540496}
+  - component: {fileID: 7250263904322530519}
   m_Layer: 0
   m_Name: colliderDamage
   m_TagString: Untagged
@@ -269,8 +270,43 @@ MonoBehaviour:
         _Z: 0
         _W: 0
         _Object: {fileID: 281602037788047727}
+    - _Target: {fileID: 7250263904322530519}
+      _MethodName: Add
+      _PersistentArguments:
+      - _Type: 3
+        _Int: 25
+        _String: 
+        _X: 0
+        _Y: 0
+        _Z: 0
+        _W: 0
+        _Object: {fileID: 0}
   DamageAt:
-    _PersistentCalls: []
+    _PersistentCalls:
+    - _Target: {fileID: 7250263904322530519}
+      _MethodName: Add
+      _PersistentArguments:
+      - _Type: 14
+        _Int: 0
+        _String: 
+        _X: 3
+        _Y: 0
+        _Z: 0
+        _W: 0
+        _Object: {fileID: 0}
+--- !u!114 &7250263904322530519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2599568059874136515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f02da4ae81be4c2d9290b2a5d72b6d1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Value: 0
 --- !u!1 &4298717464745130224
 GameObject:
   m_ObjectHideFlags: 0

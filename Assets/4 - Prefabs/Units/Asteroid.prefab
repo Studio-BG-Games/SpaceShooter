@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6596271197145662815}
   - component: {fileID: 5209280508797210879}
   - component: {fileID: 2141243363192574079}
+  - component: {fileID: 6303239580527793299}
   m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
@@ -106,6 +107,17 @@ MonoBehaviour:
     - _Target: {fileID: 567035601177946027}
       _MethodName: PlayFeedbacks
       _PersistentArguments: []
+    - _Target: {fileID: 6303239580527793299}
+      _MethodName: Add
+      _PersistentArguments:
+      - _Type: 3
+        _Int: 25
+        _String: 
+        _X: 0
+        _Y: 0
+        _Z: 0
+        _W: 0
+        _Object: {fileID: 0}
   DamageAt:
     _PersistentCalls:
     - _Target: {fileID: 3828775887792186333}
@@ -140,6 +152,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _component: {fileID: 8512949519327222624}
+--- !u!114 &6303239580527793299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 281602037788047725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f02da4ae81be4c2d9290b2a5d72b6d1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Value: 0
 --- !u!1 &281602037788047727
 GameObject:
   m_ObjectHideFlags: 0
