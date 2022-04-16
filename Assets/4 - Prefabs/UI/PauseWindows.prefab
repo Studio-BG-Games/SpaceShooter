@@ -1613,6 +1613,16 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3090282905763972052, guid: bf1c97f0b8c974d479e2a38546637b90,
+        type: 3}
+      propertyPath: m_Maskable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3090282905763972052, guid: bf1c97f0b8c974d479e2a38546637b90,
+        type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3090282905763972054, guid: bf1c97f0b8c974d479e2a38546637b90,
         type: 3}
       propertyPath: m_Name
