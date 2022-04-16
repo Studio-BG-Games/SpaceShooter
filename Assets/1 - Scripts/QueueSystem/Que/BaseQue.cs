@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 namespace QueueSystem
@@ -7,7 +8,7 @@ namespace QueueSystem
     public abstract class BaseQue
     { 
         [JsonProperty][Min(0)][SerializeField] private float _lifeTime;
-        private float _pastTime;
+        [ReadOnly][ShowInInspector]private float _pastTime;
 
         public bool IsEnd => _pastTime >= _lifeTime;
         
@@ -22,6 +23,8 @@ namespace QueueSystem
         }
         
         public virtual void OnFinish() { }
+
+        public virtual void Zero() => _pastTime = 0;
 
         protected virtual void Update(float deltaTime) { }
     }

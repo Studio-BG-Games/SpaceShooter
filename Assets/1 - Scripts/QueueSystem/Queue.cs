@@ -13,12 +13,17 @@ namespace QueueSystem
         [SerializeField][SerializeReference] private List<BaseQue> _ques;
         [Sirenix.OdinInspector.ReadOnly][ShowInInspector] private int _currentStep=0;
 
-        private void OnEnable() => Zero();
+        private void OnEnable() => Zero(true);
 
-        private void Zero()
+        private void Zero(bool isInit)
         {
             _currentStep = 0;
-            _ques.ForEach(x => x.OnInit(gameObject));
+            _ques.ForEach(x =>
+            {
+                x.Zero();
+                if(isInit)
+                    x.OnInit(gameObject);
+            });
             _ques[_currentStep].OnStart();
         }
 
@@ -32,14 +37,14 @@ namespace QueueSystem
         {
             _ques[_currentStep].OnFinish();
             _currentStep++;
-            if (_currentStep >= _ques.Count) _currentStep = 0;
+            if (_currentStep >= _ques.Count) Zero(false);
             _ques[_currentStep].OnStart();
         }
 
         public void CopyFrom(Queue otherQueue)
         {
             _ques = otherQueue._ques.DeepCloneJson();
-            Zero();
+            Zero(true);
         }
     }
 }

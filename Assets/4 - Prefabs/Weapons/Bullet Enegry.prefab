@@ -12,12 +12,12 @@ GameObject:
   - component: {fileID: 4984299782318381335}
   - component: {fileID: 1256465192544184063}
   - component: {fileID: 7114145335453364577}
-  - component: {fileID: -9107042937410610320}
   - component: {fileID: 1736801951247989670}
   - component: {fileID: 361239981846803379}
   - component: {fileID: 956252732933885642}
   - component: {fileID: 3130991220438859139}
   - component: {fileID: 7086691605529723953}
+  - component: {fileID: 639829490093609406}
   m_Layer: 0
   m_Name: Bullet Enegry
   m_TagString: Untagged
@@ -172,49 +172,6 @@ MonoBehaviour:
     applyScaleX: 0
     applyScaleY: 0
     applyScaleZ: 0
---- !u!114 &-9107042937410610320
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1059452319082446}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 003c25630808c7243847bd9149749434, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _AwakeEvent:
-    _PersistentCalls: []
-  _StartEvent:
-    _PersistentCalls: []
-  _EnableEvent:
-    _PersistentCalls:
-    - _Target: {fileID: 0}
-      _MethodName: UnityEngine.Object, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null.Destroy
-      _PersistentArguments:
-      - _Type: 13
-        _Int: 0
-        _String: UnityEngine.Object, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
-          PublicKeyToken=null
-        _X: 0
-        _Y: 0
-        _Z: 0
-        _W: 0
-        _Object: {fileID: 1059452319082446}
-      - _Type: 5
-        _Int: 0
-        _String: 
-        _X: 2.5
-        _Y: 0
-        _Z: 0
-        _W: 0
-        _Object: {fileID: 0}
-  _DisableEvent:
-    _PersistentCalls: []
-  _DestroyEvent:
-    _PersistentCalls: []
 --- !u!114 &1736801951247989670
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -324,6 +281,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1033e6937cae4e0b955ff0aa931f5cd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &639829490093609406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1059452319082446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98de1e8d4cb845e09380d35579ef5130, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event:
+    _PersistentCalls:
+    - _Target: {fileID: 0}
+      _MethodName: UnityEngine.Object, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null.Destroy
+      _PersistentArguments:
+      - _Type: 13
+        _Int: 0
+        _String: UnityEngine.Object, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
+          PublicKeyToken=null
+        _X: 0
+        _Y: 0
+        _Z: 0
+        _W: 0
+        _Object: {fileID: 1059452319082446}
+  Timer: 2.5
 --- !u!1 &1649931267902942
 GameObject:
   m_ObjectHideFlags: 0

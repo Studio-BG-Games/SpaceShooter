@@ -199,10 +199,10 @@ MonoBehaviour:
     _isRoot: 0
   bounds:
     center: {x: 0, y: 0, z: 49.25}
-    extents: {x: 75, y: 75, z: 50.75}
-    max: {x: 75, y: 75, z: 100}
-    min: {x: -75, y: -75, z: -1.5}
-    size: {x: 150, y: 150, z: 101.5}
+    extents: {x: 25, y: 25, z: 50.75}
+    max: {x: 25, y: 25, z: 100}
+    min: {x: -25, y: -25, z: -1.5}
+    size: {x: 50, y: 50, z: 101.5}
   builders: []
   unpacked: 0
   alwaysDraw: 0
@@ -363,7 +363,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 150, y: 150, z: 3}
+  m_Size: {x: 50, y: 50, z: 3}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &2650554025345168177
 MonoBehaviour:
