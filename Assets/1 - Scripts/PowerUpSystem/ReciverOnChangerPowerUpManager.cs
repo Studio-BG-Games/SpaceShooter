@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using ModelCore;
 using Sirenix.Utilities;
 using UltEvents;
@@ -11,21 +12,70 @@ namespace PowerUpSystem
         private PowerUpManager _manager;
         private PowerUpManager Manager => _manager ??= EntityAgregator.Instance.Select(x => x.Has<PowerUpManager>()).Select<PowerUpManager>();
 
-        public ReciverTarget[] TargetsRecivers = new ReciverTarget[]{};
+        [SerializeField, SerializeReference] public BaseReciverTarget[] TargetsRecivers = new BaseReciverTarget[]{};
 
-        private void OnEnable() => TargetsRecivers.ForEach(x => Manager.ResultOfCommand += x.TryInvoke);
+        private void Start()
+        {
+            TargetsRecivers = TargetsRecivers.Where(x => x != null).ToArray();
+        }
 
-        private void OnDisable() => TargetsRecivers.ForEach(x => Manager.ResultOfCommand -= x.TryInvoke);
+        private void OnEnable()
+        {
+            TargetsRecivers?.ForEach(x => Manager.ResultOfCommand += x.Handler);
+            TargetsRecivers?.ForEach(x => x.TryInvokeOnStart(Manager));
+        }
+
+        private void OnDisable()
+        {
+            TargetsRecivers?.ForEach(x => Manager.ResultOfCommand -= x.Handler);
+        }
 
         [System.Serializable]
-        public class ReciverTarget
+        public abstract class BaseReciverTarget
         {
-            [SerializeReference][SerializeField]public BaseEventActionWithPowerUpManager TypeEvent;
-            public UltEvent Event;
+            [SerializeField]protected UltEvent Event;
 
-            public void TryInvoke(BaseEventActionWithPowerUpManager other)
+            public virtual void TryInvokeOnStart(PowerUpManager manag) { }
+            
+            public abstract void Handler(BaseEventActionWithPowerUpManager e);
+        }
+
+        public class OnAddPowerUp : BaseReciverTarget
+        {
+            public PowerUpType Type;
+
+            public override void TryInvokeOnStart(PowerUpManager manag)
             {
-                if(TypeEvent.IsMe(other)) Event.Invoke();
+                Debug.Log("Start invoke");
+                if (manag.PowerUp.FirstOrDefault(x => x.TypePowerUp == Type) != null)
+                {
+                    Debug.Log("Suces start on invoke");
+                    Event?.Invoke();
+                }
+                Debug.Log("__________");
+            }
+
+            public override void Handler(BaseEventActionWithPowerUpManager e)
+            {
+                var casted = e as AddNewPowerUp;
+                if (casted == null) return;
+                
+                if(Type==null && casted.NewPowerUp!=null) Event?.Invoke();
+                else if(casted.NewPowerUp.TypePowerUp == Type) Event?.Invoke();
+            }
+        }
+        
+        public class OnRemovePowerUp : BaseReciverTarget
+        {
+            public PowerUpType Type;
+
+            public override void Handler(BaseEventActionWithPowerUpManager e)
+            {
+                var casted = e as DeletedPowerUpEvent;
+                if (casted == null) return;
+                
+                if(Type==null && casted.DeletedPowerUp!=null) Event?.Invoke();
+                else if(casted.DeletedPowerUp.TypePowerUp == Type) Event?.Invoke();
             }
         }
     }
