@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using ModelCore;
+using Services;
 using Sirenix.Utilities;
 using UltEvents;
 using UnityEngine;
@@ -40,6 +41,14 @@ namespace PowerUpSystem
             });
         }
 
+        private void OnDestroy()
+        {
+            TargetsRecivers?.ForEach(x =>
+            {
+                if (x != null) x.OnDestroy();
+            });
+        }
+
         [System.Serializable]
         public abstract class BaseReciverTarget
         {
@@ -48,6 +57,59 @@ namespace PowerUpSystem
             public virtual void TryInvokeOnStart(PowerUpManager manag) { }
             
             public abstract void Handler(BaseEventActionWithPowerUpManager e);
+
+            public virtual void OnDestroy() {}
+        }
+        
+        public class FreezRecive : BaseReciverTarget
+        {
+            public UltEvent Freezed;
+            public UltEvent Unfreezed;
+            
+            public PowerUpType TypeFreez;
+            public HealthDamageEvent Damage;
+
+            private bool _hasFreesed = false;
+
+            public override void TryInvokeOnStart(PowerUpManager manag)
+            {
+                if (manag.PowerUp.FirstOrDefault(x => x.TypePowerUp == TypeFreez) != null) OnAdd();
+            }
+
+            public override void Handler(BaseEventActionWithPowerUpManager e)
+            {
+                if (TryCast<AddNewPowerUp>(e, out var added) && added.NewPowerUp.TypePowerUp == TypeFreez) OnAdd();
+                if (TryCast<DeletedPowerUpEvent>(e, out var deleted) && deleted.DeletedPowerUp.TypePowerUp == TypeFreez) OnDelete();
+            }
+
+            public override void OnDestroy()
+            {
+                OnDelete();
+            }
+
+            private void OnAdd() => Damage.DamageAt += HandlerDamage;
+
+            private void OnDelete()
+            {
+                Damage.DamageAt -= HandlerDamage;
+                if (_hasFreesed)
+                {
+                    Unfreezed.Invoke();
+                    _hasFreesed = false;
+                }
+            }
+
+            private void HandlerDamage(int obj)
+            {
+                Freezed.Invoke();
+                _hasFreesed = true;
+            }
+
+            private bool TryCast<T>(object obj, out T r) where T : class
+            {
+                r = obj as T;
+                return r != null;
+            }
         }
 
         public class OnAddPowerUp : BaseReciverTarget

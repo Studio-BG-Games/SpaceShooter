@@ -726,9 +726,44 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 643d6f810cd84e788ba490eab1ea4eb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TargetsRecivers: []
+  TargetsRecivers:
+  - id: 0
   references:
     version: 1
+    00000000:
+      type: {class: ReciverOnChangerPowerUpManager/FreezRecive, ns: PowerUpSystem,
+        asm: Assembly-CSharp}
+      data:
+        Event:
+          _PersistentCalls: []
+        Freezed:
+          _PersistentCalls:
+          - _Target: {fileID: 2042666243940755346}
+            _MethodName: set_Follow
+            _PersistentArguments:
+            - _Type: 1
+              _Int: 0
+              _String: 
+              _X: 0
+              _Y: 0
+              _Z: 0
+              _W: 0
+              _Object: {fileID: 0}
+        Unfreezed:
+          _PersistentCalls:
+          - _Target: {fileID: 2042666243940755346}
+            _MethodName: set_Follow
+            _PersistentArguments:
+            - _Type: 1
+              _Int: 1
+              _String: 
+              _X: 0
+              _Y: 0
+              _Z: 0
+              _W: 0
+              _Object: {fileID: 0}
+        TypeFreez: {fileID: 11400000, guid: a9bb6a2a8806bf245884cb242e27f918, type: 2}
+        Damage: {fileID: 7589913938110540496}
 --- !u!114 &1372645592064792362
 MonoBehaviour:
   m_ObjectHideFlags: 0
