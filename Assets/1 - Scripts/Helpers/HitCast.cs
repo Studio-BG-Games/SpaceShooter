@@ -11,6 +11,7 @@ namespace Services
         [SerializeField] private bool _isForward;
         [Min(0)][SerializeField] private float _distance;
 
+        public LayerMask Mask;
         private HashSet<Collider> _collidersForIgnore = new HashSet<Collider>();
         public UltEvent<Collider> Hited;
 
@@ -25,7 +26,7 @@ namespace Services
 
         private void Update()
         {
-            if(Physics.Raycast(transform.position, (IsForward ? transform.forward : transform.forward * -1), out var info, _distance))
+            if(Physics.Raycast(transform.position, (IsForward ? transform.forward : transform.forward * -1), out var info, _distance, Mask))
                 if(!_collidersForIgnore.Contains(info.collider))
                     Hited.Invoke(info.collider);
         }

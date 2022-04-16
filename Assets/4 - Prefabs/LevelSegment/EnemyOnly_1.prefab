@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2080506711}
   - component: {fileID: 8852489247710065178}
   m_Layer: 0
-  m_Name: EnemyOnly
+  m_Name: EnemyOnly_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -198,11 +198,11 @@ MonoBehaviour:
     colliders: []
     _isRoot: 0
   bounds:
-    center: {x: 0, y: 0, z: 89.25}
-    extents: {x: 75, y: 75, z: 90.75}
-    max: {x: 75, y: 75, z: 180}
+    center: {x: 0, y: 0, z: 49.25}
+    extents: {x: 75, y: 75, z: 50.75}
+    max: {x: 75, y: 75, z: 100}
     min: {x: -75, y: -75, z: -1.5}
-    size: {x: 150, y: 150, z: 181.5}
+    size: {x: 150, y: 150, z: 101.5}
   builders: []
   unpacked: 0
   alwaysDraw: 0
@@ -227,7 +227,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Min: {x: -20, y: -20}
   Max: {x: 20, y: 20}
-  Distance: 180
+  Distance: 100
 --- !u!1 &1660821066734291504
 GameObject:
   m_ObjectHideFlags: 0
@@ -254,7 +254,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1660821066734291504}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 20, y: -12.1, z: 151.6}
+  m_LocalPosition: {x: -19.9, y: 10.7, z: 74.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2080506710}
@@ -284,17 +284,17 @@ MonoBehaviour:
     00000000:
       type: {class: SimpleObject, ns: SpawnerSystem, asm: Assembly-CSharp}
       data:
-        Prefab: {fileID: 281602037788047727, guid: 19ac5b1ec07d4e64e8f8b58fc40c8656,
+        Prefab: {fileID: 6196823835803901076, guid: 2c3aea8918219d54ca06933e2b3483db,
           type: 3}
     00000001:
       type: {class: ArrayPoints, ns: SpawnerSystem, asm: Assembly-CSharp}
       data:
         Start: {fileID: 7378567652299218888}
-        Diraction: {x: -0.37, y: 0.24, z: 0.2}
-        DelayDetweenSpawn: 0.3
-        Distance: 26.03
+        Diraction: {x: 0.02, y: -0.07, z: 0.36}
+        DelayDetweenSpawn: 0.47
+        Distance: 20.92
         Count: 5
-        GizmosSize: 2.8
+        GizmosSize: 0.5
     00000002:
       type: {class: SetParent, ns: SpawnerSystem, asm: Assembly-CSharp}
       data:
@@ -314,56 +314,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TargetsRecivers:
-  - TypeEvent:
-      id: 0
-    Event:
-      _PersistentCalls:
-      - _Target: {fileID: 0}
-        _MethodName: UnityEngine.Debug, UnityEngine.CoreModule, Version=0.0.0.0,
-          Culture=neutral, PublicKeyToken=null.LogInfo
-        _PersistentArguments:
-        - _Type: 2
-          _Int: 0
-          _String: "\u041A\u0430\u043A\u043E\u0439-\u0442\u043E \u0431\u043E\u043D\u0443\u0441
-            \u0431\u044B\u043B \u0434\u043E\u0431\u0430\u0432\u043B\u0435\u043D"
-          _X: 0
-          _Y: 0
-          _Z: 0
-          _W: 0
-          _Object: {fileID: 0}
-        - _Type: 2
-          _Int: 0
-          _String: 
-          _X: 0
-          _Y: 0
-          _Z: 0
-          _W: 0
-          _Object: {fileID: 0}
-        - _Type: 3
-          _Int: 0
-          _String: 
-          _X: 0
-          _Y: 0
-          _Z: 0
-          _W: 0
-          _Object: {fileID: 0}
-        - _Type: 3
-          _Int: 0
-          _String: 
-          _X: 0
-          _Y: 0
-          _Z: 0
-          _W: 0
-          _Object: {fileID: 0}
+  - id: 0
   references:
     version: 1
     00000000:
-      type: {class: AddNewPowerUp, ns: PowerUpSystem, asm: Assembly-CSharp}
-      data:
-        _newPowerUp:
-          _typePowerUp: {fileID: 0}
-          _lifeTime: 0
-          _pastLiveTime: 0
+      type: {class: , ns: , asm: }
 --- !u!1 &4622206907982418952
 GameObject:
   m_ObjectHideFlags: 0
@@ -483,7 +438,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6680602912298376510}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 180}
+  m_LocalPosition: {x: 0, y: 0, z: 100}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2080506710}

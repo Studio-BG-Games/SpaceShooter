@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5209280508797210879}
   - component: {fileID: 2141243363192574079}
   - component: {fileID: 6303239580527793299}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -174,7 +174,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 281602037788337487}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Asteroid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -214,7 +214,7 @@ GameObject:
   - component: {fileID: 6497688644445609539}
   - component: {fileID: 3748802254244585012}
   - component: {fileID: 1874447709954657150}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TriggerAttack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -365,7 +365,7 @@ GameObject:
   - component: {fileID: 5701064313200755185}
   - component: {fileID: 3919551512559624449}
   - component: {fileID: 7765639745580060092}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: '[Dead]'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -828,7 +828,7 @@ GameObject:
   - component: {fileID: 8175403790539533681}
   - component: {fileID: 8191075692344862006}
   - component: {fileID: 1349818559203808802}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: '[Rotator]'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -983,7 +983,7 @@ GameObject:
   - component: {fileID: 2877984149202919538}
   - component: {fileID: 1747970140417887162}
   - component: {fileID: 942863714216611515}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Data
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1075,7 +1075,7 @@ GameObject:
   - component: {fileID: 6850010408095328994}
   - component: {fileID: 3828775887792186333}
   - component: {fileID: 6103309942560404889}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: '[OnDamage]'
   m_TagString: Untagged
   m_Icon: {fileID: 0}

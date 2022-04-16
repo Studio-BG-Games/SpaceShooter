@@ -8,8 +8,8 @@ namespace QueueSystem
 {
     public class XYMove : BaseQue
     {
-        [Range(-1f, 1f)]public float XDir;
-        [Range(-1f, 1f)]public float YDir;
+        public float XDir;
+        public float YDir;
         
         public EntityRef ShipData;
         public Runner Run;

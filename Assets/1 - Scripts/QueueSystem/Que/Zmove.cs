@@ -9,7 +9,7 @@ namespace QueueSystem
     public class Zmove : BaseQue
     {
         public bool IsInvertDiraction;
-        [Range(0,1f)]public float SpeedInNormal;
+        public float SpeedInNormal;
         public EntityRef ShipData;
         public Runner Run;
 
