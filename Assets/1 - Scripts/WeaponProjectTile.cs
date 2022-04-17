@@ -23,17 +23,23 @@ namespace Services
         
         private Collider[] ColliderForIgnore;
         private Coroutine _pause;
+        [SerializeField] private bool _canAttack = true;
 
         public void Init(Collider[] coliderInfoner) => ColliderForIgnore = coliderInfoner;
 
-        private void Start()
+        private void OnEnable()
         {
-            
+            _canAttack = true;
+        }
+
+        private void OnDisable()
+        {
+            _canAttack = false;
         }
 
         public void TryFire(Entity ship, Entity dataBullet, C_ProjectTile prefab)
         {
-            if (_pause == null && (enabled && gameObject.activeSelf))
+            if (_pause == null && (enabled && gameObject.activeSelf) && _canAttack)
             {
                 var r = Instantiate(prefab, _spawnPoint.position, _spawnPoint.rotation);
                 r.HitCast.AddIgnore(ColliderForIgnore);
