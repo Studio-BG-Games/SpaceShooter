@@ -904,7 +904,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TimeActivated: 0
   Min: 0.2
-  Max: 0.8
+  Max: 0.4
   Generated:
     _PersistentCalls:
     - _Target: {fileID: 3648253725893031749}

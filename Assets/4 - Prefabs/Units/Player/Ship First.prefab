@@ -926,7 +926,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5fc889ef9054646865613834e74d64b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 80
+  _speed: 40
   _isPositive: 0
 --- !u!114 &5918972828082586952
 MonoBehaviour:
@@ -1442,6 +1442,7 @@ MonoBehaviour:
   - {fileID: 7448878117752036335}
   Damager: {fileID: 5383439242666809758}
   _delayBetwenAttack: 0.05
+  _hasBeAttask: 0
 --- !u!114 &5383439242666809758
 MonoBehaviour:
   m_ObjectHideFlags: 0

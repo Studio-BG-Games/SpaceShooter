@@ -182,7 +182,7 @@ MonoBehaviour:
         PowerUp:
           _typePowerUp: {fileID: 11400000, guid: a9bb6a2a8806bf245884cb242e27f918,
             type: 2}
-          _lifeTime: 20
+          _lifeTime: 50
           _pastLiveTime: 0
 --- !u!1 &8953592458824705916
 GameObject:

@@ -478,8 +478,8 @@ MonoBehaviour:
         Start: {fileID: 773742316669528492}
         Diraction: {x: -5.34, y: 4.7, z: 19.62}
         DelayDetweenSpawn: 0
-        Distance: 1
-        Count: 7
+        Distance: 5
+        Count: 2
         GizmosSize: 5
     00000002:
       type: {class: SetParent, ns: SpawnerSystem, asm: Assembly-CSharp}
@@ -549,8 +549,8 @@ MonoBehaviour:
         Start: {fileID: 5913329696693799440}
         Diraction: {x: 1.77, y: 0, z: 19.62}
         DelayDetweenSpawn: 0
-        Distance: 1
-        Count: 7
+        Distance: 3
+        Count: 3
         GizmosSize: 3.1
     00000002:
       type: {class: SetParent, ns: SpawnerSystem, asm: Assembly-CSharp}
