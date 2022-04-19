@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 880626830503776325}
   - component: {fileID: 4347918647491975260}
+  - component: {fileID: 2505975957378127771}
   m_Layer: 0
   m_Name: Weapon_Gun_Projectile
   m_TagString: Untagged
@@ -28,6 +29,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 1.846, z: 0.367}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 5239336509019327035}
   - {fileID: 6388353629206137830}
   - {fileID: 880626830737762042}
   m_Father: {fileID: 0}
@@ -54,6 +56,20 @@ MonoBehaviour:
       _MethodName: Flash
       _PersistentArguments: []
   _canAttack: 1
+--- !u!114 &2505975957378127771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 880626830503776326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44c950aa36c14827ba71d9acca9edcc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Reference: {fileID: 0}
+  Target: {fileID: 5239336509019327035}
 --- !u!1 &880626830737762043
 GameObject:
   m_ObjectHideFlags: 0
@@ -84,7 +100,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 880626830503776325}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &880626830737762040
 MeshFilter:
@@ -163,10 +179,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 678559591883020730}
-  - {fileID: 5239336509019327035}
   - {fileID: 3731276594514523389}
   m_Father: {fileID: 880626830503776325}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3652971272775416983
 GameObject:
@@ -196,7 +211,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6388353629206137830}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5381760359646359189
 GameObject:
@@ -222,11 +237,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5381760359646359189}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1.4}
+  m_LocalPosition: {x: 0, y: 0.17499995, z: 1.46}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 6388353629206137830}
-  m_RootOrder: 1
+  m_Father: {fileID: 880626830503776325}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2063129212394938807
 PrefabInstance:
