@@ -14,11 +14,17 @@ namespace Services.Bind
         public MobileInput Mobile;
         
         public InputInEditor InpInEdit;
+        private CompositeInput _composite;
 
         public override void Create(DiBox container)
         {
             IInput inputForRegister = null;
-            if (IsDesctop() || IsEditorKeyborad())
+            if (InpInEdit == InputInEditor.Bouth)
+            {
+                _composite = new CompositeInput(new IInput[]{ Pc, Mobile});
+                inputForRegister = _composite;
+            }
+            else if (IsDesctop() || IsEditorKeyborad())
             {
                 inputForRegister = Pc;
                 Destroy(Mobile.gameObject);   
@@ -32,6 +38,11 @@ namespace Services.Bind
             container.RegisterSingle<IInput>(inputForRegister);
         }
 
+        private void Update()
+        {
+            _composite?.UpdateCustom();
+        }
+
         public override void DestroyDi(DiBox container)
         {
             container.RemoveSingel<IInput>();
@@ -43,7 +54,7 @@ namespace Services.Bind
 
         public enum InputInEditor
         {
-            Screen, KeyboardAndMouse
+            Screen, KeyboardAndMouse, Bouth
         }
     }
 }

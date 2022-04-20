@@ -83,9 +83,6 @@ MonoBehaviour:
         _Z: 0
         _W: 0
         _Object: {fileID: 0}
-    - _Target: {fileID: 7597893980264929459}
-      _MethodName: LockCursor
-      _PersistentArguments: []
   Off:
     _PersistentCalls:
     - _Target: {fileID: 7597893980264929462}
@@ -99,9 +96,6 @@ MonoBehaviour:
         _Z: 0
         _W: 0
         _Object: {fileID: 0}
-    - _Target: {fileID: 7597893980264929459}
-      _MethodName: FreeCursor
-      _PersistentArguments: []
 --- !u!114 &7597893978976488033
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -115,12 +109,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Pause:
-    _PersistentCalls:
-    - _Target: {fileID: 7597893980264929459}
-      _MethodName: FreeCursor
-      _PersistentArguments: []
+    _PersistentCalls: []
   Unpause:
-    _PersistentCalls:
-    - _Target: {fileID: 7597893980264929459}
-      _MethodName: LockCursor
-      _PersistentArguments: []
+    _PersistentCalls: []
+  NewPause:
+    _PersistentCalls: []

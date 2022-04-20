@@ -7,6 +7,8 @@ namespace Services.Inputs
     {
         private IInput[] _inputs;
         public event Action<Vector2> Move;
+        private Vector2 _moveDir;
+        public Vector2 MoveDir => _moveDir;
         public event Action ChangeWeapon;
         public event Action Pause;
         public event Action Fire;
@@ -17,16 +19,27 @@ namespace Services.Inputs
             for (var i = 0; i < _inputs.Length; i++)
             {
                 if(_inputs[i]==null) continue;
-                _inputs[i].Move += MoveHandler;
                 _inputs[i].ChangeWeapon += ChangeHander;
                 _inputs[i].Fire += FireHandler;
                 _inputs[i].Pause += PauseHandler;
             }
         }
 
+        public void UpdateCustom()
+        {
+            foreach (var input in _inputs)
+            {
+                if (input.MoveDir.magnitude > 0)
+                {
+                    Move?.Invoke(input.MoveDir);
+                    return;
+                }
+            }
+            Move?.Invoke(Vector2.zero);
+        }
+
         private void PauseHandler() => Pause?.Invoke();
 
-        private void MoveHandler(Vector2 obj) => Move?.Invoke(obj);
 
         private void ChangeHander() => ChangeWeapon?.Invoke();
 
@@ -37,7 +50,6 @@ namespace Services.Inputs
             for (var i = 0; i < _inputs.Length; i++)
             {
                 if(_inputs[i]==null) continue;
-                _inputs[i].Move -= MoveHandler;
                 _inputs[i].ChangeWeapon -= ChangeHander;
                 _inputs[i].Fire -= FireHandler;
                 _inputs[i].Pause -= PauseHandler;
