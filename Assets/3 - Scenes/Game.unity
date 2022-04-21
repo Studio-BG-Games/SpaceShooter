@@ -1308,7 +1308,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Pc: {fileID: 1597772522}
   Mobile: {fileID: 1528873762}
-  InpInEdit: 2
+  InpInEdit: 1
 --- !u!114 &1778674007
 MonoBehaviour:
   m_ObjectHideFlags: 0
