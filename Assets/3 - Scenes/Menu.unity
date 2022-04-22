@@ -13327,9 +13327,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UltEvents.UltEventHolder, UltEvents
-        m_MethodName: Invoke
+      - m_Target: {fileID: 1541151544}
+        m_TargetAssemblyTypeName: C_MainMenuScreenController, Assembly-CSharp
+        m_MethodName: StartTutor
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -55,6 +55,12 @@ public class C_MainMenuScreenController : MonoBehaviour
         Main.Model.Status = true;
     }
 
+    public void StartTutor()
+    {
+        LoadScreen.Status = true;
+        Wait(DelayLoadLevel ,()=>SceneLoader.Load(TutorialSceneName));
+    }
+    
     public void StartGame()
     {
         LoadScreen.Status = true;

@@ -5,6 +5,7 @@ using ModelCore;
 using Models;
 using Services.PauseManagers;
 using Services.RecoveryManagers;
+using UltEvents;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
@@ -16,6 +17,8 @@ namespace MC.Controlers
         public C_GeneratorLevel GeneratorLevel;
         public C_PlayerShipUI UiController;
         public C_GameSceneScreenControl GameScreen;
+
+        public UltEvent Started;
 
         [Min(0)]public float DelayFirstShowGameUI = 0.4f;
         public string MenuSceneName;
@@ -89,6 +92,8 @@ namespace MC.Controlers
                 GameScreen.LoseScreen.Model.Status = false;
                 CorutineGame.Instance.Wait(2, () => SceneLoader.Restart());
             };
+            
+            Started.Invoke();
         }
     }
 }
