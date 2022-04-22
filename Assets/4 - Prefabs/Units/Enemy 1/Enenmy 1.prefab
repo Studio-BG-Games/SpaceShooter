@@ -323,6 +323,7 @@ GameObject:
   - component: {fileID: 3286737114913944330}
   - component: {fileID: 7589913938110540496}
   - component: {fileID: 7250263904322530519}
+  - component: {fileID: 8508938612417849216}
   m_Layer: 10
   m_Name: colliderDamage
   m_TagString: Untagged
@@ -422,6 +423,36 @@ MonoBehaviour:
         _Z: 0
         _W: 0
         _Object: {fileID: 0}
+    - _Target: {fileID: 8508938612417849216}
+      _MethodName: SpawnParticle
+      _PersistentArguments:
+      - _Type: 13
+        _Int: 0
+        _String: UnityEngine.ParticleSystem, UnityEngine.ParticleSystemModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        _X: 0
+        _Y: 0
+        _Z: 0
+        _W: 0
+        _Object: {fileID: 736814323986288615, guid: 7297e2535accc654d8ba7d4e0dfadf32,
+          type: 3}
+      - _Type: 13
+        _Int: 0
+        _String: UnityEngine.Transform, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        _X: 0
+        _Y: 0
+        _Z: 0
+        _W: 0
+        _Object: {fileID: 281602037788337487}
+      - _Type: 1
+        _Int: 1
+        _String: 
+        _X: 0
+        _Y: 0
+        _Z: 0
+        _W: 0
+        _Object: {fileID: 0}
 --- !u!114 &7250263904322530519
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -435,6 +466,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Value: 0
+--- !u!114 &8508938612417849216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2599568059874136515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 710587bab06ebc44da2f99416ff5d881, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4298717464745130224
 GameObject:
   m_ObjectHideFlags: 0
@@ -1622,12 +1665,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91694602b25a02f4c869c3926dad6e12, type: 3}
---- !u!4 &379094414971924133 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 880626830503776325, guid: 91694602b25a02f4c869c3926dad6e12,
-    type: 3}
-  m_PrefabInstance: {fileID: 682943176673558240}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &3831619670648628924 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4347918647491975260, guid: 91694602b25a02f4c869c3926dad6e12,
@@ -1640,6 +1677,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67baca86a1ce4bf5a1b6aab5e6c885dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &379094414971924133 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 880626830503776325, guid: 91694602b25a02f4c869c3926dad6e12,
+    type: 3}
+  m_PrefabInstance: {fileID: 682943176673558240}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7275139213058389035
 PrefabInstance:
   m_ObjectHideFlags: 0
