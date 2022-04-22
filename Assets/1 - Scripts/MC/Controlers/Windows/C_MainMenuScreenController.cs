@@ -55,7 +55,7 @@ public class C_MainMenuScreenController : MonoBehaviour
         Main.Model.Status = true;
     }
 
-    private void StartGame()
+    public void StartGame()
     {
         LoadScreen.Status = true;
         Wait(DelayLoadLevel ,()=>SceneLoader.Load(GameSceneName));

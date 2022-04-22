@@ -38,6 +38,8 @@ Transform:
   - {fileID: 5078628259709385360}
   - {fileID: 6885902916414132650}
   - {fileID: 9064700910982933897}
+  - {fileID: 6444979766117235383}
+  - {fileID: 687806568367771531}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -141,6 +143,173 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Value: 
+--- !u!1 &572296802596667891
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6444979766117235383}
+  - component: {fileID: 847231135860759354}
+  - component: {fileID: 753495046267674451}
+  - component: {fileID: 8070500036691980418}
+  - component: {fileID: 2414119486007193329}
+  - component: {fileID: 6935648966570312755}
+  - component: {fileID: 1656392225650736196}
+  m_Layer: 10
+  m_Name: TriggerCollision
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6444979766117235383
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 572296802596667891}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 281602037788337487}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!64 &847231135860759354
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 572296802596667891}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300008, guid: 357a319b805c5d34f8098891ea2be380, type: 3}
+--- !u!114 &753495046267674451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 572296802596667891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc6d66cd70fc4597bf34033286640ee3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DamageInfoRef: {fileID: 2414119486007193329}
+  Damaged:
+    _PersistentCalls:
+    - _Target: {fileID: 0}
+      _MethodName: UnityEngine.Object, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null.Destroy
+      _PersistentArguments:
+      - _Type: 13
+        _Int: 0
+        _String: UnityEngine.Object, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
+          PublicKeyToken=null
+        _X: 0
+        _Y: 0
+        _Z: 0
+        _W: 0
+        _Object: {fileID: 281602037788047727}
+  _canEvented: 1
+--- !u!114 &8070500036691980418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 572296802596667891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d182145493694b08a062c9ee86b51900, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _targets:
+  - TargetId: {fileID: 0}
+    ChangeAt: -2
+--- !u!114 &2414119486007193329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 572296802596667891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 998f707e7ea6491a9662ac06bce6523c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _component: {fileID: 8070500036691980418}
+--- !u!114 &6935648966570312755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 572296802596667891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8e0c45775f1b8f4b9a24196038d1b93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _TriggerEnterEvent:
+    _PersistentCalls:
+    - _Target: {fileID: 1656392225650736196}
+      _MethodName: TryFind
+      _PersistentArguments:
+      - _Type: 14
+        _Int: 0
+        _String: UnityEngine.Collider, UnityEngine.PhysicsModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        _X: 0
+        _Y: 0
+        _Z: 0
+        _W: 0
+        _Object: {fileID: 0}
+  _TriggerStayEvent:
+    _PersistentCalls: []
+  _TriggerExitEvent:
+    _PersistentCalls: []
+--- !u!114 &1656392225650736196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 572296802596667891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13424878253e48bd8ab79a05bd741b4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IdToSearch:
+  - {fileID: 11400000, guid: a2f811f45c2b2f240add89ee371a40a2, type: 2}
+  Finded:
+    _PersistentCalls: []
+  FindedCol:
+    _PersistentCalls:
+    - _Target: {fileID: 753495046267674451}
+      _MethodName: Change
+      _PersistentArguments:
+      - _Type: 14
+        _Int: 0
+        _String: UnityEngine.Collider, UnityEngine.PhysicsModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        _X: 0
+        _Y: 0
+        _Z: 0
+        _W: 0
+        _Object: {fileID: 0}
 --- !u!1 &2599568059874136515
 GameObject:
   m_ObjectHideFlags: 0
@@ -749,6 +918,28 @@ MonoBehaviour:
               _Z: 0
               _W: 0
               _Object: {fileID: 0}
+          - _Target: {fileID: 572296802596667891}
+            _MethodName: SetActive
+            _PersistentArguments:
+            - _Type: 1
+              _Int: 0
+              _String: 
+              _X: 0
+              _Y: 0
+              _Z: 0
+              _W: 0
+              _Object: {fileID: 0}
+          - _Target: {fileID: 4918608329337889027}
+            _MethodName: SetActive
+            _PersistentArguments:
+            - _Type: 1
+              _Int: 1
+              _String: 
+              _X: 0
+              _Y: 0
+              _Z: 0
+              _W: 0
+              _Object: {fileID: 0}
         Unfreezed:
           _PersistentCalls:
           - _Target: {fileID: 2042666243940755346}
@@ -756,6 +947,28 @@ MonoBehaviour:
             _PersistentArguments:
             - _Type: 1
               _Int: 1
+              _String: 
+              _X: 0
+              _Y: 0
+              _Z: 0
+              _W: 0
+              _Object: {fileID: 0}
+          - _Target: {fileID: 572296802596667891}
+            _MethodName: SetActive
+            _PersistentArguments:
+            - _Type: 1
+              _Int: 1
+              _String: 
+              _X: 0
+              _Y: 0
+              _Z: 0
+              _W: 0
+              _Object: {fileID: 0}
+          - _Target: {fileID: 4918608329337889027}
+            _MethodName: SetActive
+            _PersistentArguments:
+            - _Type: 1
+              _Int: 0
               _String: 
               _X: 0
               _Y: 0
@@ -919,6 +1132,173 @@ Transform:
   m_Father: {fileID: 281602037788337487}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4918608329337889027
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 687806568367771531}
+  - component: {fileID: 5974338111131816444}
+  - component: {fileID: 534458533765218757}
+  - component: {fileID: 8526799887489507477}
+  - component: {fileID: 5558874958781999514}
+  - component: {fileID: 8768585162678493588}
+  - component: {fileID: 7049644008052844665}
+  m_Layer: 10
+  m_Name: TriggerCollisionOnFreez
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &687806568367771531
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4918608329337889027}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 281602037788337487}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!64 &5974338111131816444
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4918608329337889027}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300008, guid: 357a319b805c5d34f8098891ea2be380, type: 3}
+--- !u!114 &534458533765218757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4918608329337889027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc6d66cd70fc4597bf34033286640ee3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DamageInfoRef: {fileID: 5558874958781999514}
+  Damaged:
+    _PersistentCalls:
+    - _Target: {fileID: 0}
+      _MethodName: UnityEngine.Object, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null.Destroy
+      _PersistentArguments:
+      - _Type: 13
+        _Int: 0
+        _String: UnityEngine.Object, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
+          PublicKeyToken=null
+        _X: 0
+        _Y: 0
+        _Z: 0
+        _W: 0
+        _Object: {fileID: 281602037788047727}
+  _canEvented: 1
+--- !u!114 &8526799887489507477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4918608329337889027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d182145493694b08a062c9ee86b51900, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _targets:
+  - TargetId: {fileID: 0}
+    ChangeAt: 0
+--- !u!114 &5558874958781999514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4918608329337889027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 998f707e7ea6491a9662ac06bce6523c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _component: {fileID: 8526799887489507477}
+--- !u!114 &8768585162678493588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4918608329337889027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8e0c45775f1b8f4b9a24196038d1b93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _TriggerEnterEvent:
+    _PersistentCalls:
+    - _Target: {fileID: 7049644008052844665}
+      _MethodName: TryFind
+      _PersistentArguments:
+      - _Type: 14
+        _Int: 0
+        _String: UnityEngine.Collider, UnityEngine.PhysicsModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        _X: 0
+        _Y: 0
+        _Z: 0
+        _W: 0
+        _Object: {fileID: 0}
+  _TriggerStayEvent:
+    _PersistentCalls: []
+  _TriggerExitEvent:
+    _PersistentCalls: []
+--- !u!114 &7049644008052844665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4918608329337889027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13424878253e48bd8ab79a05bd741b4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IdToSearch:
+  - {fileID: 11400000, guid: a2f811f45c2b2f240add89ee371a40a2, type: 2}
+  Finded:
+    _PersistentCalls: []
+  FindedCol:
+    _PersistentCalls:
+    - _Target: {fileID: 534458533765218757}
+      _MethodName: Change
+      _PersistentArguments:
+      - _Type: 14
+        _Int: 0
+        _String: UnityEngine.Collider, UnityEngine.PhysicsModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        _X: 0
+        _Y: 0
+        _Z: 0
+        _W: 0
+        _Object: {fileID: 0}
 --- !u!1 &5741253872828283957
 GameObject:
   m_ObjectHideFlags: 0

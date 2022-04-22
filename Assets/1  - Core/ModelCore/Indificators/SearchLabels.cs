@@ -8,26 +8,29 @@ namespace ModelCore
     {
         public List<Object> IdToSearch;
 
-        public UltEvent<Entity> Finded; 
-        
-        public void TryFind(GameObject obj)
+        public UltEvent<Entity> Finded;
+        public UltEvent<Collider> FindedCol;
+
+        public bool TryFind(GameObject obj)
         {
             if (obj.TryGetComponent<EntityRef>(out var e))
             {
                 foreach (var o in IdToSearch)
                 {
-                    Debug.Log(e);
-                    Debug.Log(e.Component);
-                    Debug.Log(e.Component.Label);
                     if (e.Component.Label.IsAlias(o))
                     {
                         Finded.Invoke(e.Component);
-                        break;
+                        return true;
                     }
                 }
             }
+
+            return false;
         }
 
-        public void TryFind(Collider collider) => TryFind(collider.gameObject);
+        public void TryFind(Collider collider)
+        {
+            if(TryFind(collider.gameObject)) FindedCol.Invoke(collider);
+        }
     }
 }

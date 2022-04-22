@@ -45,8 +45,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e2bc5a81fdf4c8181ef415b51e13b0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PitchForce: 25
-  RollForce: 25
+  PitchForce: 0
+  RollForce: 18
   Speed: 55
   Target: {fileID: 5564541975785974631}
 --- !u!114 &2907912631094186054
