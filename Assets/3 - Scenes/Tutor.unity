@@ -2030,7 +2030,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Pc: {fileID: 1597772522}
   Mobile: {fileID: 1528873762}
-  InpInEdit: 1
+  InpInEdit: 2
 --- !u!114 &1778674007
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2996,7 +2996,7 @@ PrefabInstance:
     - target: {fileID: 5092976837112775630, guid: 27184d028353adc4390b5e46bcd1e92f,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 431.22964
       objectReference: {fileID: 0}
     - target: {fileID: 5092976837112775630, guid: 27184d028353adc4390b5e46bcd1e92f,
         type: 3}
