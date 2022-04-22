@@ -423,6 +423,8 @@ MonoBehaviour:
   GeneratorLevel: {fileID: 562288224}
   UiController: {fileID: 1282926527}
   GameScreen: {fileID: 369401209}
+  Started:
+    _PersistentCalls: []
   DelayFirstShowGameUI: 0.4
   MenuSceneName: Menu
 --- !u!1 &393251905
@@ -1308,7 +1310,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Pc: {fileID: 1597772522}
   Mobile: {fileID: 1528873762}
-  InpInEdit: 1
+  InpInEdit: 2
 --- !u!114 &1778674007
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -384,6 +384,8 @@ MonoBehaviour:
     - _Target: {fileID: 5682443981781410832}
       _MethodName: Spawn
       _PersistentArguments: []
+  FindedCol:
+    _PersistentCalls: []
 --- !u!114 &2095032158688268756
 MonoBehaviour:
   m_ObjectHideFlags: 0

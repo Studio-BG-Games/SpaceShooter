@@ -354,6 +354,8 @@ MonoBehaviour:
     - _Target: {fileID: 0}
       _MethodName: Spawn
       _PersistentArguments: []
+  FindedCol:
+    _PersistentCalls: []
 --- !u!114 &2095032158688268756
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -469,8 +471,14 @@ MonoBehaviour:
       type: {class: RandomList, ns: SpawnerSystem, asm: Assembly-CSharp}
       data:
         _containers:
-        - Chance: 0.85
+        - Chance: 0.81
           prefab: {fileID: 281602037788047727, guid: 89e47e3dfd1c4ca4db8281832c513da1,
+            type: 3}
+        - Chance: 0.938
+          prefab: {fileID: 7724470165878708026, guid: f9b66399bb5f65445907701b581767d0,
+            type: 3}
+        - Chance: 0.836
+          prefab: {fileID: 6225899359725055678, guid: b4d00667b693a93418d958b9948b3444,
             type: 3}
     00000001:
       type: {class: ArrayPoints, ns: SpawnerSystem, asm: Assembly-CSharp}
@@ -540,8 +548,14 @@ MonoBehaviour:
       type: {class: RandomList, ns: SpawnerSystem, asm: Assembly-CSharp}
       data:
         _containers:
-        - Chance: 0.85
+        - Chance: 0.81
           prefab: {fileID: 281602037788047727, guid: 89e47e3dfd1c4ca4db8281832c513da1,
+            type: 3}
+        - Chance: 0.938
+          prefab: {fileID: 7724470165878708026, guid: f9b66399bb5f65445907701b581767d0,
+            type: 3}
+        - Chance: 0.836
+          prefab: {fileID: 6225899359725055678, guid: b4d00667b693a93418d958b9948b3444,
             type: 3}
     00000001:
       type: {class: ArrayPoints, ns: SpawnerSystem, asm: Assembly-CSharp}
