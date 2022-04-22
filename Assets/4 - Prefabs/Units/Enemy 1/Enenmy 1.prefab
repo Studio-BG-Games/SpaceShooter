@@ -371,7 +371,7 @@ MonoBehaviour:
       - _Type: 5
         _Int: 0
         _String: 
-        _X: 20
+        _X: 1
         _Y: 0
         _Z: 0
         _W: 0
@@ -1577,7 +1577,7 @@ MonoBehaviour:
       - _Type: 5
         _Int: 0
         _String: 
-        _X: 20
+        _X: 1
         _Y: 0
         _Z: 0
         _W: 0
