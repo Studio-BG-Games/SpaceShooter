@@ -82,8 +82,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: {fileID: 11400000, guid: a65ec0f5624545c4ca630f0317e965e5, type: 2}
-  _current: 35
-  _max: 35
+  _current: 70
+  _max: 70
 --- !u!114 &843207225896265999
 MonoBehaviour:
   m_ObjectHideFlags: 0

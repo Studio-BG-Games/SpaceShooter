@@ -53,7 +53,7 @@ Rigidbody:
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0.3
   m_UseGravity: 0
   m_IsKinematic: 1
   m_Interpolate: 1
@@ -158,6 +158,7 @@ GameObject:
   - component: {fileID: 2414119486007193329}
   - component: {fileID: 6935648966570312755}
   - component: {fileID: 1656392225650736196}
+  - component: {fileID: 2610891930237187124}
   m_Layer: 10
   m_Name: TriggerCollision
   m_TagString: Untagged
@@ -208,6 +209,132 @@ MonoBehaviour:
   DamageInfoRef: {fileID: 2414119486007193329}
   Damaged:
     _PersistentCalls:
+    - _Target: {fileID: 2042666243940755346}
+      _MethodName: set_enabled
+      _PersistentArguments:
+      - _Type: 1
+        _Int: 0
+        _String: 
+        _X: 0
+        _Y: 0
+        _Z: 0
+        _W: 0
+        _Object: {fileID: 0}
+    - _Target: {fileID: 5415968286576029626}
+      _MethodName: set_enabled
+      _PersistentArguments:
+      - _Type: 1
+        _Int: 0
+        _String: 
+        _X: 0
+        _Y: 0
+        _Z: 0
+        _W: 0
+        _Object: {fileID: 0}
+    - _Target: {fileID: 4465991927635232526}
+      _MethodName: set_isKinematic
+      _PersistentArguments:
+      - _Type: 1
+        _Int: 0
+        _String: 
+        _X: 0
+        _Y: 0
+        _Z: 0
+        _W: 0
+        _Object: {fileID: 0}
+    - _Target: {fileID: 1949267718481264783}
+      _MethodName: set_enabled
+      _PersistentArguments:
+      - _Type: 1
+        _Int: 0
+        _String: 
+        _X: 0
+        _Y: 0
+        _Z: 0
+        _W: 0
+        _Object: {fileID: 0}
+    - _Target: {fileID: 2599568059874136515}
+      _MethodName: SetActive
+      _PersistentArguments:
+      - _Type: 1
+        _Int: 0
+        _String: 
+        _X: 0
+        _Y: 0
+        _Z: 0
+        _W: 0
+        _Object: {fileID: 0}
+    - _Target: {fileID: 572296802596667891}
+      _MethodName: SetActive
+      _PersistentArguments:
+      - _Type: 1
+        _Int: 0
+        _String: 
+        _X: 0
+        _Y: 0
+        _Z: 0
+        _W: 0
+        _Object: {fileID: 0}
+  DamagedGO:
+    _PersistentCalls:
+    - _Target: {fileID: 2610891930237187124}
+      _MethodName: MakeInpulseRigibody
+      _PersistentArguments:
+      - _Type: 13
+        _Int: 0
+        _String: UnityEngine.Rigidbody, UnityEngine.PhysicsModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        _X: 0
+        _Y: 0
+        _Z: 0
+        _W: 0
+        _Object: {fileID: 4465991927635232526}
+      - _Type: 14
+        _Int: 0
+        _String: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        _X: 0
+        _Y: 0
+        _Z: 0
+        _W: 0
+        _Object: {fileID: 0}
+      - _Type: 5
+        _Int: 0
+        _String: 
+        _X: 15
+        _Y: 0
+        _Z: 0
+        _W: 0
+        _Object: {fileID: 0}
+    - _Target: {fileID: 2610891930237187124}
+      _MethodName: MakeTorque
+      _PersistentArguments:
+      - _Type: 13
+        _Int: 0
+        _String: UnityEngine.Rigidbody, UnityEngine.PhysicsModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        _X: 0
+        _Y: 0
+        _Z: 0
+        _W: 0
+        _Object: {fileID: 4465991927635232526}
+      - _Type: 14
+        _Int: 0
+        _String: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        _X: 0
+        _Y: 0
+        _Z: 0
+        _W: 0
+        _Object: {fileID: 0}
+      - _Type: 5
+        _Int: 0
+        _String: 
+        _X: 1.5
+        _Y: 0
+        _Z: 0
+        _W: 0
+        _Object: {fileID: 0}
     - _Target: {fileID: 0}
       _MethodName: UnityEngine.Object, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null.Destroy
@@ -221,6 +348,42 @@ MonoBehaviour:
         _Z: 0
         _W: 0
         _Object: {fileID: 281602037788047727}
+      - _Type: 5
+        _Int: 0
+        _String: 
+        _X: 5
+        _Y: 0
+        _Z: 0
+        _W: 0
+        _Object: {fileID: 0}
+    - _Target: {fileID: 2610891930237187124}
+      _MethodName: MakeInpulseForward
+      _PersistentArguments:
+      - _Type: 13
+        _Int: 0
+        _String: UnityEngine.Rigidbody, UnityEngine.PhysicsModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        _X: 0
+        _Y: 0
+        _Z: 0
+        _W: 0
+        _Object: {fileID: 4465991927635232526}
+      - _Type: 5
+        _Int: 0
+        _String: 
+        _X: 20
+        _Y: 0
+        _Z: 0
+        _W: 0
+        _Object: {fileID: 0}
+      - _Type: 1
+        _Int: 0
+        _String: 
+        _X: 0
+        _Y: 0
+        _Z: 0
+        _W: 0
+        _Object: {fileID: 0}
   _canEvented: 1
 --- !u!114 &8070500036691980418
 MonoBehaviour:
@@ -310,6 +473,18 @@ MonoBehaviour:
         _Z: 0
         _W: 0
         _Object: {fileID: 0}
+--- !u!114 &2610891930237187124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 572296802596667891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 710587bab06ebc44da2f99416ff5d881, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2599568059874136515
 GameObject:
   m_ObjectHideFlags: 0
@@ -1240,6 +1415,132 @@ MonoBehaviour:
   DamageInfoRef: {fileID: 5558874958781999514}
   Damaged:
     _PersistentCalls:
+    - _Target: {fileID: 2042666243940755346}
+      _MethodName: set_enabled
+      _PersistentArguments:
+      - _Type: 1
+        _Int: 0
+        _String: 
+        _X: 0
+        _Y: 0
+        _Z: 0
+        _W: 0
+        _Object: {fileID: 0}
+    - _Target: {fileID: 5415968286576029626}
+      _MethodName: set_enabled
+      _PersistentArguments:
+      - _Type: 1
+        _Int: 0
+        _String: 
+        _X: 0
+        _Y: 0
+        _Z: 0
+        _W: 0
+        _Object: {fileID: 0}
+    - _Target: {fileID: 4465991927635232526}
+      _MethodName: set_isKinematic
+      _PersistentArguments:
+      - _Type: 1
+        _Int: 0
+        _String: 
+        _X: 0
+        _Y: 0
+        _Z: 0
+        _W: 0
+        _Object: {fileID: 0}
+    - _Target: {fileID: 1949267718481264783}
+      _MethodName: set_enabled
+      _PersistentArguments:
+      - _Type: 1
+        _Int: 0
+        _String: 
+        _X: 0
+        _Y: 0
+        _Z: 0
+        _W: 0
+        _Object: {fileID: 0}
+    - _Target: {fileID: 2599568059874136515}
+      _MethodName: SetActive
+      _PersistentArguments:
+      - _Type: 1
+        _Int: 0
+        _String: 
+        _X: 0
+        _Y: 0
+        _Z: 0
+        _W: 0
+        _Object: {fileID: 0}
+    - _Target: {fileID: 4918608329337889027}
+      _MethodName: SetActive
+      _PersistentArguments:
+      - _Type: 1
+        _Int: 0
+        _String: 
+        _X: 0
+        _Y: 0
+        _Z: 0
+        _W: 0
+        _Object: {fileID: 0}
+  DamagedGO:
+    _PersistentCalls:
+    - _Target: {fileID: 2610891930237187124}
+      _MethodName: MakeInpulseRigibody
+      _PersistentArguments:
+      - _Type: 13
+        _Int: 0
+        _String: UnityEngine.Rigidbody, UnityEngine.PhysicsModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        _X: 0
+        _Y: 0
+        _Z: 0
+        _W: 0
+        _Object: {fileID: 4465991927635232526}
+      - _Type: 14
+        _Int: 0
+        _String: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        _X: 0
+        _Y: 0
+        _Z: 0
+        _W: 0
+        _Object: {fileID: 0}
+      - _Type: 5
+        _Int: 0
+        _String: 
+        _X: 15
+        _Y: 0
+        _Z: 0
+        _W: 0
+        _Object: {fileID: 0}
+    - _Target: {fileID: 2610891930237187124}
+      _MethodName: MakeTorque
+      _PersistentArguments:
+      - _Type: 13
+        _Int: 0
+        _String: UnityEngine.Rigidbody, UnityEngine.PhysicsModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        _X: 0
+        _Y: 0
+        _Z: 0
+        _W: 0
+        _Object: {fileID: 4465991927635232526}
+      - _Type: 14
+        _Int: 0
+        _String: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        _X: 0
+        _Y: 0
+        _Z: 0
+        _W: 0
+        _Object: {fileID: 0}
+      - _Type: 5
+        _Int: 0
+        _String: 
+        _X: 1.5
+        _Y: 0
+        _Z: 0
+        _W: 0
+        _Object: {fileID: 0}
     - _Target: {fileID: 0}
       _MethodName: UnityEngine.Object, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null.Destroy
@@ -1253,6 +1554,42 @@ MonoBehaviour:
         _Z: 0
         _W: 0
         _Object: {fileID: 281602037788047727}
+      - _Type: 5
+        _Int: 0
+        _String: 
+        _X: 5
+        _Y: 0
+        _Z: 0
+        _W: 0
+        _Object: {fileID: 0}
+    - _Target: {fileID: 2610891930237187124}
+      _MethodName: MakeInpulseForward
+      _PersistentArguments:
+      - _Type: 13
+        _Int: 0
+        _String: UnityEngine.Rigidbody, UnityEngine.PhysicsModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        _X: 0
+        _Y: 0
+        _Z: 0
+        _W: 0
+        _Object: {fileID: 4465991927635232526}
+      - _Type: 5
+        _Int: 0
+        _String: 
+        _X: 20
+        _Y: 0
+        _Z: 0
+        _W: 0
+        _Object: {fileID: 0}
+      - _Type: 1
+        _Int: 0
+        _String: 
+        _X: 0
+        _Y: 0
+        _Z: 0
+        _W: 0
+        _Object: {fileID: 0}
   _canEvented: 1
 --- !u!114 &8526799887489507477
 MonoBehaviour:
@@ -1827,6 +2164,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91694602b25a02f4c869c3926dad6e12, type: 3}
+--- !u!4 &7552222107896587374 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 880626830503776325, guid: 91694602b25a02f4c869c3926dad6e12,
+    type: 3}
+  m_PrefabInstance: {fileID: 7275139213058389035}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &6386267449864645751 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4347918647491975260, guid: 91694602b25a02f4c869c3926dad6e12,
@@ -1839,9 +2182,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67baca86a1ce4bf5a1b6aab5e6c885dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &7552222107896587374 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 880626830503776325, guid: 91694602b25a02f4c869c3926dad6e12,
-    type: 3}
-  m_PrefabInstance: {fileID: 7275139213058389035}
-  m_PrefabAsset: {fileID: 0}

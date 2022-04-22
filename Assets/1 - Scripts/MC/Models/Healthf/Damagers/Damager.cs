@@ -9,6 +9,7 @@ namespace Services
     {
         public DamageInfoRef DamageInfoRef;
         public UltEvent Damaged;
+        public UltEvent<GameObject> DamagedGO;
         [SerializeField][HideInInspector]private bool _canEvented = true;
 
         private void Awake() => _canEvented = true;
@@ -22,6 +23,10 @@ namespace Services
             healthf.ForEach(x =>
             {
                 Change(x);
+                if (_canEvented)
+                {
+                    DamagedGO.Invoke(collider.gameObject);
+                }
                 _canEvented = false;
             });
 
@@ -30,7 +35,10 @@ namespace Services
 
         public void Change(Health health)
         {
-            if(_canEvented) Damaged.Invoke();
+            if (_canEvented)
+            {
+                Damaged.Invoke();
+            }
             DamageInfoRef.Component.GoOverDamageElelemnt(x => x.Change(health));
         }
     }

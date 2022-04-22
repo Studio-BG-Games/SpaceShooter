@@ -15,7 +15,6 @@ using Screen = UnityEngine.Screen;
 public class C_MainMenuScreenController : MonoBehaviour
 {
     public Object IdWindowsEntity;
-    public Button PlayButton;
     
     public TargetWindow Main;
     public TargetWindow Sign;
@@ -39,8 +38,6 @@ public class C_MainMenuScreenController : MonoBehaviour
             t.Controll.Init(model);
             t.Model = model;
         });
-
-        PlayButton.onClick.AddListener(StartGame);
 
         Wait(1, () =>
         {
