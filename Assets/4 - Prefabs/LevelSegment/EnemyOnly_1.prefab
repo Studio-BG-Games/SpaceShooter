@@ -198,11 +198,11 @@ MonoBehaviour:
     colliders: []
     _isRoot: 0
   bounds:
-    center: {x: 0, y: 0, z: 49.25}
-    extents: {x: 25, y: 25, z: 50.75}
-    max: {x: 25, y: 25, z: 100}
+    center: {x: 0, y: 0, z: 67.75}
+    extents: {x: 25, y: 25, z: 69.25}
+    max: {x: 25, y: 25, z: 137}
     min: {x: -25, y: -25, z: -1.5}
-    size: {x: 50, y: 50, z: 101.5}
+    size: {x: 50, y: 50, z: 138.5}
   builders: []
   unpacked: 0
   alwaysDraw: 0
@@ -227,7 +227,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Min: {x: -20, y: -20}
   Max: {x: 20, y: 20}
-  Distance: 100
+  Distance: 137
 --- !u!1 &1660821066734291504
 GameObject:
   m_ObjectHideFlags: 0
@@ -254,7 +254,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1660821066734291504}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -19.9, y: 10.7, z: 74.6}
+  m_LocalPosition: {x: -19.9, y: 10.7, z: 103.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2080506710}
@@ -291,8 +291,8 @@ MonoBehaviour:
       data:
         Start: {fileID: 7378567652299218888}
         Diraction: {x: 0.02, y: -0.07, z: 0.36}
-        DelayDetweenSpawn: 0.47
-        Distance: 20.92
+        DelayDetweenSpawn: 0.8
+        Distance: 31.46
         Count: 5
         GizmosSize: 0.5
     00000002:
@@ -440,7 +440,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6680602912298376510}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 100}
+  m_LocalPosition: {x: 0, y: 0, z: 137}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2080506710}
